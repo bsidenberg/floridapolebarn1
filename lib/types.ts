@@ -50,7 +50,7 @@ export interface QuoteFormData {
   lastName: string
   phone: string
   email: string
-  notes: string
+  notes?: string
 }
 
 export interface ServiceCity {
