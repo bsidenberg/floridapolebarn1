@@ -109,7 +109,7 @@ export async function sendQuoteNotification(data: QuoteFormData): Promise<{ succ
         to: NOTIFY_EMAILS,
         subject: `New Quote Request — ${data.firstName} ${data.lastName} (${data.zipCode})`,
         html: notifyHtml,
-        replyTo: data.email,
+        reply_to: data.email,
       }),
       resend.emails.send({
         from: `Florida Pole Barn <${FROM_EMAIL}>`,
