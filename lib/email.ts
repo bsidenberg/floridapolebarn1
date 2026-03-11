@@ -1,12 +1,11 @@
 import { Resend } from 'resend'
 import type { QuoteFormData } from './types'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-
 const NOTIFY_EMAILS = ['info@floridapolebarn.com', 'sales@floridapolebarn.com', 'paul@floridapolebarn.com']
 const FROM_EMAIL = 'onboarding@resend.dev'
 
 export async function sendQuoteNotification(data: QuoteFormData): Promise<{ success: boolean; error?: string }> {
+  const resend = new Resend(process.env.RESEND_API_KEY)
   const serviceTypeLabels: Record<string, string> = {
     'kit-only': 'Kit Delivery Only',
     'kit-install': 'Kit + Installation',
