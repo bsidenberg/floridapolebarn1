@@ -12,6 +12,8 @@ interface Post {
   title: string
   description: string
   date: string
+  updatedDate?: string
+  author: string
   readTime: string
   category: string
   content: string
@@ -24,6 +26,8 @@ const POSTS: Post[] = [
     description:
       'Complete breakdown of pole barn costs in Florida — kit prices, installation, concrete, permits, and what to budget.',
     date: '2025-01-15',
+    updatedDate: '2025-03-01',
+    author: 'Florida Pole Barn',
     readTime: '6 min read',
     category: 'Cost Guide',
     content: `
@@ -90,6 +94,7 @@ A Florida-engineered building costs more than a generic kit — because it's bui
     description:
       'Florida building permit requirements for pole barns — county rules, agricultural exemptions, and how to navigate the process.',
     date: '2025-01-10',
+    author: 'Florida Pole Barn',
     readTime: '5 min read',
     category: 'Permits & Regulations',
     content: `
@@ -147,6 +152,7 @@ If you're not sure whether your project needs a permit, ask your county building
     description:
       'Side-by-side comparison of open and enclosed pole barns for Florida — cost, ventilation, protection, and which works best for each use case.',
     date: '2025-01-05',
+    author: 'Florida Pole Barn',
     readTime: '5 min read',
     category: 'Buying Guide',
     content: `
@@ -216,6 +222,7 @@ Still unsure? Ask us during your free quote — we'll recommend what's right for
     title: 'Best Pole Barn Sizes for Common Uses in Florida',
     description: 'How to choose the right pole barn size for your Florida use case.',
     date: '2024-12-20',
+    author: 'Florida Pole Barn',
     readTime: '4 min read',
     category: 'Buying Guide',
     content: `
@@ -266,6 +273,7 @@ Build bigger than you think you need. The number one regret we hear from custome
     description:
       'What the 140 MPH wind rating on Florida pole barns actually means and what to look for when buying.',
     date: '2024-12-10',
+    author: 'Florida Pole Barn',
     readTime: '4 min read',
     category: 'Construction & Materials',
     content: `
@@ -304,6 +312,7 @@ Every Florida Pole Barn structure comes with custom-fabricated steel trusses eng
     description:
       'Everything horse owners need to know when planning a Florida barn — stall sizing, ventilation, layouts, and cost.',
     date: '2024-11-28',
+    author: 'Florida Pole Barn',
     readTime: '7 min read',
     category: 'Use Case Guide',
     content: `
@@ -384,6 +393,16 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     title: `${post.title} | Florida Pole Barn`,
     description: post.description,
     alternates: { canonical: `https://floridapolebarn.com/blog/${post.slug}` },
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      url: `https://floridapolebarn.com/blog/${post.slug}`,
+      type: 'article',
+      publishedTime: post.date,
+      modifiedTime: post.updatedDate ?? post.date,
+      authors: ['https://floridapolebarn.com/about'],
+      images: [{ url: 'https://floridapolebarn.com/og-image.jpg', width: 1200, height: 630 }],
+    },
   }
 }
 
@@ -481,8 +500,31 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const post = POSTS.find((p) => p.slug === params.slug)
   if (!post) notFound()
 
+  const blogPostingSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.description,
+    datePublished: post.date,
+    dateModified: post.updatedDate ?? post.date,
+    author: {
+      '@type': 'Organization',
+      name: 'Florida Pole Barn',
+      url: 'https://floridapolebarn.com',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Florida Pole Barn',
+      url: 'https://floridapolebarn.com',
+    },
+    url: `https://floridapolebarn.com/blog/${post.slug}`,
+    mainEntityOfPage: `https://floridapolebarn.com/blog/${post.slug}`,
+    image: 'https://floridapolebarn.com/og-image.jpg',
+  }
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }} />
       <div className="bg-brand-900 py-20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <nav className="text-sm text-brand-400 mb-6">
@@ -494,9 +536,13 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           </nav>
           <span className="text-xs bg-brand-700 text-white rounded-full px-3 py-1 font-medium">{post.category}</span>
           <h1 className="mt-4 text-3xl font-bold text-white sm:text-4xl leading-tight">{post.title}</h1>
-          <div className="mt-4 flex gap-4 text-sm text-brand-400">
-            <time>{new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</time>
+          <div className="mt-4 flex flex-wrap gap-4 text-sm text-brand-400">
+            <time dateTime={post.date}>{new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</time>
+            {post.updatedDate && (
+              <span>Updated {new Date(post.updatedDate).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
+            )}
             <span>{post.readTime}</span>
+            <span>By {post.author}</span>
           </div>
         </div>
       </div>
