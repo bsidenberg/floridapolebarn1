@@ -155,7 +155,7 @@ export default function AboutPage() {
                 We&apos;d love to hear about your experience. Google Reviews help other Florida property owners find a builder they can trust.
               </p>
               <a
-                href="https://search.google.com/local/writereview?placeid=ChIJexamplePlaceID"
+                href="https://search.google.com/local/writereview?placeid=ChIJt8LpYVOVV4gR1T1hgRoCcD4"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-5 inline-flex items-center gap-2 btn-primary"

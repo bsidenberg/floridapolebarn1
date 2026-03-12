@@ -147,7 +147,7 @@ export default function CustomerReviews() {
             )}
           </button>
           <a
-            href="https://search.google.com/local/writereview?placeid=ChIJexamplePlaceID"
+            href="https://search.google.com/local/writereview?placeid=ChIJt8LpYVOVV4gR1T1hgRoCcD4"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3 text-sm font-semibold text-gray-800 hover:bg-gray-100 transition-colors"
