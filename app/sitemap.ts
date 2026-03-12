@@ -2,6 +2,15 @@ import type { MetadataRoute } from 'next'
 
 const BASE = 'https://floridapolebarn.com'
 
+const BLOG_SLUGS = [
+  'how-much-does-a-pole-barn-cost-in-florida',
+  'do-you-need-a-permit-for-a-pole-barn-in-florida',
+  'open-vs-enclosed-pole-barn-florida',
+  'best-pole-barn-sizes-for-florida',
+  'pole-barn-hurricane-rating-florida',
+  'horse-barn-planning-florida',
+]
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date()
 
@@ -22,10 +31,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: '/blog', priority: 0.6, changeFrequency: 'weekly' as const },
   ]
 
-  return routes.map(({ url, priority, changeFrequency }) => ({
-    url: `${BASE}${url}`,
+  const blogRoutes = BLOG_SLUGS.map((slug) => ({
+    url: `${BASE}/blog/${slug}`,
     lastModified: now,
-    changeFrequency,
-    priority,
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
   }))
+
+  return [
+    ...routes.map(({ url, priority, changeFrequency }) => ({
+      url: `${BASE}${url}`,
+      lastModified: now,
+      changeFrequency,
+      priority,
+    })),
+    ...blogRoutes,
+  ]
 }

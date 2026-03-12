@@ -9,6 +9,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://floridapolebarn.com/gallery',
   },
+  openGraph: {
+    title: 'Project Gallery — Pole Barn Photos | Florida Pole Barn',
+    description: 'Browse completed pole barn projects across Florida — horse barns, equipment storage, RV shelters, workshops, and agricultural buildings.',
+    url: 'https://floridapolebarn.com/gallery',
+    images: [{ url: 'https://floridapolebarn.com/og-image.jpg', width: 1200, height: 630 }],
+  },
 }
 
 export default function GalleryPage() {

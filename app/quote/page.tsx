@@ -10,6 +10,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://floridapolebarn.com/quote',
   },
+  openGraph: {
+    title: 'Request a Free Pole Barn Quote — Florida Pole Barn',
+    description: 'Get a free, no-obligation quote for your pole barn in Florida. We call you within 1 business day.',
+    url: 'https://floridapolebarn.com/quote',
+    images: [{ url: 'https://floridapolebarn.com/og-image.jpg', width: 1200, height: 630 }],
+  },
 }
 
 const trustPoints = [

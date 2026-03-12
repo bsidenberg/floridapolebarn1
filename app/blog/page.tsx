@@ -8,6 +8,12 @@ export const metadata: Metadata = {
   description:
     'Pole barn guides, cost breakdowns, permit info, and tips for Florida property owners. Learn everything you need to know before building your pole barn.',
   alternates: { canonical: 'https://floridapolebarn.com/blog' },
+  openGraph: {
+    title: 'Pole Barn Blog — Florida Tips & Guides | Florida Pole Barn',
+    description: 'Pole barn guides, cost breakdowns, permit info, and tips for Florida property owners.',
+    url: 'https://floridapolebarn.com/blog',
+    images: [{ url: 'https://floridapolebarn.com/og-image.jpg', width: 1200, height: 630 }],
+  },
 }
 
 const posts = [
