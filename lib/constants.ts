@@ -79,7 +79,7 @@ export const USE_CASES: UseCase[] = [
     shortLabel: 'Horse Barns',
     description: 'Safe, ventilated shelters engineered for Florida heat with stall options and custom layouts.',
     href: '/horse-barns',
-    icon: '🐴',
+    icon: '/Horse Barn2.png',
   },
   {
     id: 'equipment-storage',
@@ -87,7 +87,7 @@ export const USE_CASES: UseCase[] = [
     shortLabel: 'Equipment',
     description: 'Protect tractors, ATVs, farm equipment, and tools from the Florida sun and rain.',
     href: '/equipment-storage',
-    icon: '🚜',
+    icon: '/Equipment1.png',
   },
   {
     id: 'rv-boat-storage',
@@ -95,7 +95,7 @@ export const USE_CASES: UseCase[] = [
     shortLabel: 'RV & Boat',
     description: 'Covered, open storage for RVs, boats, and recreational vehicles — easy pull-through access.',
     href: '/rv-boat-storage',
-    icon: '🚌',
+    icon: '/RV & Boat1.png',
   },
   {
     id: 'workshop-garage',
@@ -103,7 +103,7 @@ export const USE_CASES: UseCase[] = [
     shortLabel: 'Workshop',
     description: 'Build the ultimate garage, workshop, or man cave on your property.',
     href: '/workshop-garage',
-    icon: '🔧',
+    icon: '/Workshop1.png',
   },
   {
     id: 'agricultural-buildings',
@@ -111,7 +111,7 @@ export const USE_CASES: UseCase[] = [
     shortLabel: 'Agricultural',
     description: 'Durable farm structures for hay, crop storage, livestock, and agricultural operations.',
     href: '/agricultural-buildings',
-    icon: '🌾',
+    icon: '/Agricultural.png',
   },
   {
     id: 'man-cave',
@@ -119,7 +119,7 @@ export const USE_CASES: UseCase[] = [
     shortLabel: 'Man Cave',
     description: "Your property, your rules. Build the recreational retreat you've always wanted.",
     href: '/workshop-garage',
-    icon: '🏠',
+    icon: '/Man Cave1.png',
   },
 ]
 
