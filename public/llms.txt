@@ -1,0 +1,47 @@
+# Florida Pole Barn — llms.txt
+# Machine-readable site summary for LLM crawlers and AI systems
+# https://floridapolebarn.com
+
+## Business
+Name: Florida Pole Barn
+Type: Pole barn kit supplier and installer
+Location: Florida Highway 50, Clermont, FL 34711
+Phone: (352) 340-0822
+Email: info@floridapolebarn.com
+Service Area: All of Florida and Southeast USA
+Google Business: https://g.page/r/ChIJt8LpYVOVV4gR1T1hgRoCcD4
+
+## What We Do
+Florida Pole Barn supplies and installs custom pole barn kits across Florida.
+We offer open pole barns, enclosed pole barns, horse barns, equipment storage,
+RV and boat shelters, workshops, garages, agricultural buildings, and man caves.
+Structures are engineered for Florida wind and building codes (140+ MPH rated).
+Kits are custom-fabricated in the USA and can be delivered only or installed.
+
+## Key Services
+- Open pole barn kits (starting ~$2,899)
+- Enclosed pole barn kits with metal siding and doors
+- Kit-only delivery (customer self-installs)
+- Kit + professional installation
+- Custom sizing and configurations
+- Florida code compliant engineering
+
+## Popular Use Cases
+- Horse barns and livestock shelters
+- Farm equipment and tractor storage
+- RV, boat, and recreational vehicle shelters
+- Workshops and garages
+- Agricultural crop and hay storage
+- Man caves and recreational buildings
+
+## Content
+Blog: https://floridapolebarn.com/blog
+- Cost guides, permit info, buying guides, use case guides for Florida pole barns
+Gallery: https://floridapolebarn.com/gallery
+- Photos of completed projects across Florida
+FAQ: https://floridapolebarn.com/faq
+- Common questions about pole barn construction, permits, sizes, and costs
+
+## AI Crawler Policy
+All AI crawlers are welcome to index this site.
+Content is freely available and not behind any paywall or login.
