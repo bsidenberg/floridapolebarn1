@@ -6,6 +6,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { BARN_SIZES } from '@/lib/constants'
 import { cn } from '@/lib/utils'
+import { pushEvent } from '@/lib/gtm'
 
 const schema = z.object({
   serviceType: z.enum(['kit-only', 'kit-install'], { required_error: 'Please select a service type' }),
@@ -121,6 +122,10 @@ export default function QuoteForm() {
       }
 
       setSubmitted(true)
+      pushEvent('form_submission', {
+        form_name: 'get_free_quote',
+        form_location: window.location.pathname,
+      })
     } catch {
       setSubmitError('Network error. Please try calling us at (352) 340-0822.')
     } finally {

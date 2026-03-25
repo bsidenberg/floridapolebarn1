@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { COMPANY, NAV_LINKS } from '@/lib/constants'
+import { pushEvent } from '@/lib/gtm'
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -25,7 +26,11 @@ export default function Header() {
       {/* Top bar */}
       <div className="bg-brand-800 py-1.5 text-center text-sm text-brand-100">
         <span className="hidden sm:inline">Serving The Southeast · Based in Central FL ·</span>
-        <a href={COMPANY.phoneHref} className="font-semibold text-white hover:text-brand-200 transition-colors">
+        <a
+          href={COMPANY.phoneHref}
+          className="font-semibold text-white hover:text-brand-200 transition-colors"
+          onClick={() => pushEvent('phone_click', { phone_number: '3523400822', click_location: 'header_top_bar' })}
+        >
           Call Now: {COMPANY.phone}
         </a>
       </div>
@@ -89,6 +94,7 @@ export default function Header() {
           <a
             href={COMPANY.phoneHref}
             className="hidden md:flex items-center gap-1.5 rounded-lg border border-brand-200 px-3 py-2 text-sm font-semibold text-brand-700 hover:bg-brand-50 transition-colors"
+            onClick={() => pushEvent('phone_click', { phone_number: '3523400822', click_location: 'header_nav' })}
           >
             <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
@@ -159,6 +165,7 @@ export default function Header() {
               <a
                 href={COMPANY.phoneHref}
                 className="flex items-center gap-2 px-3 py-2 text-sm font-semibold text-brand-700"
+                onClick={() => pushEvent('phone_click', { phone_number: '3523400822', click_location: 'header_mobile' })}
               >
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />

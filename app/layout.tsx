@@ -1,8 +1,10 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { GoogleTagManager } from '@next/third-parties/google'
 import './globals.css'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
+import GTMPageView from '@/components/GTMPageView'
 import { COMPANY } from '@/lib/constants'
 
 const inter = Inter({
@@ -181,6 +183,7 @@ const websiteSchema = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={inter.variable}>
+      <GoogleTagManager gtmId="GTM-5P5MC48H" />
       <head>
         <script
           type="application/ld+json"
@@ -190,26 +193,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
-        {process.env.NEXT_PUBLIC_GA_ID && (
-          <>
-            <script
-              async
-              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
-            />
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', { page_path: window.location.pathname });
-                `,
-              }}
-            />
-          </>
-        )}
       </head>
       <body>
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-5P5MC48H"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
+        <GTMPageView />
         <Header />
         <main>{children}</main>
         <Footer />
