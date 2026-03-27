@@ -211,9 +211,9 @@ export default function EnclosedPoleBarnsPage() {
       <section className="section-padding bg-white">
         <div className="mx-auto max-w-7xl">
           <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold text-gray-900">Sizes & Starting Prices</h2>
+            <h2 className="text-3xl font-bold text-gray-900">Common Sizes</h2>
             <p className="mt-3 text-gray-600 max-w-xl mx-auto text-sm">
-              Enclosed kit pricing varies from open kits due to siding and doors. Contact us for exact enclosed pricing.
+              Custom sizes available. Request a free quote for exact pricing on your project.
             </p>
           </div>
           <SizeTable />

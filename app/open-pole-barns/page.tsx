@@ -212,9 +212,9 @@ export default function OpenPoleBarnsPage() {
         <div className="mx-auto max-w-7xl">
           <div className="text-center mb-10">
             <p className="text-sm font-semibold text-brand-600 uppercase tracking-wider mb-2">Sizes & Pricing</p>
-            <h2 className="text-3xl font-bold text-gray-900">Common Sizes & Kit Prices</h2>
+            <h2 className="text-3xl font-bold text-gray-900">Common Sizes</h2>
             <p className="mt-3 text-gray-600 max-w-xl mx-auto text-sm">
-              Prices shown are for open kit materials. Installation quoted separately. Custom sizes available.
+              Custom sizes available. Request a free quote for exact pricing on your project.
             </p>
           </div>
           <SizeTable />
