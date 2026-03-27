@@ -90,7 +90,7 @@ export default function AboutPage() {
                   Every building we sell is custom-fabricated. Our steel trusses are made from hot-formed angle iron, built to your specific span, and engineered for 140+ MPH wind loads. Our posts are pressure-treated for Florida&apos;s humidity and soil conditions. Our roofing is selected for decades of performance in the Florida sun.
                 </p>
                 <p>
-                  We&apos;re based in Clermont — right in the heart of Central Florida — we travel statewide to complete projects for our customers and deliver kits throughout the Southeast.
+                  We&apos;re based in Clermont — right in the heart of Central Florida — and we travel statewide to complete projects and deliver kits all across Florida.
                 </p>
               </div>
 

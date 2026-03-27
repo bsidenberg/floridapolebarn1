@@ -22,7 +22,7 @@ const trustPoints = [
   { icon: '📞', text: 'We call you within 1 business day' },
   { icon: '💰', text: 'Free, no-obligation quote' },
   { icon: '📏', text: 'Custom sizes and configurations' },
-  { icon: '🏠', text: 'We service Florida and the Southeast USA' },
+  { icon: '🏠', text: 'We service all of Florida' },
   { icon: '', img: '/us.png', text: 'Proudly made in the USA' },
   { icon: '🌀', text: '140+ MPH wind-rated structures' },
 ]

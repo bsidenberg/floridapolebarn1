@@ -25,7 +25,7 @@ export default function Header() {
     >
       {/* Top bar */}
       <div className="bg-brand-800 py-1.5 text-center text-sm text-brand-100">
-        <span className="hidden sm:inline">Serving The Southeast · Based in Central FL ·</span>
+        <span className="hidden sm:inline">Serving All of Florida · Based in Central FL ·</span>
         <a
           href={COMPANY.phoneHref}
           className="font-semibold text-white hover:text-brand-200 transition-colors"
