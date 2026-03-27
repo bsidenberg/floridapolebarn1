@@ -6,11 +6,16 @@ export default function Hero() {
   return (
     <section className="relative min-h-[600px] flex items-center overflow-hidden bg-brand-950">
       {/* Background image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/Open.jpg')" }}
-        aria-hidden="true"
-      />
+      <div className="absolute inset-0" aria-hidden="true">
+        <Image
+          src="/Open.jpg"
+          alt=""
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+      </div>
       {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-brand-950/90 via-brand-950/70 to-brand-950/40" aria-hidden="true" />
 
