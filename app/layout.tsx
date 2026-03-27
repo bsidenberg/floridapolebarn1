@@ -155,6 +155,13 @@ const localBusinessSchema = {
       closes: '17:00',
     },
   ],
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '5.0',
+    reviewCount: '16',
+    bestRating: '5',
+    worstRating: '1',
+  },
   sameAs: [
     COMPANY.social.facebook,
     COMPANY.social.instagram,
