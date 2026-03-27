@@ -128,6 +128,11 @@ const nextConfig = {
         destination: '/',
         permanent: true,
       },
+      {
+        source: '/author/:slug',
+        destination: '/about',
+        permanent: true,
+      },
     ]
   },
 }
