@@ -7,6 +7,7 @@ import SizesOverview from '@/components/home/SizesOverview'
 import GalleryPreview from '@/components/home/GalleryPreview'
 import CustomerReviews from '@/components/home/CustomerReviews'
 import WhyChooseUs from '@/components/home/WhyChooseUs'
+import TrustSignals from '@/components/home/TrustSignals'
 import CTABanner from '@/components/home/CTABanner'
 
 export const metadata: Metadata = {
@@ -35,6 +36,7 @@ export default function HomePage() {
       <GalleryPreview />
       <CustomerReviews />
       <WhyChooseUs />
+      <TrustSignals />
       <CTABanner />
     </>
   )
