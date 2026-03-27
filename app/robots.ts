@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: ['/api/', '/quote/thank-you'],
+      disallow: ['/api/'],
     },
     sitemap: 'https://floridapolebarn.com/sitemap.xml',
   }
