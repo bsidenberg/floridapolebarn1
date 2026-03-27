@@ -216,7 +216,7 @@ export default function EnclosedPoleBarnsPage() {
               Enclosed kit pricing varies from open kits due to siding and doors. Contact us for exact enclosed pricing.
             </p>
           </div>
-          <SizeTable showPrice />
+          <SizeTable />
           <div className="mt-6 text-center">
             <Link href="/quote" className="btn-primary">Get Enclosed Barn Pricing →</Link>
           </div>

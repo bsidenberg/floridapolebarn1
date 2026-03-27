@@ -217,7 +217,7 @@ export default function OpenPoleBarnsPage() {
               Prices shown are for open kit materials. Installation quoted separately. Custom sizes available.
             </p>
           </div>
-          <SizeTable showPrice />
+          <SizeTable />
           <div className="mt-6 text-center">
             <Link href="/quote" className="btn-primary">
               Get a Quote for Your Size →
