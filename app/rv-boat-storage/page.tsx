@@ -17,6 +17,7 @@ export const metadata: Metadata = {
 export default function RVBoatStoragePage() {
   return (
     <UseCasePage
+      canonical="https://floridapolebarn.com/rv-boat-storage"
       hero={{
         eyebrow: 'Florida RV & Boat Owners',
         title: 'RV & Boat Storage Buildings in Florida',

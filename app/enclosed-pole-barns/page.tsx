@@ -5,7 +5,8 @@ import SizeTable from '@/components/shared/SizeTable'
 import FAQAccordion from '@/components/shared/FAQAccordion'
 import CTABanner from '@/components/home/CTABanner'
 import TrustBar from '@/components/ui/TrustBar'
-import { COMPANY } from '@/lib/constants'
+import JsonLd from '@/components/JsonLd'
+import { COMPANY, BARN_SIZES } from '@/lib/constants'
 
 export const metadata: Metadata = {
   title: 'Enclosed Pole Barn Kits Florida | Prices & Sizes — Florida Pole Barn',
@@ -75,15 +76,63 @@ const faqs = [
   },
 ]
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://floridapolebarn.com' },
+    { '@type': 'ListItem', position: 2, name: 'Enclosed Pole Barn Kits', item: 'https://floridapolebarn.com/enclosed-pole-barns' },
+  ],
+}
+
+const offerCatalogSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'OfferCatalog',
+  name: 'Enclosed Pole Barn Kit Pricing',
+  provider: { '@id': 'https://floridapolebarn.com/#business' },
+  numberOfItems: BARN_SIZES.length,
+  itemListElement: BARN_SIZES.map((size) => ({
+    '@type': 'Offer',
+    name: `${size.width}×${size.length} Enclosed Pole Barn Kit`,
+    description: `${size.sqft} sq ft enclosed pole barn kit — ${size.primaryUse}`,
+    price: (size.startingPrice ?? 0).toString(),
+    priceCurrency: 'USD',
+    priceValidUntil: '2027-12-31',
+    availability: 'https://schema.org/InStock',
+    url: 'https://floridapolebarn.com/enclosed-pole-barns',
+    seller: { '@id': 'https://floridapolebarn.com/#business' },
+  })),
+}
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+}
+
 export default function EnclosedPoleBarnsPage() {
   return (
     <>
+      <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={offerCatalogSchema} />
+      <JsonLd data={faqSchema} />
       {/* Hero */}
       <div className="relative bg-brand-900 py-20 overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-30"
-          style={{ backgroundImage: "url('/IMG_9003.jpg')", backgroundSize: 'cover', backgroundPosition: 'center 62%' }}
-        />
+        <div className="absolute inset-0 opacity-30">
+          <Image
+            src="/IMG_9003.jpg"
+            alt=""
+            fill
+            priority
+            className="object-cover"
+            style={{ objectPosition: 'center 62%' }}
+            sizes="100vw"
+          />
+        </div>
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <nav className="text-sm text-brand-400 mb-6">
             <Link href="/" className="hover:text-brand-200">Home</Link>
@@ -180,7 +229,7 @@ export default function EnclosedPoleBarnsPage() {
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold text-gray-900">Enclosed Pole Barn FAQ</h2>
           </div>
-          <FAQAccordion items={faqs} schema />
+          <FAQAccordion items={faqs} />
         </div>
       </section>
 

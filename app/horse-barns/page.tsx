@@ -17,6 +17,7 @@ export const metadata: Metadata = {
 export default function HorseBarnsPage() {
   return (
     <UseCasePage
+      canonical="https://floridapolebarn.com/horse-barns"
       hero={{
         eyebrow: 'Florida Horse Owners',
         title: 'Horse Barns in Florida',

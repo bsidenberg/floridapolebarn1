@@ -17,6 +17,7 @@ export const metadata: Metadata = {
 export default function WorkshopGaragePage() {
   return (
     <UseCasePage
+      canonical="https://floridapolebarn.com/workshop-garage"
       hero={{
         eyebrow: 'Florida Homeowners & Hobbyists',
         title: 'Pole Barn Workshop & Garage Florida',

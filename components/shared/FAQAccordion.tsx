@@ -6,35 +6,13 @@ import type { FAQItem } from '@/lib/types'
 
 interface FAQAccordionProps {
   items: FAQItem[]
-  schema?: boolean
 }
 
-export default function FAQAccordion({ items, schema = false }: FAQAccordionProps) {
+export default function FAQAccordion({ items }: FAQAccordionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
-
-  const faqSchema = schema
-    ? {
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: items.map((item) => ({
-          '@type': 'Question',
-          name: item.question,
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: item.answer,
-          },
-        })),
-      }
-    : null
 
   return (
     <>
-      {faqSchema && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        />
-      )}
       <div className="divide-y divide-gray-200 rounded-xl border border-gray-200 overflow-hidden">
         {items.map((item, i) => (
           <div key={i} className="bg-white">

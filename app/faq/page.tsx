@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import FAQAccordion from '@/components/shared/FAQAccordion'
 import CTABanner from '@/components/home/CTABanner'
+import JsonLd from '@/components/JsonLd'
 import { FAQS, COMPANY } from '@/lib/constants'
 
 export const metadata: Metadata = {
@@ -26,13 +27,21 @@ const breadcrumbSchema = {
   ],
 }
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+}
+
 export default function FAQPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
+      <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={faqSchema} />
       {/* Hero */}
       <div className="bg-brand-900 py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -51,7 +60,7 @@ export default function FAQPage() {
       {/* FAQs */}
       <section className="section-padding bg-white">
         <div className="mx-auto max-w-4xl">
-          <FAQAccordion items={FAQS} schema />
+          <FAQAccordion items={FAQS} />
 
           {/* Still have questions */}
           <div className="mt-10 rounded-xl bg-brand-50 border border-brand-200 p-8 text-center">

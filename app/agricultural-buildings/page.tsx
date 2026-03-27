@@ -17,6 +17,7 @@ export const metadata: Metadata = {
 export default function AgriculturalBuildingsPage() {
   return (
     <UseCasePage
+      canonical="https://floridapolebarn.com/agricultural-buildings"
       hero={{
         eyebrow: 'Florida Farmers & Ranchers',
         title: 'Agricultural Buildings in Florida',

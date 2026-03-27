@@ -17,6 +17,7 @@ export const metadata: Metadata = {
 export default function EquipmentStoragePage() {
   return (
     <UseCasePage
+      canonical="https://floridapolebarn.com/equipment-storage"
       hero={{
         eyebrow: 'Farmers & Property Owners',
         title: 'Equipment Storage Buildings in Florida',

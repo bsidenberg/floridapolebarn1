@@ -3,10 +3,12 @@ import Link from 'next/link'
 import CTABanner from '@/components/home/CTABanner'
 import TrustBar from '@/components/ui/TrustBar'
 import FAQAccordion from '@/components/shared/FAQAccordion'
+import JsonLd from '@/components/JsonLd'
 import { COMPANY } from '@/lib/constants'
 import type { FAQItem } from '@/lib/types'
 
 interface UseCasePageProps {
+  canonical: string
   hero: {
     eyebrow: string
     title: string
@@ -26,15 +28,55 @@ interface UseCasePageProps {
   relatedLinks: { label: string; href: string }[]
 }
 
-export default function UseCasePage({ hero, intro, features, faqs, relatedLinks }: UseCasePageProps) {
+export default function UseCasePage({ canonical, hero, intro, features, faqs, relatedLinks }: UseCasePageProps) {
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://floridapolebarn.com' },
+      { '@type': 'ListItem', position: 2, name: hero.title, item: canonical },
+    ],
+  }
+
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: hero.title,
+    description: intro.paragraphs[0],
+    provider: { '@id': 'https://floridapolebarn.com/#business' },
+    areaServed: { '@type': 'State', name: 'Florida' },
+    serviceType: 'Construction',
+    url: canonical,
+  }
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: { '@type': 'Answer', text: item.answer },
+    })),
+  }
+
   return (
     <>
+      <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={serviceSchema} />
+      <JsonLd data={faqSchema} />
       {/* Hero */}
       <div className="relative bg-brand-900 py-20 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover opacity-30"
-          style={{ backgroundImage: `url('${hero.image}')`, backgroundPosition: hero.imagePosition ?? 'center' }}
-        />
+        <div className="absolute inset-0 opacity-30">
+          <Image
+            src={hero.image}
+            alt=""
+            fill
+            priority
+            className="object-cover"
+            style={{ objectPosition: hero.imagePosition ?? 'center' }}
+            sizes="100vw"
+          />
+        </div>
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <nav className="text-sm text-brand-400 mb-6">
             <Link href="/" className="hover:text-brand-200">Home</Link>
@@ -123,7 +165,7 @@ export default function UseCasePage({ hero, intro, features, faqs, relatedLinks 
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold text-gray-900">Frequently Asked Questions</h2>
           </div>
-          <FAQAccordion items={faqs} schema />
+          <FAQAccordion items={faqs} />
         </div>
       </section>
 
