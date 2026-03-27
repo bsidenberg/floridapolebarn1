@@ -381,7 +381,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   if (!post) return {}
 
   return {
-    title: `${post.title} | Florida Pole Barn`,
+    title: { absolute: `${post.title} | Florida Pole Barn` },
     description: post.description,
     alternates: { canonical: `https://floridapolebarn.com/blog/${post.slug}` },
     openGraph: {

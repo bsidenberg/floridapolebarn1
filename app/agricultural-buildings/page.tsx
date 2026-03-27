@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import UseCasePage from '@/components/shared/UseCasePage'
 
 export const metadata: Metadata = {
-  title: 'Agricultural Buildings Florida | Farm Barn Construction — Florida Pole Barn',
+  title: 'Agricultural Buildings Florida | Farm Barn Construction',
   description:
     'Custom agricultural buildings across Florida. Pole barn farm structures for hay storage, livestock, crop storage, and farm operations. Free quote from Central FL.',
   alternates: { canonical: 'https://floridapolebarn.com/agricultural-buildings' },

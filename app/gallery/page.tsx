@@ -3,7 +3,7 @@ import GalleryGrid from '@/components/gallery/GalleryGrid'
 import CTABanner from '@/components/home/CTABanner'
 
 export const metadata: Metadata = {
-  title: 'Project Gallery — Pole Barn Photos | Florida Pole Barn',
+  title: 'Project Gallery — Pole Barn Photos',
   description:
     'Browse completed pole barn projects across Florida — horse barns, equipment storage, RV shelters, workshops, and agricultural buildings. Get inspired for your build.',
   alternates: {

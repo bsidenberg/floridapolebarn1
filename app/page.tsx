@@ -11,7 +11,7 @@ import TrustSignals from '@/components/home/TrustSignals'
 import CTABanner from '@/components/home/CTABanner'
 
 export const metadata: Metadata = {
-  title: 'Pole Barn Kits & Building Florida | Florida Pole Barn — Central FL',
+  title: { absolute: 'Pole Barn Kits & Building Florida | Florida Pole Barn — Central FL' },
   description:
     'Custom pole barn kits and installation across all of Florida. Horse barns, equipment storage, RV shelters, workshops. 140+ MPH rated, Made in USA. Free quote from Clermont, FL.',
   alternates: {

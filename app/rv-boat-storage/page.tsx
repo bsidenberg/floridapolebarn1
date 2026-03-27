@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import UseCasePage from '@/components/shared/UseCasePage'
 
 export const metadata: Metadata = {
-  title: 'RV & Boat Storage Buildings Florida | Covered Pole Barn Shelter — Florida Pole Barn',
+  title: 'RV & Boat Storage Buildings Florida | Covered Pole Barn Shelter',
   description:
     'Custom RV and boat storage buildings across Florida. Open pole barn shelters with tall clearance and drive-through access. Protect your investment from Florida sun and storms.',
   alternates: { canonical: 'https://floridapolebarn.com/rv-boat-storage' },

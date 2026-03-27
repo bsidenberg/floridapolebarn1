@@ -4,7 +4,7 @@ import Image from 'next/image'
 import CTABanner from '@/components/home/CTABanner'
 
 export const metadata: Metadata = {
-  title: 'Pole Barn Blog — Florida Tips & Guides | Florida Pole Barn',
+  title: 'Pole Barn Blog — Florida Tips & Guides',
   description:
     'Pole barn guides, cost breakdowns, permit info, and tips for Florida property owners. Learn everything you need to know before building your pole barn.',
   alternates: { canonical: 'https://floridapolebarn.com/blog' },
@@ -22,7 +22,7 @@ const posts = [
     title: 'How Much Does a Pole Barn Cost in Florida? (2026 Guide)',
     excerpt:
       'Complete breakdown of pole barn costs in Florida — kit prices, installation, concrete, permits, and what to budget. Real numbers from a Florida builder.',
-    date: '2025-01-15',
+    date: '2026-03-27',
     readTime: '6 min read',
     category: 'Cost Guide',
     image: '/IMG_9001.jpg',

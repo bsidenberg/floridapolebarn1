@@ -9,7 +9,7 @@ import JsonLd from '@/components/JsonLd'
 import { COMPANY, BARN_SIZES } from '@/lib/constants'
 
 export const metadata: Metadata = {
-  title: 'Open Pole Barn Kits Florida | Prices & Sizes — Florida Pole Barn',
+  title: 'Open Pole Barn Kits Florida | Prices & Sizes',
   description:
     'Open pole barn kits built for Florida weather. Pressure-treated posts, custom steel trusses, metal roofing. Sizes from 20×24 to 50×96. 140+ MPH rated. Free quote.',
   alternates: { canonical: 'https://floridapolebarn.com/open-pole-barns' },

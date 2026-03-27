@@ -6,7 +6,7 @@ import JsonLd from '@/components/JsonLd'
 import { FAQS, COMPANY } from '@/lib/constants'
 
 export const metadata: Metadata = {
-  title: 'Pole Barn FAQ Florida | Common Questions Answered — Florida Pole Barn',
+  title: 'Pole Barn FAQ Florida | Common Questions Answered',
   description:
     'Answers to common questions about pole barns in Florida — cost, permits, sizes, materials, timeline, and more. From Florida Pole Barn, your local Central Florida builder.',
   alternates: { canonical: 'https://floridapolebarn.com/faq' },

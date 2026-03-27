@@ -9,7 +9,7 @@ import JsonLd from '@/components/JsonLd'
 import { COMPANY, BARN_SIZES } from '@/lib/constants'
 
 export const metadata: Metadata = {
-  title: 'Enclosed Pole Barn Kits Florida | Prices & Sizes — Florida Pole Barn',
+  title: 'Enclosed Pole Barn Kits Florida | Prices & Sizes',
   description:
     'Enclosed pole barn kits with metal siding, doors, and full weather protection. Horse barns, workshops, storage. Sizes from 20×24 to 50×96. 140+ MPH rated. Free quote.',
   alternates: { canonical: 'https://floridapolebarn.com/enclosed-pole-barns' },

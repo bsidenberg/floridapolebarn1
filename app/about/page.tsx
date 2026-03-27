@@ -6,7 +6,7 @@ import TrustBar from '@/components/ui/TrustBar'
 import { COMPANY } from '@/lib/constants'
 
 export const metadata: Metadata = {
-  title: 'About Florida Pole Barn | Local Central Florida Pole Barn Builder',
+  title: { absolute: 'About Florida Pole Barn | Central Florida Pole Barn Builder' },
   description:
     'Florida Pole Barn is a local Central Florida builder specializing in custom pole barn kits and installation serving all of Florida. Horse barns, equipment storage, workshops, and more.',
   alternates: { canonical: 'https://floridapolebarn.com/about' },

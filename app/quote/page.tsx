@@ -4,7 +4,7 @@ import QuoteForm from '@/components/forms/QuoteForm'
 import { COMPANY } from '@/lib/constants'
 
 export const metadata: Metadata = {
-  title: 'Request a Free Pole Barn Quote — Florida Pole Barn',
+  title: 'Request a Free Pole Barn Quote',
   description:
     'Get a free, no-obligation quote for your pole barn in Florida. Horse barns, equipment storage, RV shelters, workshops, and more. We call you within 1 business day.',
   alternates: {

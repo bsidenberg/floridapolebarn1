@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import UseCasePage from '@/components/shared/UseCasePage'
 
 export const metadata: Metadata = {
-  title: 'Horse Barns Florida | Custom Pole Barn Horse Shelters — Florida Pole Barn',
+  title: 'Horse Barns Florida | Custom Pole Barn Horse Shelters',
   description:
     'Custom horse barns in Florida. Ventilated, durable pole barn horse shelters with stall options. Built for Florida\'s heat and humidity. Get a free quote today.',
   alternates: { canonical: 'https://floridapolebarn.com/horse-barns' },

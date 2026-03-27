@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import UseCasePage from '@/components/shared/UseCasePage'
 
 export const metadata: Metadata = {
-  title: 'Pole Barn Workshop & Garage Florida | Man Cave Buildings — Florida Pole Barn',
+  title: 'Pole Barn Workshop & Garage Florida | Man Cave Buildings',
   description:
     'Custom pole barn workshops, garages, and man caves across Florida. Enclosed metal buildings with power, insulation options, and custom layouts. Free quote.',
   alternates: { canonical: 'https://floridapolebarn.com/workshop-garage' },

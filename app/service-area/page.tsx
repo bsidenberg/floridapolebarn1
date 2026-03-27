@@ -4,7 +4,7 @@ import CTABanner from '@/components/home/CTABanner'
 import { COMPANY } from '@/lib/constants'
 
 export const metadata: Metadata = {
-  title: 'Pole Barn Service Area — All of Florida | Florida Pole Barn',
+  title: 'Pole Barn Service Area — All of Florida',
   description:
     'Florida Pole Barn serves the entire state of Florida. Based in Clermont, Central Florida. We build horse barns, equipment storage, workshops, and agricultural buildings statewide.',
   alternates: { canonical: 'https://floridapolebarn.com/service-area' },
