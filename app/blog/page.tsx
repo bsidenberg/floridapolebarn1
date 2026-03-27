@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 const posts = [
   {
     slug: 'how-much-does-a-pole-barn-cost-in-florida',
-    title: 'How Much Does a Pole Barn Cost in Florida? (2025 Guide)',
+    title: 'How Much Does a Pole Barn Cost in Florida? (2026 Guide)',
     excerpt:
       'Complete breakdown of pole barn costs in Florida — kit prices, installation, concrete, permits, and what to budget. Real numbers from a Florida builder.',
     date: '2025-01-15',

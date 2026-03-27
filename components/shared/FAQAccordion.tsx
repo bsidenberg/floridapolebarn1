@@ -34,11 +34,12 @@ export default function FAQAccordion({ items }: FAQAccordionProps) {
                 <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd" />
               </svg>
             </button>
-            {openIndex === i && (
-              <div className="px-5 pb-4 text-sm text-gray-600 leading-relaxed border-t border-gray-100 pt-3">
-                {item.answer}
-              </div>
-            )}
+            <div
+              className="px-5 text-sm text-gray-600 leading-relaxed border-t border-gray-100 overflow-hidden transition-all duration-200"
+              style={{ maxHeight: openIndex === i ? '1000px' : '0', paddingTop: openIndex === i ? '12px' : '0', paddingBottom: openIndex === i ? '16px' : '0', borderTopWidth: openIndex === i ? '1px' : '0' }}
+            >
+              {item.answer}
+            </div>
           </div>
         ))}
       </div>

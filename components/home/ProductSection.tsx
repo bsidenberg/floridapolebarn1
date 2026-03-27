@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import SectionHeader from '@/components/ui/SectionHeader'
-import { BARN_SIZES } from '@/lib/constants'
 
 const openBarnFeatures = [
   'Open sides for maximum airflow',
@@ -19,7 +18,6 @@ const products = [
     description:
       'Open-sided structures with a full roof — maximum ventilation, natural light, and fast construction. Ideal for equipment storage, RV shelters, and covered workspace.',
     features: openBarnFeatures,
-    dynamicPrice: true,
     badge: 'Most Popular',
     badgeColor: 'bg-accent-500',
     imageClassName: 'object-cover group-hover:scale-105 transition-transform duration-500',
@@ -44,7 +42,6 @@ const products = [
   },
 ]
 
-const firstSize = BARN_SIZES[0]
 
 export default function ProductSection() {
   return (
@@ -92,14 +89,6 @@ export default function ProductSection() {
                       {feat}
                     </li>
                   ))}
-                  {'dynamicPrice' in product && product.dynamicPrice && (
-                    <li className="flex items-center gap-2 text-sm text-gray-700">
-                      <svg className="h-4 w-4 text-brand-600 shrink-0" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
-                      </svg>
-                      Starting from ${firstSize.startingPrice?.toLocaleString()}
-                    </li>
-                  )}
                 </ul>
 
                 <div className="mt-6 flex gap-3">

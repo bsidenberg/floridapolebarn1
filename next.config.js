@@ -25,12 +25,12 @@ const nextConfig = {
       },
       {
         source: '/customizable-pole-barns',
-        destination: '/',
+        destination: '/open-pole-barns',
         permanent: true,
       },
       {
         source: '/customizable-pole-barns/',
-        destination: '/',
+        destination: '/open-pole-barns',
         permanent: true,
       },
       {

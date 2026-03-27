@@ -304,7 +304,7 @@ export const FAQS: FAQItem[] = [
   {
     question: 'How much does a pole barn cost in Florida?',
     answer:
-      'Kit prices start at $2,899 for a 20×24 and go up based on size and features. See our pricing table for exact kit prices on our most popular sizes. For custom sizes, contact us for a free quote.',
+      'Pole barn kit costs in Florida vary based on size, wall height, and whether the barn is open or enclosed. Contact us for a free quote — we\'ll give you exact pricing for your specific project.',
   },
   {
     question: 'Do you install the barn or just provide the kit?',

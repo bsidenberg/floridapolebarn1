@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://floridapolebarn.com/open-pole-barns' },
   openGraph: {
     title: 'Open Pole Barn Kits Florida | Prices & Sizes',
-    description: 'Open pole barn kits built for Florida weather. Sizes from 20×24 to 50×96. Pressure-treated posts, custom steel trusses, 140+ MPH rated. Starting from $2,326. Free quote.',
+    description: 'Open pole barn kits built for Florida weather. Sizes from 20×24 to 50×96. Pressure-treated posts, custom steel trusses, 140+ MPH rated. Free quote.',
     url: 'https://floridapolebarn.com/open-pole-barns',
     images: [{ url: '/Open.jpg', width: 1200, height: 630, alt: 'Open pole barn kit in Florida with metal roof' }],
   },

@@ -22,11 +22,11 @@ interface Post {
 const POSTS: Post[] = [
   {
     slug: 'how-much-does-a-pole-barn-cost-in-florida',
-    title: 'How Much Does a Pole Barn Cost in Florida? (2025 Guide)',
+    title: 'How Much Does a Pole Barn Cost in Florida? (2026 Guide)',
     description:
       'Complete breakdown of pole barn costs in Florida — kit prices, installation, concrete, permits, and what to budget.',
     date: '2025-01-15',
-    updatedDate: '2025-03-01',
+    updatedDate: '2026-03-26',
     author: 'Florida Pole Barn',
     readTime: '6 min read',
     category: 'Cost Guide',
@@ -37,13 +37,9 @@ If you're searching for pole barn costs in Florida, you've probably seen a wide 
 
 ### Kit Prices (Materials Only)
 
-The kit — posts, trusses, roofing, hardware — is the foundation of your cost:
+The kit — posts, trusses, roofing, hardware — is the foundation of your cost. Kit pricing varies based on size, wall height, open vs. enclosed configuration, and current material costs.
 
-- **20×24 (480 sq ft):** Starting around $2,899
-- **30×36 (1,080 sq ft):** Starting around $3,048
-- **40×48 (1,920 sq ft):** Starting around $4,689
-- **40×60 (2,400 sq ft):** Starting around $6,954
-- **50×60 and larger:** Request a quote
+*Prices vary — contact us for current pricing on your specific size and configuration. We respond within 1 business day with an exact quote.*
 
 These are kit prices — materials only. Installation and site work are separate.
 
@@ -63,16 +59,11 @@ Professional installation typically runs $3–$6 per square foot for labor depen
 
 **Electrical:** Basic electrical rough-in typically runs $2,000–$6,000 by a licensed electrician.
 
-### Total Budget Estimates
+### Total Budget Framework
 
-| Building Size | Kit | Install | Total w/ Concrete |
-|---|---|---|---|
-| 20×24 open | $2,899 | ~$2,000 | ~$8,000 |
-| 30×36 open | $3,048 | ~$3,500 | ~$15,000 |
-| 40×48 enclosed | ~$7,000 | ~$8,000 | ~$30,000 |
-| 40×60 enclosed | ~$9,000 | ~$12,000 | ~$38,000 |
+When budgeting your full project, factor in: kit materials, installation labor, concrete slab (if applicable), site prep, permits, doors, and any electrical or finishing work. Total project costs scale significantly with size and whether the barn is open or enclosed.
 
-*These are estimates. Get a free quote for your specific project.*
+*Kit prices vary — contact us for a current quote on your specific size. We'll give you an exact number, not a range.*
 
 ### Why Florida Prices May Differ From What You See Online
 
