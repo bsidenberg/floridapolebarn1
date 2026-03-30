@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import { sendQuoteNotification } from '@/lib/email'
+import { supabase } from '@/lib/supabase'
 
 const schema = z.object({
   serviceType: z.enum(['kit-only', 'kit-install']),
@@ -21,11 +22,37 @@ export async function POST(req: NextRequest) {
     const body = await req.json()
     const data = schema.parse(body)
 
+    const {
+      utm_source, utm_medium, utm_campaign, utm_term, utm_content,
+      lead_source, referrer_url, landing_page,
+    } = body
+
     const result = await sendQuoteNotification(data)
 
     if (!result.success) {
       return NextResponse.json({ success: false, error: result.error }, { status: 500 })
     }
+
+    supabase
+      .from('leads')
+      .insert({
+        name:        `${data.firstName} ${data.lastName}`,
+        email:       data.email,
+        phone:       data.phone,
+        message:     data.notes ?? null,
+        status:      'new_lead',
+        utm_source:  utm_source  ?? null,
+        utm_medium:  utm_medium  ?? null,
+        utm_campaign: utm_campaign ?? null,
+        utm_term:    utm_term    ?? null,
+        utm_content: utm_content ?? null,
+        lead_source: lead_source ?? null,
+        referrer_url: referrer_url ?? null,
+        landing_page: landing_page ?? null,
+      })
+      .then(({ error }) => {
+        if (error) console.error('Supabase lead insert error:', error)
+      })
 
     return NextResponse.json({ success: true })
   } catch (err) {

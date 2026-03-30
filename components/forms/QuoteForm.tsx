@@ -7,6 +7,7 @@ import { z } from 'zod'
 import { BARN_SIZES } from '@/lib/constants'
 import { cn } from '@/lib/utils'
 import { pushEvent } from '@/lib/gtm'
+import { getStoredUtmData } from '@/lib/utm'
 
 const schema = z.object({
   serviceType: z.enum(['kit-only', 'kit-install'], { required_error: 'Please select a service type' }),
@@ -108,10 +109,11 @@ export default function QuoteForm() {
     setSubmitError(null)
 
     try {
+      const utmData = getStoredUtmData()
       const res = await fetch('/api/quote', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ ...data, ...utmData }),
       })
 
       const json = await res.json()
