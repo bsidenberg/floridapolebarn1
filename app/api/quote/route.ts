@@ -33,26 +33,25 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ success: false, error: result.error }, { status: 500 })
     }
 
-    getSupabaseClient()
+    const { error: supabaseError } = await getSupabaseClient()
       .from('leads')
       .insert({
-        name:        `${data.firstName} ${data.lastName}`,
-        email:       data.email,
-        phone:       data.phone,
-        message:     data.notes ?? null,
-        status:      'new_lead',
-        utm_source:  utm_source  ?? null,
-        utm_medium:  utm_medium  ?? null,
+        name:         `${data.firstName} ${data.lastName}`,
+        email:        data.email,
+        phone:        data.phone,
+        message:      data.notes ?? null,
+        status:       'new_lead',
+        utm_source:   utm_source   ?? null,
+        utm_medium:   utm_medium   ?? null,
         utm_campaign: utm_campaign ?? null,
-        utm_term:    utm_term    ?? null,
-        utm_content: utm_content ?? null,
-        lead_source: lead_source ?? null,
+        utm_term:     utm_term     ?? null,
+        utm_content:  utm_content  ?? null,
+        lead_source:  lead_source  ?? null,
         referrer_url: referrer_url ?? null,
         landing_page: landing_page ?? null,
       })
-      .then(({ error }) => {
-        if (error) console.error('Supabase lead insert error:', error)
-      })
+
+    if (supabaseError) console.error('Supabase lead insert error:', supabaseError)
 
     return NextResponse.json({ success: true })
   } catch (err) {
