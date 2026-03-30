@@ -36,11 +36,14 @@ export async function POST(req: NextRequest) {
     const { error: supabaseError } = await getSupabaseClient()
       .from('leads')
       .insert({
-        name:         `${data.firstName} ${data.lastName}`,
+        first_name:   data.firstName,
+        last_name:    data.lastName,
         email:        data.email,
         phone:        data.phone,
-        message:      data.notes ?? null,
-        status:       'new_lead',
+        notes:        data.notes ?? null,
+        zip:          data.zipCode ?? null,
+        stage:        'new',
+        source:       lead_source ?? null,
         utm_source:   utm_source   ?? null,
         utm_medium:   utm_medium   ?? null,
         utm_campaign: utm_campaign ?? null,
