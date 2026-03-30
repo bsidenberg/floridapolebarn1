@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import { sendQuoteNotification } from '@/lib/email'
-import { supabase } from '@/lib/supabase'
+import { getSupabaseClient } from '@/lib/supabase'
 
 const schema = z.object({
   serviceType: z.enum(['kit-only', 'kit-install']),
@@ -33,7 +33,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ success: false, error: result.error }, { status: 500 })
     }
 
-    supabase
+    getSupabaseClient()
       .from('leads')
       .insert({
         name:        `${data.firstName} ${data.lastName}`,
