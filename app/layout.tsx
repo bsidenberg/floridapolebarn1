@@ -44,6 +44,10 @@ export const metadata: Metadata = {
     'pole barn installation Florida',
   ],
   authors: [{ name: 'Florida Pole Barn' }],
+  icons: {
+    icon: '/icon.png',
+    shortcut: '/favicon.ico',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
