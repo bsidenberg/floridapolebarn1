@@ -25,7 +25,7 @@ const products = [
   {
     title: 'Enclosed Pole Barn Kits',
     href: '/enclosed-pole-barns',
-    image: '/Marina Blue.png',
+    image: '/Clepper.png',
     imageClassName: 'object-cover object-center group-hover:scale-105 transition-transform duration-500',
     description:
       'Fully enclosed with metal sidewalls, end walls, and doors — weather-tight protection for horses, livestock, high-value equipment, workshops, and storage.',
