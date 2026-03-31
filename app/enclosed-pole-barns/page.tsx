@@ -122,14 +122,14 @@ export default function EnclosedPoleBarnsPage() {
       <JsonLd data={faqSchema} />
       {/* Hero */}
       <div className="relative bg-brand-900 py-12 overflow-hidden">
-        <div className="absolute inset-0 opacity-30">
+        <div className="absolute inset-0 opacity-20">
           <Image
             src="/Clepper2.png"
             alt="Enclosed pole barn kit with metal siding and doors in Florida"
             fill
             priority
             className="object-cover"
-            style={{ objectPosition: 'center 62%' }}
+            style={{ objectPosition: 'center 45%' }}
             sizes="100vw"
           />
         </div>
