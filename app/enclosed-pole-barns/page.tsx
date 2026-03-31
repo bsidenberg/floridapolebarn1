@@ -128,8 +128,8 @@ export default function EnclosedPoleBarnsPage() {
             alt="Enclosed pole barn kit with metal siding and doors in Florida"
             fill
             priority
-            className="object-cover"
-            style={{ objectPosition: 'center 45%' }}
+            className="object-contain"
+            style={{ objectPosition: 'center center' }}
             sizes="100vw"
           />
         </div>
