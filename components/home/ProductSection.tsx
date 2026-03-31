@@ -68,7 +68,7 @@ export default function ProductSection() {
               <div className="relative h-56 bg-gray-200 overflow-hidden">
                 <Image
                   src={product.image}
-                  alt={product.title}
+                  alt={product.title === 'Open Pole Barn Kits' ? 'Open pole barn kit with metal roof in Central Florida' : 'Enclosed pole barn kit with metal siding in Central Florida'}
                   fill
                   className={'imageClassName' in product && product.imageClassName ? product.imageClassName : 'object-cover group-hover:scale-105 transition-transform duration-500'}
                   sizes="(max-width: 1024px) 100vw, 50vw"

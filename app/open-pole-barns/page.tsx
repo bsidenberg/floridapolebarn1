@@ -125,7 +125,7 @@ export default function OpenPoleBarnsPage() {
         <div className="absolute inset-0 opacity-30">
           <Image
             src="/Open.jpg"
-            alt=""
+            alt="Open pole barn kit with metal roof in Florida"
             fill
             priority
             className="object-cover object-center"

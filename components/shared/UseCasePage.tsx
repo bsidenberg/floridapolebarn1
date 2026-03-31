@@ -14,6 +14,7 @@ interface UseCasePageProps {
     title: string
     subtitle: string
     image: string
+    imageAlt?: string
     imagePosition?: string
   }
   intro: {
@@ -69,7 +70,7 @@ export default function UseCasePage({ canonical, hero, intro, features, faqs, re
         <div className="absolute inset-0 opacity-30">
           <Image
             src={hero.image}
-            alt=""
+            alt={hero.imageAlt ?? ''}
             fill
             priority
             className="object-cover"

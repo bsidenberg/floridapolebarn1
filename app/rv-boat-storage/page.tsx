@@ -24,6 +24,7 @@ export default function RVBoatStoragePage() {
         subtitle:
           'Protect your RV, boat, or recreational vehicle from Florida\'s relentless sun, UV damage, and storm season — with a custom-built pole barn shelter.',
         image: '/IMG_8588.jpg',
+        imageAlt: 'Open pole barn RV and boat storage shelter in Florida',
       }}
       intro={{
         heading: 'Your RV and Boat Deserve More Than an Open Lot',

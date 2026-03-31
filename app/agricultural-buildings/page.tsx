@@ -24,6 +24,7 @@ export default function AgriculturalBuildingsPage() {
         subtitle:
           'Durable farm structures for hay storage, livestock housing, crop storage, and agricultural operations. Built for Florida farms.',
         image: '/IMG_8998.jpg',
+        imageAlt: 'Agricultural pole barn farm building in Florida',
         imagePosition: 'center 45%',
       }}
       intro={{

@@ -24,6 +24,7 @@ export default function WorkshopGaragePage() {
         subtitle:
           'Build the ultimate garage, workshop, or man cave on your property. Enclosed pole barns offer affordable, spacious, fully customizable buildings.',
         image: '/Jeffs.jpeg',
+        imageAlt: 'Enclosed pole barn workshop and garage in Central Florida',
       }}
       intro={{
         heading: 'Your Property. Your Workshop. Your Rules.',

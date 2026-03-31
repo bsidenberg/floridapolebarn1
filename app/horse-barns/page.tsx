@@ -24,6 +24,7 @@ export default function HorseBarnsPage() {
         subtitle:
           'Ventilated, durable pole barn horse shelters designed for Florida\'s heat, humidity, and storm season. Custom stall layouts available.',
         image: '/IMG_6667.jpg',
+        imageAlt: 'Custom horse barn pole barn in Central Florida',
       }}
       intro={{
         heading: 'Horse Barns Built for the Florida Climate',

@@ -24,6 +24,7 @@ export default function EquipmentStoragePage() {
         subtitle:
           'Stop leaving your tractors, ATVs, and farm equipment exposed to Florida sun and storms. A pole barn pays for itself by protecting your investment.',
         image: '/IMG_6911.jpg',
+        imageAlt: 'Open pole barn equipment storage building in Florida',
       }}
       intro={{
         heading: 'Protect Your Equipment from Florida\'s Weather',
