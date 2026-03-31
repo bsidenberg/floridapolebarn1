@@ -121,7 +121,7 @@ export default function EnclosedPoleBarnsPage() {
       <JsonLd data={offerCatalogSchema} />
       <JsonLd data={faqSchema} />
       {/* Hero */}
-      <div className="relative bg-brand-900 py-20 overflow-hidden">
+      <div className="relative bg-brand-900 py-12 overflow-hidden">
         <div className="absolute inset-0 opacity-30">
           <Image
             src="/Clepper2.png"
@@ -129,7 +129,7 @@ export default function EnclosedPoleBarnsPage() {
             fill
             priority
             className="object-cover"
-            style={{ objectPosition: 'center 20%' }}
+            style={{ objectPosition: 'center 62%' }}
             sizes="100vw"
           />
         </div>
