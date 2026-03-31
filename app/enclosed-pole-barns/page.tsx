@@ -129,7 +129,7 @@ export default function EnclosedPoleBarnsPage() {
             fill
             priority
             className="object-cover"
-            style={{ objectPosition: 'center 62%' }}
+            style={{ objectPosition: 'center 20%' }}
             sizes="100vw"
           />
         </div>
