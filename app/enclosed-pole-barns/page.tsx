@@ -124,7 +124,7 @@ export default function EnclosedPoleBarnsPage() {
       <div className="relative bg-brand-900 py-20 overflow-hidden">
         <div className="absolute inset-0 opacity-30">
           <Image
-            src="/1000085088.JPG"
+            src="/Clepper2.png"
             alt=""
             fill
             priority
