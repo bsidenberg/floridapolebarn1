@@ -124,7 +124,7 @@ export default function EnclosedPoleBarnsPage() {
       <div className="relative bg-brand-900 py-12 overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <Image
-            src="/Clepper2.png"
+            src="/Clepper3.png"
             alt="Enclosed pole barn kit with metal siding and doors in Florida"
             fill
             priority
