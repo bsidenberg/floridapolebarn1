@@ -8,6 +8,8 @@ const schema = z.object({
   buildingType: z.enum(['open', 'enclosed', 'unsure']),
   size: z.string().min(1),
   primaryUses: z.array(z.string()).min(1),
+  city: z.string().min(1),
+  state: z.string().min(1),
   zipCode: z.string().min(5).max(10),
   timeline: z.string().min(1),
   firstName: z.string().min(1),

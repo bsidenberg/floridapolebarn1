@@ -43,6 +43,8 @@ export interface QuoteFormData {
   size: string
   // Step 2
   primaryUses: string[]
+  city: string
+  state: string
   zipCode: string
   timeline: string
   engineeringOption?: 'plans-only' | 'plans-and-permits'

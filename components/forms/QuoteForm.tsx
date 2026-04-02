@@ -14,6 +14,8 @@ const schema = z.object({
   buildingType: z.enum(['open', 'enclosed', 'unsure'], { required_error: 'Please select a building type' }),
   size: z.string().min(1, 'Please select a size'),
   primaryUses: z.array(z.string()).min(1, 'Please select at least one use'),
+  city: z.string().min(1, 'City is required'),
+  state: z.string().min(1, 'State is required'),
   zipCode: z.string().min(5, 'Please enter a valid zip code').max(10),
   timeline: z.string().min(1, 'Please select a timeline'),
   firstName: z.string().min(1, 'First name is required'),
@@ -80,6 +82,7 @@ export default function QuoteForm() {
     resolver: zodResolver(schema),
     defaultValues: {
       primaryUses: [],
+      state: 'FL',
     },
   })
 
@@ -104,7 +107,7 @@ export default function QuoteForm() {
   const nextStep = async () => {
     let fieldsToValidate: (keyof FormData)[] = []
     if (step === 0) fieldsToValidate = ['serviceType', 'buildingType', 'size']
-    if (step === 1) fieldsToValidate = ['primaryUses', 'zipCode', 'timeline']
+    if (step === 1) fieldsToValidate = ['primaryUses', 'city', 'state', 'zipCode', 'timeline']
 
     const valid = await trigger(fieldsToValidate)
     if (valid) setStep((s) => s + 1)
@@ -320,10 +323,46 @@ export default function QuoteForm() {
               )}
             </div>
 
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
+              <div className="col-span-2 sm:col-span-1">
+                <label htmlFor="city" className="block text-sm font-semibold text-gray-700 mb-1.5">
+                  City <span className="text-red-500">*</span>
+                </label>
+                <input
+                  id="city"
+                  type="text"
+                  {...register('city')}
+                  placeholder="Clermont"
+                  className={cn(
+                    'w-full rounded-lg border px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500',
+                    errors.city ? 'border-red-400' : 'border-gray-300'
+                  )}
+                />
+                {errors.city && <p className="mt-1 text-sm text-red-600">{errors.city.message}</p>}
+              </div>
+
+              <div>
+                <label htmlFor="state" className="block text-sm font-semibold text-gray-700 mb-1.5">
+                  State <span className="text-red-500">*</span>
+                </label>
+                <select
+                  id="state"
+                  {...register('state')}
+                  className={cn(
+                    'w-full rounded-lg border px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 bg-white',
+                    errors.state ? 'border-red-400' : 'border-gray-300'
+                  )}
+                >
+                  {['AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA','HI','ID','IL','IN','IA','KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ','NM','NY','NC','ND','OH','OK','OR','PA','RI','SC','SD','TN','TX','UT','VT','VA','WA','WV','WI','WY'].map((s) => (
+                    <option key={s} value={s}>{s}</option>
+                  ))}
+                </select>
+                {errors.state && <p className="mt-1 text-sm text-red-600">{errors.state.message}</p>}
+              </div>
+
               <div>
                 <label htmlFor="zipCode" className="block text-sm font-semibold text-gray-700 mb-1.5">
-                  Property Zip Code <span className="text-red-500">*</span>
+                  Zip Code <span className="text-red-500">*</span>
                 </label>
                 <input
                   id="zipCode"
@@ -339,26 +378,26 @@ export default function QuoteForm() {
                 />
                 {errors.zipCode && <p className="mt-1 text-sm text-red-600">{errors.zipCode.message}</p>}
               </div>
+            </div>
 
-              <div>
-                <label htmlFor="timeline" className="block text-sm font-semibold text-gray-700 mb-1.5">
-                  Desired Timeline <span className="text-red-500">*</span>
-                </label>
-                <select
-                  id="timeline"
-                  {...register('timeline')}
-                  className={cn(
-                    'w-full rounded-lg border px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 bg-white',
-                    errors.timeline ? 'border-red-400' : 'border-gray-300'
-                  )}
-                >
-                  <option value="">Select timeline...</option>
-                  {TIMELINE_OPTIONS.map((opt) => (
-                    <option key={opt.value} value={opt.value}>{opt.label}</option>
-                  ))}
-                </select>
-                {errors.timeline && <p className="mt-1 text-sm text-red-600">{errors.timeline.message}</p>}
-              </div>
+            <div>
+              <label htmlFor="timeline" className="block text-sm font-semibold text-gray-700 mb-1.5">
+                Desired Timeline <span className="text-red-500">*</span>
+              </label>
+              <select
+                id="timeline"
+                {...register('timeline')}
+                className={cn(
+                  'w-full rounded-lg border px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 bg-white',
+                  errors.timeline ? 'border-red-400' : 'border-gray-300'
+                )}
+              >
+                <option value="">Select timeline...</option>
+                {TIMELINE_OPTIONS.map((opt) => (
+                  <option key={opt.value} value={opt.value}>{opt.label}</option>
+                ))}
+              </select>
+              {errors.timeline && <p className="mt-1 text-sm text-red-600">{errors.timeline.message}</p>}
             </div>
 
             {/* Engineering & Permits */}

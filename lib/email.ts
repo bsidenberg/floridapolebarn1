@@ -39,7 +39,7 @@ export async function sendQuoteNotification(data: QuoteFormData): Promise<{ succ
           <tr><td style="padding: 6px 0; color: #6b7280; width: 140px;">Name</td><td style="padding: 6px 0; font-weight: 600;">${data.firstName} ${data.lastName}</td></tr>
           <tr><td style="padding: 6px 0; color: #6b7280;">Phone</td><td style="padding: 6px 0; font-weight: 600;"><a href="tel:${data.phone.replace(/\D/g, '')}" style="color: #b91c1c;">${data.phone}</a></td></tr>
           <tr><td style="padding: 6px 0; color: #6b7280;">Email</td><td style="padding: 6px 0;"><a href="mailto:${data.email}" style="color: #b91c1c;">${data.email}</a></td></tr>
-          <tr><td style="padding: 6px 0; color: #6b7280;">Zip Code</td><td style="padding: 6px 0;">${data.zipCode}</td></tr>
+          <tr><td style="padding: 6px 0; color: #6b7280;">Location</td><td style="padding: 6px 0;">${data.city}, ${data.state} ${data.zipCode}</td></tr>
         </table>
 
         <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 20px 0;">
