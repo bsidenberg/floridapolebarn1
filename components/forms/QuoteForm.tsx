@@ -21,6 +21,7 @@ const schema = z.object({
   phone: z.string().min(10, 'Please enter a valid phone number'),
   email: z.string().email('Please enter a valid email address'),
   notes: z.string().optional(),
+  engineeringOption: z.enum(['plans-only', 'plans-and-permits']).optional(),
 })
 
 type FormData = z.infer<typeof schema>
@@ -85,6 +86,11 @@ export default function QuoteForm() {
   const serviceType = watch('serviceType')
   const buildingType = watch('buildingType')
   const primaryUses = watch('primaryUses')
+  const engineeringOption = watch('engineeringOption')
+
+  const toggleEngineering = (value: 'plans-only' | 'plans-and-permits') => {
+    setValue('engineeringOption', engineeringOption === value ? undefined : value)
+  }
 
   const toggleUse = (id: string) => {
     const current = primaryUses || []
@@ -352,6 +358,58 @@ export default function QuoteForm() {
                   ))}
                 </select>
                 {errors.timeline && <p className="mt-1 text-sm text-red-600">{errors.timeline.message}</p>}
+              </div>
+            </div>
+
+            {/* Engineering & Permits */}
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-1">
+                Engineering &amp; Permits <span className="font-normal text-gray-500">(optional)</span>
+              </label>
+              <p className="text-xs text-gray-500 mb-3">Select if needed — most permitted projects in Florida require stamped plans.</p>
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                {([
+                  {
+                    value: 'plans-only' as const,
+                    icon: '📐',
+                    title: 'I need engineered plans',
+                    desc: 'Stamped structural plans for your building, required for most permitted projects in Florida.',
+                  },
+                  {
+                    value: 'plans-and-permits' as const,
+                    icon: '🏛️',
+                    title: 'Engineered plans + permit assistance',
+                    desc: 'Includes stamped plans plus our team handles the permit application with your local building department.',
+                  },
+                ]).map((opt) => {
+                  const selected = engineeringOption === opt.value
+                  return (
+                    <button
+                      key={opt.value}
+                      type="button"
+                      onClick={() => toggleEngineering(opt.value)}
+                      className={cn(
+                        'relative flex flex-col gap-1.5 rounded-xl border-2 p-4 text-left transition-all',
+                        selected
+                          ? 'border-brand-600 bg-brand-50'
+                          : 'border-gray-200 bg-white hover:border-brand-300'
+                      )}
+                    >
+                      {selected && (
+                        <span className="absolute top-3 right-3 flex h-5 w-5 items-center justify-center rounded-full bg-brand-600">
+                          <svg className="h-3 w-3 text-white" viewBox="0 0 20 20" fill="currentColor">
+                            <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
+                          </svg>
+                        </span>
+                      )}
+                      <span className="text-2xl leading-none">{opt.icon}</span>
+                      <span className={cn('text-sm font-semibold', selected ? 'text-brand-800' : 'text-gray-900')}>
+                        {opt.title}
+                      </span>
+                      <span className="text-xs text-gray-500 leading-relaxed">{opt.desc}</span>
+                    </button>
+                  )
+                })}
               </div>
             </div>
 

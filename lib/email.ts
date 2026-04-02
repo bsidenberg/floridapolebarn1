@@ -51,6 +51,7 @@ export async function sendQuoteNotification(data: QuoteFormData): Promise<{ succ
           <tr><td style="padding: 6px 0; color: #6b7280;">Size</td><td style="padding: 6px 0;">${data.size}</td></tr>
           <tr><td style="padding: 6px 0; color: #6b7280;">Primary Uses</td><td style="padding: 6px 0;">${data.primaryUses.join(', ')}</td></tr>
           <tr><td style="padding: 6px 0; color: #6b7280;">Timeline</td><td style="padding: 6px 0;">${timelineLabel}</td></tr>
+          ${data.engineeringOption ? `<tr><td style="padding: 6px 0; color: #6b7280;">Engineering</td><td style="padding: 6px 0; font-weight: 600; color: #b91c1c;">${data.engineeringOption === 'plans-only' ? '📐 Engineered Plans Requested' : '🏛️ Engineered Plans + Permit Assistance Requested'}</td></tr>` : ''}
         </table>
 
         ${

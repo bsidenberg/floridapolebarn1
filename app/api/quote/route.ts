@@ -15,6 +15,7 @@ const schema = z.object({
   phone: z.string().min(10),
   email: z.string().email(),
   notes: z.string().optional(),
+  engineeringOption: z.enum(['plans-only', 'plans-and-permits']).optional(),
 })
 
 export async function POST(req: NextRequest) {
