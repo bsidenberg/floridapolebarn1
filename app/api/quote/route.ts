@@ -14,7 +14,7 @@ const schema = z.object({
   timeline: z.string().min(1),
   firstName: z.string().min(1),
   lastName: z.string().min(1),
-  phone: z.string().min(10),
+  phone: z.string().regex(/^\d{3}-\d{3}-\d{4}$/),
   email: z.string().email(),
   notes: z.string().optional(),
   engineeringOption: z.enum(['plans-only', 'plans-and-permits']).optional(),

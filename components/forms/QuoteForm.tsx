@@ -20,7 +20,7 @@ const schema = z.object({
   timeline: z.string().min(1, 'Please select a timeline'),
   firstName: z.string().min(1, 'First name is required'),
   lastName: z.string().min(1, 'Last name is required'),
-  phone: z.string().min(10, 'Please enter a valid phone number'),
+  phone: z.string().regex(/^\d{3}-\d{3}-\d{4}$/, 'Please enter a valid 10-digit phone number'),
   email: z.string().email('Please enter a valid email address'),
   notes: z.string().optional(),
   engineeringOption: z.enum(['plans-only', 'plans-and-permits']).optional(),
@@ -508,8 +508,17 @@ export default function QuoteForm() {
               <input
                 id="phone"
                 type="tel"
+                inputMode="numeric"
                 {...register('phone')}
-                placeholder="(352) 555-0100"
+                placeholder="352-555-0100"
+                onChange={(e) => {
+                  const digits = e.target.value.replace(/\D/g, '').slice(0, 10)
+                  const formatted =
+                    digits.length <= 3 ? digits :
+                    digits.length <= 6 ? `${digits.slice(0, 3)}-${digits.slice(3)}` :
+                    `${digits.slice(0, 3)}-${digits.slice(3, 6)}-${digits.slice(6)}`
+                  setValue('phone', formatted, { shouldValidate: errors.phone !== undefined })
+                }}
                 className={cn(
                   'w-full rounded-lg border px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500',
                   errors.phone ? 'border-red-400' : 'border-gray-300'
