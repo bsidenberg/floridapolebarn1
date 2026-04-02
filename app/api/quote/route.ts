@@ -36,6 +36,55 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ success: false, error: result.error }, { status: 500 })
     }
 
+    // Build enriched notes: prepend structured form data so no collected info is lost
+    const SERVICE_LABELS: Record<string, string> = {
+      'kit-only':    'Kit Delivery Only',
+      'kit-install': 'Kit + Installation',
+    }
+    const BUILDING_LABELS: Record<string, string> = {
+      open:     'Open Pole Barn',
+      enclosed: 'Enclosed Pole Barn',
+      unsure:   'Not Sure Yet',
+    }
+    const TIMELINE_LABELS: Record<string, string> = {
+      'asap':     'As Soon As Possible',
+      '1-3mo':    '1–3 Months',
+      '3-6mo':    '3–6 Months',
+      '6mo+':     '6+ Months Out',
+      'planning': 'Just Planning / Getting Info',
+    }
+    const ENGINEERING_LABELS: Record<string, string> = {
+      'plans-only':        'Stamped Plans Only',
+      'plans-and-permits': 'Plans + Permit Assistance',
+    }
+    const USE_LABELS: Record<string, string> = {
+      'equipment-storage': 'Equipment Storage',
+      'horse-barn':        'Horse Barn',
+      'rv-boat-storage':   'RV / Boat Storage',
+      'workshop-garage':   'Workshop / Garage',
+      'agricultural':      'Agricultural / Farming',
+      'man-cave':          'Man Cave / Recreation',
+      'commercial':        'Commercial Use',
+      'other':             'Other',
+    }
+
+    const formLines = [
+      `[Website Form]`,
+      `Service:  ${SERVICE_LABELS[data.serviceType] ?? data.serviceType}`,
+      `Building: ${BUILDING_LABELS[data.buildingType] ?? data.buildingType}`,
+      `Size:     ${data.size}`,
+      `Uses:     ${data.primaryUses.map(u => USE_LABELS[u] ?? u).join(', ')}`,
+      `State:    ${data.state}`,
+      `Timeline: ${TIMELINE_LABELS[data.timeline] ?? data.timeline}`,
+      data.engineeringOption
+        ? `Engineering: ${ENGINEERING_LABELS[data.engineeringOption] ?? data.engineeringOption}`
+        : null,
+    ].filter(Boolean).join('\n')
+
+    const enrichedNotes = data.notes?.trim()
+      ? `${formLines}\n\nCustomer notes: ${data.notes.trim()}`
+      : formLines
+
     const { error: supabaseError } = await getSupabaseClient()
       .from('leads')
       .insert({
@@ -43,16 +92,18 @@ export async function POST(req: NextRequest) {
         last_name:    data.lastName,
         email:        data.email,
         phone:        data.phone,
-        notes:        data.notes ?? null,
+        city:         data.city,
         zip:          data.zipCode ?? null,
+        barn_size:    data.size,
+        notes:        enrichedNotes,
         stage:        'new',
-        source:       lead_source ?? null,
+        priority:     'cold',
+        source:       lead_source ?? 'Website Form',
         utm_source:   utm_source   ?? null,
         utm_medium:   utm_medium   ?? null,
         utm_campaign: utm_campaign ?? null,
         utm_term:     utm_term     ?? null,
         utm_content:  utm_content  ?? null,
-        lead_source:  lead_source  ?? null,
         referrer_url: referrer_url ?? null,
         landing_page: landing_page ?? null,
       })
