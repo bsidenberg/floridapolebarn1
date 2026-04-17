@@ -88,6 +88,8 @@ export async function POST(req: NextRequest) {
     const { error: supabaseError } = await getSupabaseClient()
       .from('leads')
       .insert({
+        service_type: data.serviceType ?? null,
+        lead_source:  lead_source ?? null,
         first_name:   data.firstName,
         last_name:    data.lastName,
         email:        data.email,
