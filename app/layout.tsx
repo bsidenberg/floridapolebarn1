@@ -5,6 +5,7 @@ import './globals.css'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import GTMPageView from '@/components/GTMPageView'
+import Joseph from '@/components/chat/Joseph'
 import { COMPANY } from '@/lib/constants'
 
 const inter = Inter({
@@ -220,6 +221,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main>{children}</main>
         <Footer />
+        <Joseph />
       </body>
     </html>
   )
