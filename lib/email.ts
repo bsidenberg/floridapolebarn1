@@ -1,8 +1,9 @@
 import { Resend } from 'resend'
 import type { QuoteFormData } from './types'
 
-const NOTIFY_EMAILS = ['info@floridapolebarn.com', 'sales@floridapolebarn.com', 'paul@floridapolebarn.com']
+const NOTIFY_EMAILS = ['info@floridapolebarn.com', 'sales@floridapolebarn.com']
 const FROM_EMAIL = 'noreply@floridapolebarn.com'
+const ALERT_EMAIL = 'info@floridapolebarn.com'
 
 export async function sendQuoteNotification(data: QuoteFormData): Promise<{ success: boolean; error?: string }> {
   const resend = new Resend(process.env.RESEND_API_KEY)
@@ -123,5 +124,54 @@ export async function sendQuoteNotification(data: QuoteFormData): Promise<{ succ
   } catch (err) {
     console.error('Email send error:', err)
     return { success: false, error: 'Failed to send email' }
+  }
+}
+
+export async function sendCrmSyncFailureAlert(params: {
+  leadPayload: Record<string, unknown>
+  error: { message?: string; code?: string }
+}): Promise<{ success: boolean; error?: string }> {
+  const resend = new Resend(process.env.RESEND_API_KEY)
+
+  const { leadPayload, error } = params
+
+  const html = `
+    <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+      <div style="background: #b91c1c; padding: 24px; border-radius: 8px 8px 0 0;">
+        <h1 style="color: white; margin: 0; font-size: 20px;">⚠️ CRM sync failed — lead not saved</h1>
+      </div>
+      <div style="background: #fff7f7; padding: 24px; border: 1px solid #fca5a5; border-top: none; border-radius: 0 0 8px 8px;">
+        <p style="color: #111827;">A new lead came in via the website form and the email notification went out, <strong>BUT the Supabase insert failed</strong>. This lead needs to be added to the CRM manually.</p>
+
+        <h2 style="color: #b91c1c; font-size: 15px;">Error details</h2>
+        <p style="font-family: monospace; background: #f3f4f6; padding: 10px; border-radius: 4px; font-size: 13px; word-break: break-all;">
+          Message: ${error.message ?? '(none)'}<br>
+          Code: ${error.code ?? '(none)'}
+        </p>
+
+        <h2 style="color: #b91c1c; font-size: 15px;">Lead payload</h2>
+        <pre style="font-family: monospace; background: #f3f4f6; padding: 12px; border-radius: 4px; font-size: 12px; overflow-x: auto; white-space: pre-wrap; word-break: break-all;">${JSON.stringify(leadPayload, null, 2)}</pre>
+
+        <div style="margin-top: 20px; padding: 14px; background: #fef3c7; border: 1px solid #fcd34d; border-radius: 6px;">
+          <p style="margin: 0; color: #92400e; font-weight: 600;">
+            Please add this lead manually at
+            <a href="https://fpb-crm.vercel.app" style="color: #b91c1c;">fpb-crm.vercel.app</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  `
+
+  try {
+    await resend.emails.send({
+      from: `Florida Pole Barn <${FROM_EMAIL}>`,
+      to: [ALERT_EMAIL],
+      subject: '⚠️ CRM sync failed — lead received but not saved',
+      html,
+    })
+    return { success: true }
+  } catch (err) {
+    console.error('CRM sync failure alert email failed:', err)
+    return { success: false, error: 'Failed to send alert email' }
   }
 }

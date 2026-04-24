@@ -1,7 +1,18 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
-import { sendQuoteNotification } from '@/lib/email'
+import { sendQuoteNotification, sendCrmSyncFailureAlert } from '@/lib/email'
 import { getSupabaseClient } from '@/lib/supabase'
+
+function mapServiceTypeToCRM(slug: string | undefined | null): string | null {
+  if (!slug) return null
+  const map: Record<string, string> = {
+    'kit-only':    'Kit Delivery Only',
+    'kit-install': 'Kit + Installation',
+    // Legacy safety — in case older values slip through
+    'turnkey':     'Kit + Installation',
+  }
+  return map[slug] ?? null  // unknown slug becomes null, which is a valid CRM value
+}
 
 const schema = z.object({
   serviceType: z.enum(['kit-only', 'kit-install']),
@@ -85,32 +96,41 @@ export async function POST(req: NextRequest) {
       ? `${formLines}\n\nCustomer notes: ${data.notes.trim()}`
       : formLines
 
+    const leadPayload = {
+      service_type: mapServiceTypeToCRM(data.serviceType),
+      lead_source:  lead_source ?? null,
+      first_name:   data.firstName,
+      last_name:    data.lastName,
+      email:        data.email,
+      phone:        data.phone,
+      city:         data.city,
+      zip:          data.zipCode ?? null,
+      barn_size:    data.size,
+      notes:        enrichedNotes,
+      stage:        'new',
+      priority:     'cold',
+      source:       lead_source ?? 'Website Form',
+      utm_source:   utm_source   ?? null,
+      utm_medium:   utm_medium   ?? null,
+      utm_campaign: utm_campaign ?? null,
+      utm_term:     utm_term     ?? null,
+      utm_content:  utm_content  ?? null,
+      referrer_url: referrer_url ?? null,
+      landing_page: landing_page ?? null,
+    }
+
     const { error: supabaseError } = await getSupabaseClient()
       .from('leads')
-      .insert({
-        service_type: data.serviceType ?? null,
-        lead_source:  lead_source ?? null,
-        first_name:   data.firstName,
-        last_name:    data.lastName,
-        email:        data.email,
-        phone:        data.phone,
-        city:         data.city,
-        zip:          data.zipCode ?? null,
-        barn_size:    data.size,
-        notes:        enrichedNotes,
-        stage:        'new',
-        priority:     'cold',
-        source:       lead_source ?? 'Website Form',
-        utm_source:   utm_source   ?? null,
-        utm_medium:   utm_medium   ?? null,
-        utm_campaign: utm_campaign ?? null,
-        utm_term:     utm_term     ?? null,
-        utm_content:  utm_content  ?? null,
-        referrer_url: referrer_url ?? null,
-        landing_page: landing_page ?? null,
-      })
+      .insert(leadPayload)
 
-    if (supabaseError) console.error('Supabase lead insert error:', supabaseError)
+    if (supabaseError) {
+      console.error('Supabase lead insert error:', supabaseError)
+      // Fire alert email so the lead can be added manually — do not await failure
+      sendCrmSyncFailureAlert({
+        leadPayload,
+        error: { message: supabaseError.message, code: supabaseError.code },
+      }).catch(alertErr => console.error('CRM sync alert email failed:', alertErr))
+    }
 
     return NextResponse.json({ success: true })
   } catch (err) {
