@@ -8,10 +8,17 @@ export function captureUtmParams() {
 
   const params = new URLSearchParams(window.location.search);
   const utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'] as const;
+  const clickKeys = ['gclid', 'fbclid'] as const;
 
   utmKeys.forEach(key => {
     const val = params.get(key);
     if (val) sessionStorage.setItem(key, val);
+  });
+
+  // Capture click IDs on first touch only (they belong to the originating click)
+  clickKeys.forEach(key => {
+    const val = params.get(key);
+    if (val && !sessionStorage.getItem(key)) sessionStorage.setItem(key, val);
   });
 
   // Capture landing page on first touch only
@@ -39,10 +46,13 @@ export function getStoredUtmData() {
   const referrer = sessionStorage.getItem('referrer_url') || document.referrer || '';
   const landing  = sessionStorage.getItem('landing_page') || window.location.href;
 
+  const gclid  = sessionStorage.getItem('gclid')  || '';
+  const fbclid = sessionStorage.getItem('fbclid') || '';
+
   const lead_source = resolveLeadSource(source, medium, referrer);
 
   return { utm_source: source, utm_medium: medium, utm_campaign: campaign,
-           utm_term: term, utm_content: content, lead_source,
+           utm_term: term, utm_content: content, gclid, fbclid, lead_source,
            referrer_url: referrer, landing_page: landing };
 }
 

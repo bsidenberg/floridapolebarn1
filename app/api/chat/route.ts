@@ -321,10 +321,43 @@ export async function POST(req: NextRequest) {
 
         // Validate minimum required fields
         if (lead.first_name && lead.service_type && (lead.email || lead.phone)) {
+          const session = sessionContext ?? { url: '', utm: {}, referrer: '' }
           await Promise.all([
-            saveLead(lead, sessionContext ?? { url: '', utm: {}, referrer: '' }),
+            saveLead(lead, session),
             sendLeadEmail(lead),
           ])
+
+          // Fire-and-forget: forward chat lead to marketing bot
+          const leadsIngestSecret = process.env.LEADS_INGEST_SECRET
+          if (leadsIngestSecret) {
+            fetch('https://fpb-marketing-bot.vercel.app/api/leads', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'x-leads-ingest-secret': leadsIngestSecret,
+              },
+              body: JSON.stringify({
+                name:             `${lead.first_name}${lead.last_name ? ' ' + lead.last_name : ''}`,
+                email:            lead.email            ?? null,
+                phone:            lead.phone            ?? null,
+                message:          lead.conversation_summary ?? null,
+                source_url:       session.url           ?? null,
+                landing_page_url: session.url           ?? null,
+                referrer_url:     session.referrer       ?? null,
+                utm_source:       session.utm?.utm_source   ?? null,
+                utm_medium:       session.utm?.utm_medium   ?? null,
+                utm_campaign:     session.utm?.utm_campaign ?? null,
+                utm_content:      session.utm?.utm_content  ?? null,
+                utm_term:         session.utm?.utm_term     ?? null,
+                gclid:            session.utm?.gclid        ?? null,
+                fbclid:           session.utm?.fbclid       ?? null,
+                lead_type:        'form',
+              }),
+            }).catch(err => console.error('Marketing bot lead ingest failed (chat):', err))
+          } else {
+            console.warn('LEADS_INGEST_SECRET not set — skipping marketing bot ingest')
+          }
+
           leadCaptured = true
         } else {
           console.warn('capture_lead called without minimum required fields — skipped', lead)

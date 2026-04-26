@@ -38,6 +38,7 @@ export async function POST(req: NextRequest) {
 
     const {
       utm_source, utm_medium, utm_campaign, utm_term, utm_content,
+      gclid, fbclid,
       lead_source, referrer_url, landing_page,
     } = body
 
@@ -119,17 +120,64 @@ export async function POST(req: NextRequest) {
       landing_page: landing_page ?? null,
     }
 
+    // Fire-and-forget: forward lead to marketing bot (never blocks the form response)
+    const leadsIngestSecret = process.env.LEADS_INGEST_SECRET
+    if (leadsIngestSecret) {
+      fetch('https://fpb-marketing-bot.vercel.app/api/leads', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'x-leads-ingest-secret': leadsIngestSecret,
+        },
+        body: JSON.stringify({
+          name:             `${data.firstName} ${data.lastName}`.trim(),
+          email:            data.email,
+          phone:            data.phone,
+          message:          enrichedNotes,
+          source_url:       landing_page   ?? null,
+          landing_page_url: landing_page   ?? null,
+          referrer_url:     referrer_url   ?? null,
+          utm_source:       utm_source     ?? null,
+          utm_medium:       utm_medium     ?? null,
+          utm_campaign:     utm_campaign   ?? null,
+          utm_content:      utm_content    ?? null,
+          utm_term:         utm_term       ?? null,
+          gclid:            gclid          ?? null,
+          fbclid:           fbclid         ?? null,
+          lead_type:        'form',
+        }),
+      }).catch(err => console.error('Marketing bot lead ingest failed (quote form):', err))
+    } else {
+      console.warn('LEADS_INGEST_SECRET not set — skipping marketing bot ingest')
+    }
+
     const { error: supabaseError } = await getSupabaseClient()
       .from('leads')
       .insert(leadPayload)
 
     if (supabaseError) {
       console.error('Supabase lead insert error:', supabaseError)
-      // Fire alert email so the lead can be added manually — do not await failure
+
+      // Layer 2: alert email (fire-and-forget)
       sendCrmSyncFailureAlert({
         leadPayload,
         error: { message: supabaseError.message, code: supabaseError.code },
       }).catch(alertErr => console.error('CRM sync alert email failed:', alertErr))
+
+      // Layer 3: audit table (fire-and-forget)
+      getSupabaseClient()
+        .from('failed_lead_writes')
+        .insert({
+          source: 'website_quote_form',
+          payload: leadPayload,
+          error_code: supabaseError.code ?? null,
+          error_message: supabaseError.message ?? null,
+        })
+        .then(({ error: auditErr }) => {
+          if (auditErr) {
+            console.error('Failed to write to failed_lead_writes audit table:', auditErr)
+          }
+        })
     }
 
     return NextResponse.json({ success: true })

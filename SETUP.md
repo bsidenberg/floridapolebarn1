@@ -18,11 +18,15 @@ cp .env.local.example .env.local
 Edit `.env.local`:
 
 ```
-RESEND_API_KEY=re_xxxxxxxx       # Get free key at resend.com
+RESEND_API_KEY=re_xxxxxxxx             # Get free key at resend.com
 CONTACT_EMAIL=info@floridapolebarn.com
 NEXT_PUBLIC_SITE_URL=https://floridapolebarn.com
-NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX   # Optional — your GA4 ID
+NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX         # Optional — your GA4 ID
+LEADS_INGEST_SECRET=your_marketing_bot_ingest_secret_here  # Copy real value from Vercel — never commit the actual secret
 ```
+
+> **Security:** `LEADS_INGEST_SECRET` is server-side only. Do NOT prefix it with `NEXT_PUBLIC_`.
+> It is read only inside `app/api/` routes and never sent to the browser.
 
 ## 3. Add your images
 
@@ -85,7 +89,30 @@ Add your `.env.local` variables to Vercel's Environment Variables dashboard.
 4. Add to `.env.local` as `RESEND_API_KEY`
 5. Update `FROM_EMAIL` in `lib/email.ts` to match your verified Resend domain
 
-## 8. Connect Google Analytics
+## 8. Connect the FPB Marketing Bot (lead ingestion)
+
+The website forwards every quote form submission and Joseph chat lead to the marketing bot at `fpb-marketing-bot.vercel.app`.
+
+**Environment variable required:**
+
+| Variable | Value |
+|---|---|
+| `LEADS_INGEST_SECRET` | Copy from fpb-marketing-bot Vercel project → Settings → Environment Variables |
+
+**Where to add it:**
+1. Vercel dashboard → floridapolebarn1 project → Settings → Environment Variables
+2. Add `LEADS_INGEST_SECRET` for Production, Preview, and Development environments
+3. Redeploy (Vercel → Deployments → Redeploy latest)
+
+**How to verify after deploy:**
+1. Submit the quote form at floridapolebarn.com/quote
+2. Go to Vercel → floridapolebarn1 → Functions → `/api/quote` → Logs
+3. Confirm there is no `Marketing bot lead ingest failed` error line
+4. Check the marketing bot dashboard at fpb-marketing-bot.vercel.app for the incoming lead
+
+**If the marketing bot is unreachable:** the form submission still completes normally. The error is logged server-side only — the customer sees no failure.
+
+## 9. Connect Google Analytics
 
 1. Go to analytics.google.com
 2. Create a GA4 property for floridapolebarn.com
