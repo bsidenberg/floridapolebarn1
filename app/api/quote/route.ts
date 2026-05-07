@@ -98,8 +98,9 @@ export async function POST(req: NextRequest) {
       : formLines
 
     const leadPayload = {
-      service_type: mapServiceTypeToCRM(data.serviceType),
-      lead_source:  lead_source ?? null,
+      service_type:  mapServiceTypeToCRM(data.serviceType),
+      building_type: BUILDING_LABELS[data.buildingType] ?? null,
+      lead_source:   lead_source ?? null,
       first_name:   data.firstName,
       last_name:    data.lastName,
       email:        data.email,
