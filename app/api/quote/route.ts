@@ -42,12 +42,6 @@ export async function POST(req: NextRequest) {
       lead_source, referrer_url, landing_page,
     } = body
 
-    const result = await sendQuoteNotification(data)
-
-    if (!result.success) {
-      return NextResponse.json({ success: false, error: result.error }, { status: 500 })
-    }
-
     // Build enriched notes: prepend structured form data so no collected info is lost
     const SERVICE_LABELS: Record<string, string> = {
       'kit-only':    'Kit Delivery Only',
@@ -179,6 +173,20 @@ export async function POST(req: NextRequest) {
             console.error('Failed to write to failed_lead_writes audit table:', auditErr)
           }
         })
+    }
+
+    // Best-effort: confirmation + internal notification emails (and the SMS).
+    // The Supabase insert above is the source of truth for lead capture, so a
+    // Resend outage must never drop the lead. This block can neither throw nor
+    // return — any failure is logged and swallowed so the customer still sees
+    // the thank-you page.
+    try {
+      const result = await sendQuoteNotification(data)
+      if (!result.success) {
+        console.error('[quote-email] sendQuoteNotification reported failure:', result.error)
+      }
+    } catch (emailErr) {
+      console.error('[quote-email] unexpected error:', emailErr)
     }
 
     return NextResponse.json({ success: true })
