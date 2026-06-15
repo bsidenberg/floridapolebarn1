@@ -3,7 +3,7 @@ import type { QuoteFormData } from './types'
 import { sendQuoteConfirmationSms } from './sms'
 
 const NOTIFY_EMAILS = ['info@floridapolebarn.com', 'sales@floridapolebarn.com']
-const FROM_EMAIL = 'noreply@floridapolebarn.com'
+const FROM_EMAIL = 'noreply@send.floridapolebarn.com'
 const ALERT_EMAIL = 'info@floridapolebarn.com'
 
 export async function sendQuoteNotification(data: QuoteFormData): Promise<{ success: boolean; error?: string }> {
