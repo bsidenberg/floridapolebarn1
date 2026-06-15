@@ -28,6 +28,7 @@ const schema = z.object({
   phone: z.string().regex(/^\d{3}-\d{3}-\d{4}$/),
   email: z.string().email(),
   notes: z.string().optional(),
+  smsConsent: z.boolean().optional(),
   engineeringOption: z.enum(['plans-only', 'plans-and-permits']).optional(),
 })
 
@@ -103,6 +104,7 @@ export async function POST(req: NextRequest) {
       zip:          data.zipCode ?? null,
       barn_size:    data.size,
       notes:        enrichedNotes,
+      sms_consent_at: data.smsConsent ? new Date().toISOString() : null,
       stage:        'new',
       priority:     'cold',
       source:       lead_source ?? 'Website Form',

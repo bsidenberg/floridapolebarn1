@@ -54,6 +54,7 @@ export interface QuoteFormData {
   phone: string
   email: string
   notes?: string
+  smsConsent?: boolean
 }
 
 export interface ServiceCity {

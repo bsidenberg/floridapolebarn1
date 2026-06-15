@@ -23,6 +23,7 @@ const schema = z.object({
   phone: z.string().regex(/^\d{3}-\d{3}-\d{4}$/, 'Please enter a valid 10-digit phone number'),
   email: z.string().email('Please enter a valid email address'),
   notes: z.string().optional(),
+  smsConsent: z.boolean().optional(),
   engineeringOption: z.enum(['plans-only', 'plans-and-permits']).optional(),
 })
 
@@ -580,6 +581,18 @@ export default function QuoteForm() {
               By submitting, you agree to be contacted about your quote request.
               No spam, ever. We call you — we don&apos;t sell your info.
             </p>
+
+            <div className="flex items-start gap-2.5 pt-3">
+              <input
+                id="smsConsent"
+                type="checkbox"
+                {...register('smsConsent')}
+                className="mt-0.5 h-4 w-4 rounded border-gray-300 text-brand-600 focus:ring-brand-500 cursor-pointer flex-shrink-0"
+              />
+              <label htmlFor="smsConsent" className="text-sm text-gray-600 leading-snug cursor-pointer">
+                Yes, send me a text message confirming my quote request. Reply STOP to opt out anytime. Message and data rates may apply. <span className="text-gray-400">(Optional — you&apos;ll get email either way.)</span>
+              </label>
+            </div>
           </div>
         )}
       </form>

@@ -134,17 +134,22 @@ export async function sendQuoteNotification(data: QuoteFormData): Promise<{ succ
       }),
     ])
 
-    // Fire the confirmation SMS only after the emails succeed. The SMS outcome
-    // never affects this function's return value — email is the sole driver of
-    // result.success. sendQuoteConfirmationSms already swallows its own errors;
-    // the try/catch is a final guard against anything unexpected.
-    try {
-      await sendQuoteConfirmationSms({
-        phone: data.phone,
-        firstName: data.firstName,
-      })
-    } catch (err) {
-      console.error('[sms] unexpected error:', err)
+    // Fire the confirmation SMS only after the emails succeed, and only when the
+    // customer explicitly opted in. The SMS outcome never affects this function's
+    // return value — email is the sole driver of result.success.
+    // sendQuoteConfirmationSms already swallows its own errors; the try/catch is
+    // a final guard against anything unexpected.
+    if (data.smsConsent) {
+      try {
+        await sendQuoteConfirmationSms({
+          phone: data.phone,
+          firstName: data.firstName,
+        })
+      } catch (err) {
+        console.error('[sms] unexpected error:', err)
+      }
+    } else {
+      console.info('[sms] skipped: customer did not opt in')
     }
 
     return { success: true }
