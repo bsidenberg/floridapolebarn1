@@ -1,5 +1,6 @@
 import { Resend } from 'resend'
 import type { QuoteFormData } from './types'
+import { sendQuoteConfirmationSms } from './sms'
 
 const NOTIFY_EMAILS = ['info@floridapolebarn.com', 'sales@floridapolebarn.com']
 const FROM_EMAIL = 'noreply@floridapolebarn.com'
@@ -29,7 +30,7 @@ export async function sendQuoteNotification(data: QuoteFormData): Promise<{ succ
 
   const notifyHtml = `
     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-      <div style="background: #b91c1c; padding: 24px; border-radius: 8px 8px 0 0;">
+      <div style="background: #c0272d; padding: 24px; border-radius: 8px 8px 0 0;">
         <h1 style="color: white; margin: 0; font-size: 22px;">New Quote Request</h1>
         <p style="color: #fecaca; margin: 4px 0 0;">Florida Pole Barn Website</p>
       </div>
@@ -38,8 +39,8 @@ export async function sendQuoteNotification(data: QuoteFormData): Promise<{ succ
         <h2 style="color: #111827; font-size: 16px; margin-top: 0;">Contact Info</h2>
         <table style="width: 100%; border-collapse: collapse;">
           <tr><td style="padding: 6px 0; color: #6b7280; width: 140px;">Name</td><td style="padding: 6px 0; font-weight: 600;">${data.firstName} ${data.lastName}</td></tr>
-          <tr><td style="padding: 6px 0; color: #6b7280;">Phone</td><td style="padding: 6px 0; font-weight: 600;"><a href="tel:${data.phone.replace(/\D/g, '')}" style="color: #b91c1c;">${data.phone}</a></td></tr>
-          <tr><td style="padding: 6px 0; color: #6b7280;">Email</td><td style="padding: 6px 0;"><a href="mailto:${data.email}" style="color: #b91c1c;">${data.email}</a></td></tr>
+          <tr><td style="padding: 6px 0; color: #6b7280;">Phone</td><td style="padding: 6px 0; font-weight: 600;"><a href="tel:${data.phone.replace(/\D/g, '')}" style="color: #c0272d;">${data.phone}</a></td></tr>
+          <tr><td style="padding: 6px 0; color: #6b7280;">Email</td><td style="padding: 6px 0;"><a href="mailto:${data.email}" style="color: #c0272d;">${data.email}</a></td></tr>
           <tr><td style="padding: 6px 0; color: #6b7280;">Location</td><td style="padding: 6px 0;">${data.city}, ${data.state} ${data.zipCode}</td></tr>
         </table>
 
@@ -52,7 +53,7 @@ export async function sendQuoteNotification(data: QuoteFormData): Promise<{ succ
           <tr><td style="padding: 6px 0; color: #6b7280;">Size</td><td style="padding: 6px 0;">${data.size}</td></tr>
           <tr><td style="padding: 6px 0; color: #6b7280;">Primary Uses</td><td style="padding: 6px 0;">${data.primaryUses.join(', ')}</td></tr>
           <tr><td style="padding: 6px 0; color: #6b7280;">Timeline</td><td style="padding: 6px 0;">${timelineLabel}</td></tr>
-          ${data.engineeringOption ? `<tr><td style="padding: 6px 0; color: #6b7280;">Engineering</td><td style="padding: 6px 0; font-weight: 600; color: #b91c1c;">${data.engineeringOption === 'plans-only' ? '📐 Engineered Plans Requested' : '🏛️ Engineered Plans + Permit Assistance Requested'}</td></tr>` : ''}
+          ${data.engineeringOption ? `<tr><td style="padding: 6px 0; color: #6b7280;">Engineering</td><td style="padding: 6px 0; font-weight: 600; color: #c0272d;">${data.engineeringOption === 'plans-only' ? '📐 Engineered Plans Requested' : '🏛️ Engineered Plans + Permit Assistance Requested'}</td></tr>` : ''}
         </table>
 
         ${
@@ -66,7 +67,7 @@ export async function sendQuoteNotification(data: QuoteFormData): Promise<{ succ
         }
 
         <div style="margin-top: 24px; padding: 16px; background: #fef3c7; border: 1px solid #fcd34d; border-radius: 6px;">
-          <p style="margin: 0; color: #92400e; font-weight: 600;">⚡ Follow up within 1 business day</p>
+          <p style="margin: 0; color: #92400e; font-weight: 600;">⚡ Follow up within 48 hours</p>
         </div>
       </div>
     </div>
@@ -74,13 +75,13 @@ export async function sendQuoteNotification(data: QuoteFormData): Promise<{ succ
 
   const confirmHtml = `
     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-      <div style="background: #b91c1c; padding: 24px; border-radius: 8px 8px 0 0;">
+      <div style="background: #c0272d; padding: 24px; border-radius: 8px 8px 0 0;">
         <h1 style="color: white; margin: 0; font-size: 22px;">We Got Your Quote Request!</h1>
         <p style="color: #fecaca; margin: 4px 0 0;">Florida Pole Barn</p>
       </div>
       <div style="background: #f9fafb; padding: 24px; border: 1px solid #e5e7eb; border-top: none; border-radius: 0 0 8px 8px;">
         <p style="color: #111827;">Hi ${data.firstName},</p>
-        <p style="color: #374151;">Thanks for reaching out! We received your request for a <strong>${buildingTypeLabel}</strong>${data.size !== 'custom' ? ` (${data.size})` : ''} and will be in touch within <strong>1 business day</strong>.</p>
+        <p style="color: #374151;">Thanks for reaching out! We received your request for a <strong>${buildingTypeLabel}</strong>${data.size !== 'custom' ? ` (${data.size})` : ''} and will be in touch within <strong>48 hours</strong>.</p>
 
         <div style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; margin: 20px 0;">
           <p style="margin: 0 0 8px; font-weight: 600; color: #111827;">Your Request Summary</p>
@@ -90,18 +91,30 @@ export async function sendQuoteNotification(data: QuoteFormData): Promise<{ succ
         </div>
 
         <p style="color: #374151;">In the meantime, feel free to call us directly:</p>
-        <p style="font-size: 22px; font-weight: 700; color: #b91c1c; margin: 8px 0;">
-          <a href="tel:3523400822" style="color: #b91c1c; text-decoration: none;">(352) 340-0822</a>
+        <p style="font-size: 22px; font-weight: 700; color: #c0272d; margin: 8px 0;">
+          <a href="tel:3523400822" style="color: #c0272d; text-decoration: none;">(352) 340-0822</a>
         </p>
 
         <p style="color: #6b7280; font-size: 13px; margin-top: 24px; border-top: 1px solid #e5e7eb; padding-top: 16px;">
           Florida Pole Barn<br>
           Florida Highway 50, Clermont, FL 34711<br>
-          <a href="https://floridapolebarn.com" style="color: #b91c1c;">floridapolebarn.com</a>
+          <a href="https://floridapolebarn.com" style="color: #c0272d;">floridapolebarn.com</a>
         </p>
       </div>
     </div>
   `
+
+  const confirmText = [
+    `Hi ${data.firstName},`,
+    ``,
+    `Thanks for reaching out! We received your request for a ${buildingTypeLabel}${data.size !== 'custom' ? ` (${data.size})` : ''}.`,
+    ``,
+    `We'll be in touch within 48 hours.`,
+    ``,
+    `Call us anytime: (352) 340-0822`,
+    ``,
+    `— Florida Pole Barn`,
+  ].join('\n')
 
   try {
     await Promise.all([
@@ -117,8 +130,22 @@ export async function sendQuoteNotification(data: QuoteFormData): Promise<{ succ
         to: [data.email],
         subject: 'We received your pole barn quote request',
         html: confirmHtml,
+        text: confirmText,
       }),
     ])
+
+    // Fire the confirmation SMS only after the emails succeed. The SMS outcome
+    // never affects this function's return value — email is the sole driver of
+    // result.success. sendQuoteConfirmationSms already swallows its own errors;
+    // the try/catch is a final guard against anything unexpected.
+    try {
+      await sendQuoteConfirmationSms({
+        phone: data.phone,
+        firstName: data.firstName,
+      })
+    } catch (err) {
+      console.error('[sms] unexpected error:', err)
+    }
 
     return { success: true }
   } catch (err) {
@@ -137,25 +164,25 @@ export async function sendCrmSyncFailureAlert(params: {
 
   const html = `
     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-      <div style="background: #b91c1c; padding: 24px; border-radius: 8px 8px 0 0;">
+      <div style="background: #c0272d; padding: 24px; border-radius: 8px 8px 0 0;">
         <h1 style="color: white; margin: 0; font-size: 20px;">⚠️ CRM sync failed — lead not saved</h1>
       </div>
       <div style="background: #fff7f7; padding: 24px; border: 1px solid #fca5a5; border-top: none; border-radius: 0 0 8px 8px;">
         <p style="color: #111827;">A new lead came in via the website form and the email notification went out, <strong>BUT the Supabase insert failed</strong>. This lead needs to be added to the CRM manually.</p>
 
-        <h2 style="color: #b91c1c; font-size: 15px;">Error details</h2>
+        <h2 style="color: #c0272d; font-size: 15px;">Error details</h2>
         <p style="font-family: monospace; background: #f3f4f6; padding: 10px; border-radius: 4px; font-size: 13px; word-break: break-all;">
           Message: ${error.message ?? '(none)'}<br>
           Code: ${error.code ?? '(none)'}
         </p>
 
-        <h2 style="color: #b91c1c; font-size: 15px;">Lead payload</h2>
+        <h2 style="color: #c0272d; font-size: 15px;">Lead payload</h2>
         <pre style="font-family: monospace; background: #f3f4f6; padding: 12px; border-radius: 4px; font-size: 12px; overflow-x: auto; white-space: pre-wrap; word-break: break-all;">${JSON.stringify(leadPayload, null, 2)}</pre>
 
         <div style="margin-top: 20px; padding: 14px; background: #fef3c7; border: 1px solid #fcd34d; border-radius: 6px;">
           <p style="margin: 0; color: #92400e; font-weight: 600;">
             Please add this lead manually at
-            <a href="https://fpb-crm.vercel.app" style="color: #b91c1c;">fpb-crm.vercel.app</a>
+            <a href="https://fpb-crm.vercel.app" style="color: #c0272d;">fpb-crm.vercel.app</a>
           </p>
         </div>
       </div>
