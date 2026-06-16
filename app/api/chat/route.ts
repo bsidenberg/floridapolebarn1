@@ -205,7 +205,7 @@ async function sendLeadEmail(lead: LeadInput): Promise<void> {
 
   const html = `
     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-      <div style="background: #b91c1c; padding: 24px; border-radius: 8px 8px 0 0;">
+      <div style="background: #c0272d; padding: 24px; border-radius: 8px 8px 0 0;">
         <h1 style="color: white; margin: 0; font-size: 22px;">New Chat Lead — Joseph</h1>
         <p style="color: #fecaca; margin: 4px 0 0;">Florida Pole Barn Website Chat</p>
       </div>
@@ -218,8 +218,8 @@ async function sendLeadEmail(lead: LeadInput): Promise<void> {
         <h2 style="color: #111827; font-size: 16px; margin-top: 0;">Contact Info</h2>
         <table style="width: 100%; border-collapse: collapse;">
           <tr><td style="padding: 6px 0; color: #6b7280; width: 140px;">Name</td><td style="padding: 6px 0; font-weight: 600;">${lead.first_name}${lead.last_name ? ' ' + lead.last_name : ''}</td></tr>
-          ${lead.phone ? `<tr><td style="padding: 6px 0; color: #6b7280;">Phone</td><td style="padding: 6px 0; font-weight: 600;"><a href="tel:${lead.phone.replace(/\D/g, '')}" style="color: #b91c1c;">${lead.phone}</a></td></tr>` : ''}
-          ${lead.email ? `<tr><td style="padding: 6px 0; color: #6b7280;">Email</td><td style="padding: 6px 0;"><a href="mailto:${lead.email}" style="color: #b91c1c;">${lead.email}</a></td></tr>` : ''}
+          ${lead.phone ? `<tr><td style="padding: 6px 0; color: #6b7280;">Phone</td><td style="padding: 6px 0; font-weight: 600;"><a href="tel:${lead.phone.replace(/\D/g, '')}" style="color: #c0272d;">${lead.phone}</a></td></tr>` : ''}
+          ${lead.email ? `<tr><td style="padding: 6px 0; color: #6b7280;">Email</td><td style="padding: 6px 0;"><a href="mailto:${lead.email}" style="color: #c0272d;">${lead.email}</a></td></tr>` : ''}
           ${lead.city ? `<tr><td style="padding: 6px 0; color: #6b7280;">City</td><td style="padding: 6px 0;">${lead.city}${lead.zip ? ', FL ' + lead.zip : ', FL'}</td></tr>` : ''}
         </table>
 
