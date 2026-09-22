@@ -3,6 +3,7 @@ import type { MetadataRoute } from 'next'
 const BASE = 'https://floridapolebarn.com'
 
 const BLOG_SLUGS = [
+  'planning-pole-barn-florida-storm-season',
   'how-much-does-a-pole-barn-cost-in-florida',
   'do-you-need-a-permit-for-a-pole-barn-in-florida',
   'open-vs-enclosed-pole-barn-florida',

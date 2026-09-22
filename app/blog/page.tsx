@@ -18,6 +18,16 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'planning-pole-barn-florida-storm-season',
+    title: 'Planning a Pole Barn for Florida Storm Season',
+    excerpt:
+      'What to think through before storm season — wind speed by county and site, open versus enclosed layouts, drainage and post embedment, and engineering documents that match the property.',
+    date: '2026-09-22',
+    readTime: '9 min read',
+    category: 'Construction & Materials',
+    image: '/Gable-Dress-with-Roof-Trim.jpg',
+  },
+  {
     slug: 'how-much-does-a-pole-barn-cost-in-florida',
     title: 'How Much Does a Pole Barn Cost in Florida? (2026 Guide)',
     excerpt:
