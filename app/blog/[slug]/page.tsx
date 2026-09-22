@@ -21,6 +21,118 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: 'planning-pole-barn-florida-storm-season',
+    title: 'Planning a Pole Barn for Florida Storm Season',
+    description:
+      'Plan a Florida pole barn for storm season: site wind speed, open versus enclosed layouts, drainage and post embedment, and engineering documents that match the property.',
+    date: '2026-09-22',
+    author: 'Florida Pole Barn',
+    readTime: '9 min read',
+    category: 'Construction & Materials',
+    content: `
+## Planning a Pole Barn for Florida Storm Season
+
+A Florida pole barn planned for storm season is engineered to the wind speed, exposure, and soil at the site, with a deliberate choice about which sides stay open from June through November, drainage that moves water away from the posts, and stamped drawings that describe that exact building.
+
+Atlantic hurricane season runs from June 1 through November 30. County rules and the Florida Building Code set the minimum. Your parcel can still differ from the county next door, and an open pasture can design differently from a wooded lot on the same road. Before you order doors or set posts, answer four questions: what wind speed applies here, will the barn be open or enclosed during storm months, where will rainwater go, and do the drawings match this building on this property?
+
+### Wind Speed Is Set by the Site, Not by One Statewide Number
+
+The Florida Building Code assigns an ultimate design wind speed by location and by risk category. Counties enforce that code, and some add local amendments. There is no single wind speed that covers every pole barn in the state. An inland county such as Marion, Lake, or Polk is not interchangeable with a coastal county such as Lee, Collier, or Escambia, and even inside one county the parcel nearer open water can differ from a parcel miles inland.
+
+Here is what to think about when you ask a building department or an engineer about your county:
+
+- **Map speed for the address**: The speed comes from the code wind map for your coordinates, not from a brochure. Inland north and central counties are often lower than coastal counties. The Keys, the southeast coast, and open shorelines are generally higher.
+- **Risk category**: A private storage barn is commonly designed as Risk Category II, but the category follows how the building will be used. A different use can raise the speed the engineer must design to. Confirm the category instead of assuming every barn is the same.
+- **Exposure category**: This describes the terrain around the barn. Suburban or wooded surroundings are typically Exposure B. Open fields, pasture, and many agricultural sites are Exposure C, which increases the pressure on the frame. Sites close to large open water can be Exposure D. Two barns with the same map speed can need different framing if one sits in the open and one sits among trees.
+- **Wind-borne debris region**: In many coastal areas, doors and windows must be designed for wind-borne debris or be protected. That decision belongs on the plans before you order openings.
+- **High-Velocity Hurricane Zone**: Miami-Dade and Broward counties follow High-Velocity Hurricane Zone requirements in addition to wind speed. Drawings prepared for an inland county are not a substitute for those documents.
+
+Ask for the design wind speed, exposure, and risk category in writing, tied to your address. If a drawing lists only a round number and no site, resolve that before you submit for a permit.
+
+### Open, Enclosed, or Partially Open During Storm Months
+
+Open and enclosed are structural choices, not only comfort choices. Engineers classify a building as open, enclosed, or partially enclosed, and that classification changes internal wind pressure. The drawings have to match the walls you actually build.
+
+Think through June through November, not only the week you move equipment in:
+
+- **Open sides**: Air moves through the barn in Florida heat, which helps with equipment, hay, and livestock. In a tropical storm, rain blows in, and anything loose can become a projectile. Decide what stays in the barn through storm season and how it will be tied down or moved.
+- **Enclosed sides**: Walls and doors keep rain off tools, feed, and vehicles, and they give you a way to secure the building. Doors and other large openings must be on the plans. A door that is not latched the way the design assumes is an opening the engineer did not count on.
+- **A mix**: Many Florida barns leave one or more sides open, add a lean-to, or use end walls only. That layout works when it is the layout on the drawings. Adding metal to an open side later is a structural change, because it can move the building from open to partially enclosed and change the loads on the frame.
+
+Before storm season, walk the building against the plans. Note which openings are meant to be closed, which hardware has to be engaged, and which items you will relocate when a storm is forecast. Write that down while the weather is quiet.
+
+Hurricane season is also peak heat. If you enclose the barn, plan ventilation for the weeks it stays shut — ridge vents, eave vents, or fans — so humidity does not sit on tack, tools, and stored feed. Ventilation and a way to close the building can both be part of the same design.
+
+### Drainage and Post Embedment
+
+Florida rain is heavy, soils are often sandy, and the water table can sit close to the surface. Wind design assumes the posts stay where the engineer put them. Standing water in post holes, or runoff that scours around the piers, works against that assumption.
+
+What to think about on the site:
+
+- **Grade**: Slope the ground so water moves away from the building. A pad that is the low spot in the pasture will hold water against the posts and, on an enclosed barn, against the base of the walls.
+- **Floor**: A concrete slab, gravel, or compacted base each handles water differently. Plan a slope and an exit path so wash water and driven rain leave the building instead of sitting on the post line.
+- **Roof water**: A large roof sheds a lot of water in a short storm. Gutters are a choice; a clear path for that water is part of the plan. Keep discharge off the embedment zone and away from low ground you do not want to flood.
+- **Embedment**: Depth, hole diameter, concrete backfill, and any uplift restraint come from the engineering for your wind load and soil. Do not copy a depth from another county or another barn. Sandy soil, organic soil, and a high water table can all change the detail.
+- **Timing**: Setting posts in holes full of water, or backfilling differently from the detail on the plans, means the building in the ground is not the building on the drawings. If the site is wet, ask how the detail should be adjusted before concrete goes in.
+
+After the first hard rain, walk the perimeter. If water ponds at a corner or cuts a channel along a post, correct the grade before storm season.
+
+### Engineering Documents That Match This Site
+
+Permits, inspections, and insurance questions all go more smoothly when the paper describes the building on the property. When you review drawings, look for:
+
+- **Project location**: An address, parcel, or county — enough to show the design is for this site.
+- **Code edition**: The Florida Building Code edition your county is enforcing, including any local amendment the building department requires.
+- **Design criteria**: Ultimate wind speed, exposure category, risk category, and whether the building is open, enclosed, or partially enclosed.
+- **Geometry**: Width, length, eave height, roof pitch, and the location of open sides and doors. If you change a door size or enclose a bay, the set should be updated to match.
+- **Foundation or embedment**: Post depth, concrete, and any footing or anchor the design relies on, with notes that fit the soil you actually have.
+- **Seal**: The design professional's seal on the sheets you will submit.
+
+Keep the approved set with your property records. When you sell, insure, or repair the barn after a storm, that set is what shows the building was planned for the site.
+
+Florida Pole Barn prepares engineered drawings for the span and wind load of the building you are planning, so the permit set can follow the county and the layout. Have the address, the open-versus-enclosed plan, and the door sizes ready when you start.
+
+### A Planning Sequence That Fits Storm Season
+
+Use this order so decisions do not have to be undone in May:
+
+- **1. Pick the use and the layout**: What the barn holds, which sides are open, door sizes, and eave height. Those choices drive enclosure class and openings.
+- **2. Confirm the site criteria**: Wind speed, exposure, risk category, grade, and the code edition with your county building department or your engineer.
+- **3. Match the documents to those criteria**: Drawings, embedment, and opening details should list the same information you just confirmed.
+- **4. Build drainage into the pad**: Set grade and floor slope before posts and concrete lock the low spots in place.
+- **5. Leave a storm routine**: Who closes which doors, what gets moved, and where the approved plans are kept. Review it each spring before June 1.
+
+### Frequently Asked Questions
+
+### Does every Florida county use the same pole barn wind speed?
+
+No. The Florida Building Code maps ultimate design wind speed by location and risk category. Coastal counties and the Keys are generally higher than inland counties, and Miami-Dade and Broward also follow High-Velocity Hurricane Zone rules. Confirm the speed for your address, along with the exposure category of the terrain around the barn.
+
+### Is an open pole barn a poor fit for storm months?
+
+Not by itself. An open barn can be the right layout for equipment, hay, and livestock because it vents heat. It does let rain in, and loose items need a tie-down or relocation plan. The structure still has to be engineered for the site wind speed and for an open or partially enclosed classification. Choose open when that is how you will use the barn, and put that layout on the drawings.
+
+### Can I enclose an open barn later, before hurricane season?
+
+Only after the structure is rechecked. Adding walls changes internal wind pressure and can change the loads on posts, trusses, and connections. Plan the enclosed or partially enclosed layout at the start if you know you will want walls, or have the engineer review the change before you add them.
+
+### Why do drainage and embedment belong in a storm-season plan?
+
+Wind design assumes the posts and anchors stay in the ground. Heavy rain, sandy soils, and a high water table can soften or scour that support if the site ponds, or if post holes are placed wet and backfilled off the detail. Grade water away from the building and follow the embedment on the stamped plans.
+
+### What should the engineering set include?
+
+Location, the Florida Building Code edition, design wind speed, exposure, risk category, enclosure classification, building dimensions, openings, and the post or foundation detail. The sheets you submit should describe the barn you are building, including which sides are open.
+
+### When should storm details be decided?
+
+Before the permit set is finalized. Wind criteria, open versus enclosed sides, door sizes, and embedment are design inputs. Deciding them after the seal usually means revising the documents. A spring walkthrough is for hardware and housekeeping, not for redesigning the frame.
+
+**[Request a free quote for your Florida pole barn →](/quote)**
+    `,
+  },
+  {
     slug: 'how-much-does-a-pole-barn-cost-in-florida',
     title: 'How Much Does a Pole Barn Cost in Florida? (2026 Guide)',
     description:
