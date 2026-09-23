@@ -6,6 +6,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { BARN_SIZES } from '@/lib/constants'
 import { cn } from '@/lib/utils'
+import { buildEnhancedConversionUserData } from '@/lib/enhanced-conversions'
 import { pushEvent } from '@/lib/gtm'
 import { getStoredUtmData } from '@/lib/utm'
 
@@ -134,9 +135,20 @@ export default function QuoteForm() {
       }
 
       setSubmitted(true)
+      const userData = buildEnhancedConversionUserData({
+        email: data.email,
+        phone: data.phone,
+        firstName: data.firstName,
+        lastName: data.lastName,
+        city: data.city,
+        state: data.state,
+        zipCode: data.zipCode,
+      })
+      // GTM should map `form_submission` → Google Ads conversion tag with Include user-provided data / Enhanced conversions.
       pushEvent('form_submission', {
         form_name: 'get_free_quote',
         form_location: window.location.pathname,
+        ...(userData ? { user_data: userData } : {}),
       })
     } catch {
       setSubmitError('Network error. Please try calling us at (352) 340-0822.')
