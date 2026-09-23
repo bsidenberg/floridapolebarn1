@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, useCallback } from 'react'
 import { COMPANY } from '@/lib/constants'
+import { getStoredUtmData } from '@/lib/utm'
 
 interface Message {
   role: 'user' | 'assistant'
@@ -10,6 +11,7 @@ interface Message {
 
 interface SessionContext {
   url: string
+  landingPage: string
   utm: Record<string, string>
   referrer: string
 }
@@ -17,23 +19,19 @@ interface SessionContext {
 const STORAGE_KEY = 'fpb-joseph-chat'
 const GREETING = "Hey, I'm Joseph with Florida Pole Barn. What kind of project are you thinking about?"
 
-function parseUTMFromURL(): Record<string, string> {
-  if (typeof window === 'undefined') return {}
-  const params = new URLSearchParams(window.location.search)
-  const keys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content']
-  const result: Record<string, string> = {}
-  for (const key of keys) {
-    const val = params.get(key)
-    if (val) result[key] = val
-  }
-  return result
-}
-
 function getSessionContext(): SessionContext {
+  const stored = getStoredUtmData()
+  const utm: Record<string, string> = {}
+  const keys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'fbclid'] as const
+  for (const key of keys) {
+    const val = stored[key]
+    if (val) utm[key] = val
+  }
   return {
     url: typeof window !== 'undefined' ? window.location.href : '',
-    utm: parseUTMFromURL(),
-    referrer: typeof document !== 'undefined' ? document.referrer : '',
+    landingPage: stored.landing_page || (typeof window !== 'undefined' ? window.location.href : ''),
+    utm,
+    referrer: stored.referrer_url || '',
   }
 }
 
