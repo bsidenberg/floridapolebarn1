@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import { sendQuoteNotification, sendCrmSyncFailureAlert } from '@/lib/email'
 import { getSupabaseClient } from '@/lib/supabase'
+import { isMissingClickIdColumn, leadAttributionColumns, omitClickIdColumns } from '@/lib/utm'
 
 function mapServiceTypeToCRM(slug: string | undefined | null): string | null {
   if (!slug) return null
@@ -40,8 +41,15 @@ export async function POST(req: NextRequest) {
     const {
       utm_source, utm_medium, utm_campaign, utm_term, utm_content,
       gclid, fbclid,
-      lead_source, referrer_url, landing_page,
+      referrer_url, landing_page,
     } = body
+
+    // Channel comes from click ids / UTMs / referrer. Ignore any client-supplied
+    // lead_source so "Website Form" cannot be stored as the marketing channel.
+    const attribution = leadAttributionColumns({
+      utm_source, utm_medium, utm_campaign, utm_term, utm_content,
+      gclid, fbclid, referrer_url, landing_page,
+    })
 
     // Build enriched notes: prepend structured form data so no collected info is lost
     const SERVICE_LABELS: Record<string, string> = {
@@ -95,7 +103,7 @@ export async function POST(req: NextRequest) {
     const leadPayload = {
       service_type:  mapServiceTypeToCRM(data.serviceType),
       building_type: BUILDING_LABELS[data.buildingType] ?? null,
-      lead_source:   lead_source ?? null,
+      lead_source:   attribution.lead_source,
       first_name:   data.firstName,
       last_name:    data.lastName,
       email:        data.email,
@@ -107,14 +115,16 @@ export async function POST(req: NextRequest) {
       sms_consent_at: data.smsConsent ? new Date().toISOString() : null,
       stage:        'new',
       priority:     'cold',
-      source:       lead_source ?? 'Website Form',
-      utm_source:   utm_source   ?? null,
-      utm_medium:   utm_medium   ?? null,
-      utm_campaign: utm_campaign ?? null,
-      utm_term:     utm_term     ?? null,
-      utm_content:  utm_content  ?? null,
-      referrer_url: referrer_url ?? null,
-      landing_page: landing_page ?? null,
+      source:       attribution.source,
+      utm_source:   attribution.utm_source,
+      utm_medium:   attribution.utm_medium,
+      utm_campaign: attribution.utm_campaign,
+      utm_term:     attribution.utm_term,
+      utm_content:  attribution.utm_content,
+      gclid:        attribution.gclid,
+      fbclid:       attribution.fbclid,
+      referrer_url: attribution.referrer_url,
+      landing_page: attribution.landing_page,
     }
 
     // Fire-and-forget: forward lead to marketing bot (never blocks the form response)
@@ -131,16 +141,16 @@ export async function POST(req: NextRequest) {
           email:            data.email,
           phone:            data.phone,
           message:          enrichedNotes,
-          source_url:       landing_page   ?? null,
-          landing_page_url: landing_page   ?? null,
-          referrer_url:     referrer_url   ?? null,
-          utm_source:       utm_source     ?? null,
-          utm_medium:       utm_medium     ?? null,
-          utm_campaign:     utm_campaign   ?? null,
-          utm_content:      utm_content    ?? null,
-          utm_term:         utm_term       ?? null,
-          gclid:            gclid          ?? null,
-          fbclid:           fbclid         ?? null,
+          source_url:       attribution.landing_page,
+          landing_page_url: attribution.landing_page,
+          referrer_url:     attribution.referrer_url,
+          utm_source:       attribution.utm_source,
+          utm_medium:       attribution.utm_medium,
+          utm_campaign:     attribution.utm_campaign,
+          utm_content:      attribution.utm_content,
+          utm_term:         attribution.utm_term,
+          gclid:            attribution.gclid,
+          fbclid:           attribution.fbclid,
           lead_type:        'form',
         }),
       }).catch(err => console.error('Marketing bot lead ingest failed (quote form):', err))
@@ -148,9 +158,17 @@ export async function POST(req: NextRequest) {
       console.warn('LEADS_INGEST_SECRET not set — skipping marketing bot ingest')
     }
 
-    const { error: supabaseError } = await getSupabaseClient()
+    let { error: supabaseError } = await getSupabaseClient()
       .from('leads')
       .insert(leadPayload)
+
+    if (supabaseError && isMissingClickIdColumn(supabaseError)) {
+      console.warn('leads.gclid/fbclid column missing — retrying quote insert without click ids')
+      const retry = await getSupabaseClient()
+        .from('leads')
+        .insert(omitClickIdColumns(leadPayload))
+      supabaseError = retry.error
+    }
 
     if (supabaseError) {
       console.error('Supabase lead insert error:', supabaseError)

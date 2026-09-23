@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import Anthropic from '@anthropic-ai/sdk'
 import { Resend } from 'resend'
 import { getSupabaseClient } from '@/lib/supabase'
+import { isMissingClickIdColumn, leadAttributionColumns, omitClickIdColumns } from '@/lib/utm'
 
 const JOSEPH_SYSTEM_PROMPT = `You are Joseph, the website assistant for Florida Pole Barn (floridapolebarn.com). Your job is to answer questions accurately and gather enough information from the visitor to add them to our CRM so our sales team can follow up and close. You are NOT a salesperson. You don't push, you don't close. You're a helpful, knowledgeable intake person.
 
@@ -149,6 +150,8 @@ interface LeadInput {
 
 interface SessionContext {
   url: string
+  /** First-touch landing URL. Falls back to `url` when an older client omits it. */
+  landingPage?: string
   utm: Record<string, string>
   referrer: string
 }
@@ -165,30 +168,50 @@ async function saveLead(lead: LeadInput, session: SessionContext): Promise<void>
       : null,
   ].filter(Boolean).join('\n')
 
-  const { error } = await getSupabaseClient()
-    .from('leads')
-    .insert({
-      first_name:   lead.first_name,
-      last_name:    lead.last_name    ?? null,
-      email:        lead.email        ?? null,
-      phone:        lead.phone        ?? null,
-      city:         lead.city         ?? null,
-      zip:          lead.zip          ?? null,
-      service_type: lead.service_type,
-      barn_size:    lead.barn_size    ?? null,
-      notes:        notesLines,
-      stage:        'new',
-      priority:     lead.priority     ?? 'warm',
-      source:       'Website Chat',
-      lead_source:  'Website Chat',
-      utm_source:   session.utm?.utm_source   ?? null,
-      utm_medium:   session.utm?.utm_medium   ?? null,
-      utm_campaign: session.utm?.utm_campaign ?? null,
-      utm_term:     session.utm?.utm_term     ?? null,
-      utm_content:  session.utm?.utm_content  ?? null,
-      referrer_url: session.referrer          ?? null,
-      landing_page: session.url               ?? null,
-    })
+  const attribution = leadAttributionColumns({
+    utm_source:   session.utm?.utm_source,
+    utm_medium:   session.utm?.utm_medium,
+    utm_campaign: session.utm?.utm_campaign,
+    utm_term:     session.utm?.utm_term,
+    utm_content:  session.utm?.utm_content,
+    gclid:        session.utm?.gclid,
+    fbclid:       session.utm?.fbclid,
+    referrer_url: session.referrer,
+    landing_page: session.landingPage || session.url,
+  })
+
+  const leadRow = {
+    first_name:   lead.first_name,
+    last_name:    lead.last_name    ?? null,
+    email:        lead.email        ?? null,
+    phone:        lead.phone        ?? null,
+    city:         lead.city         ?? null,
+    zip:          lead.zip          ?? null,
+    service_type: lead.service_type,
+    barn_size:    lead.barn_size    ?? null,
+    notes:        notesLines,
+    stage:        'new',
+    priority:     lead.priority     ?? 'warm',
+    source:       attribution.source,
+    lead_source:  attribution.lead_source,
+    utm_source:   attribution.utm_source,
+    utm_medium:   attribution.utm_medium,
+    utm_campaign: attribution.utm_campaign,
+    utm_term:     attribution.utm_term,
+    utm_content:  attribution.utm_content,
+    gclid:        attribution.gclid,
+    fbclid:       attribution.fbclid,
+    referrer_url: attribution.referrer_url,
+    landing_page: attribution.landing_page,
+  }
+
+  let { error } = await getSupabaseClient().from('leads').insert(leadRow)
+
+  if (error && isMissingClickIdColumn(error)) {
+    console.warn('leads.gclid/fbclid column missing — retrying chat insert without click ids')
+    const retry = await getSupabaseClient().from('leads').insert(omitClickIdColumns(leadRow))
+    error = retry.error
+  }
 
   if (error) console.error('Supabase chat lead insert error:', error)
 }
@@ -341,8 +364,8 @@ export async function POST(req: NextRequest) {
                 email:            lead.email            ?? null,
                 phone:            lead.phone            ?? null,
                 message:          lead.conversation_summary ?? null,
-                source_url:       session.url           ?? null,
-                landing_page_url: session.url           ?? null,
+                source_url:       session.url || session.landingPage || null,
+                landing_page_url: session.landingPage || session.url || null,
                 referrer_url:     session.referrer       ?? null,
                 utm_source:       session.utm?.utm_source   ?? null,
                 utm_medium:       session.utm?.utm_medium   ?? null,
