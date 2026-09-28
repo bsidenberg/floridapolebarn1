@@ -18,6 +18,16 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'florida-pole-barn-site-preparation-checklist',
+    title: 'What to Think About When Preparing Your Site for a Florida Pole Barn',
+    excerpt:
+      'What to think through before the crew arrives — grade and drainage, delivery access, pad elevation, utilities, and a Florida-specific site checklist.',
+    date: '2026-09-28',
+    readTime: '8 min read',
+    category: 'Construction & Materials',
+    image: '/IMG_9002.jpg',
+  },
+  {
     slug: 'planning-pole-barn-florida-storm-season',
     title: 'Planning a Pole Barn for Florida Storm Season',
     excerpt:

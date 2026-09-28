@@ -21,6 +21,129 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: 'florida-pole-barn-site-preparation-checklist',
+    title: 'What to Think About When Preparing Your Site for a Florida Pole Barn',
+    description:
+      'Prepare your Florida property for a pole barn: grade and drainage, access for delivery and equipment, pad elevation, utility marking, and a practical checklist before posts go in the ground.',
+    date: '2026-09-28',
+    author: 'Florida Pole Barn',
+    readTime: '8 min read',
+    category: 'Construction & Materials',
+    content: `
+## What to Think About When Preparing Your Site for a Florida Pole Barn
+
+A Florida pole barn goes up more smoothly when the pad is graded to shed water, the delivery path can handle posts and trusses, utilities are marked, and the layout on the ground matches the engineered drawings before the first hole is dug.
+
+Site work is easy to underestimate. The building set assumes a certain grade, access, and pad. When the truck cannot reach the pad, when the low corner ponds after the first rain, or when a unmarked irrigation line sits where a post belongs, the schedule and the structure both take the hit. Before the crew arrives, walk the property with the same questions a builder and an inspector will ask.
+
+### Start With Use, Layout, and the Pad Footprint
+
+Stake the building outline from the approved dimensions — width, length, eave height, and which sides stay open. Walk that footprint with the drawings in hand.
+
+Here is what to think about when you set the pad:
+
+- **Setbacks and easements**: Confirm the barn sits where the county and any HOA allow. A pad that is perfect for drainage but over a utility easement or too close to a property line will have to move.
+- **Orientation**: Note sun, prevailing wind, driveway approach, and how equipment will enter. In Florida heat, afternoon sun on a long west wall matters for enclosed barns and for livestock shade on open ones.
+- **Open versus enclosed sides**: Mark which sides will have walls or doors. That choice affects enclosure class on the engineering set and where you need clear space for door swing or lean-tos.
+- **Future additions**: If you may add a lean-to, wash bay, or second bay later, leave room now so the first pad does not block the logical expansion.
+
+Do not treat the stakes as optional. The posts will follow them. Moving the building after holes are dug means new holes and a new conversation with the engineer if dimensions change.
+
+### Grade and Drainage Come Before Concrete
+
+Florida rain is heavy, soils are often sandy, and the water table can sit close to the surface. Wind and gravity both assume the posts stay where the drawings put them. Standing water at the post line works against that assumption.
+
+What to think about for water on the site:
+
+- **High point for the pad**: Prefer a slight crown or continuous fall away from the building. A pad in a natural low spot will collect runoff from the rest of the pasture or yard.
+- **Sheet flow path**: Trace where water goes in a hard afternoon storm. Keep roof discharge and yard runoff from cutting a channel along the posts.
+- **Floor choice**: Concrete, gravel, or compacted base each needs a planned exit for wash water and driven rain. Slope the floor or the surrounding grade so water leaves the building instead of sitting on the post line.
+- **Roof water**: A large metal roof sheds a lot of water quickly. Gutters are optional; a clear discharge path is not. Keep that water off the embedment zone.
+- **Neighbor and road drainage**: Do not solve your ponding by sending a new stream onto a neighbor or into a right-of-way without checking local rules.
+
+After you rough-grade, wait for a real rain if you can, or soak the pad with a hose. Fix ruts and low corners before posts go in.
+
+### Access for Delivery, Equipment, and Inspections
+
+Posts, trusses, and panels arrive on trucks that need width, height clearance, and a firm path. Cranes or lifts, if used, need stable ground. Inspectors need to reach the work.
+
+Think through the path from the road to the pad:
+
+- **Gate and driveway width**: Will the delivery truck clear the gate posts, trees, and power lines? Overhead limbs and soft shoulders stop more jobs than people expect.
+- **Turning and staging**: Leave a staging area for bundles of steel and panels so the pad itself stays clear for layout.
+- **Soft ground**: After summer rains, sand and organic soil can bog a loaded truck. Plan temporary matting or an alternate dry approach if the driveway floods.
+- **Neighbor relations**: If the only access crosses a shared drive, confirm that before the truck is on the way.
+
+If the path is tight, say so early. Relocating the pad a few feet for access is cheaper in planning than improvising on delivery day.
+
+### Utilities, Wells, and What Lies Underground
+
+Before any digging, know what is under the stakes.
+
+- **Call for locates**: Use the statewide call-before-you-dig service so public utilities are marked. Do this early enough that marks are still visible when work starts.
+- **Private lines**: Irrigation, septic, electric to a well, low-voltage cable, and old fence charger lines often do not show on public locates. Walk the property with anyone who installed them.
+- **Wells and septic**: Keep required setbacks from wells and drain fields. County health rules can veto a pad location that otherwise looks perfect.
+- **Overhead lines**: Note clearances for delivery and for any future lean-to or antenna. Metal buildings and overhead service need planned separation.
+
+Mark known private lines with flags that survive a rain. A sketch in your phone is not enough once the excavator arrives.
+
+### Soil, Water Table, and Embedment Reality
+
+The engineering set specifies post depth, hole diameter, and backfill for the design wind load and assumed soil. Florida sites often include sand, organic layers, or a high water table that fills holes as soon as they are dug.
+
+What to think about before dig day:
+
+- **Match the detail**: Do not copy embedment from another county or another barn. Follow the stamped sheets for this building.
+- **Wet holes**: If groundwater fills the holes, stop and ask how the detail should be adjusted before concrete goes in. A hole poured full of slurry water is not the detail on the plans.
+- **Organic or fill soil**: Soft spots, old dump areas, and recent fill may need undercut or a different foundation approach. Flag them when you walk the site.
+- **Compaction of the pad**: Loose fill under a future slab or gravel floor settles. Compact in lifts where the drawings or the builder specify.
+
+If the soil on site does not match what the drawings assume, resolve that before posts are set — not after the frame is up.
+
+### A Practical Checklist Before the Crew Arrives
+
+Use this sequence so site decisions do not have to be undone:
+
+- **1. Confirm permits and the approved set**: Keep the stamped drawings on site. The pad and openings should match that set.
+- **2. Stake the footprint and door locations**: Walk setbacks, easements, and swing paths.
+- **3. Rough-grade for drainage**: Establish fall away from the building and a roof-water path.
+- **4. Clear and firm the access route**: Gates, limbs, soft spots, and staging area.
+- **5. Complete utility locates**: Public marks plus private irrigation, septic, and well lines.
+- **6. Recheck after rain**: Fix ponding and ruts before dig day.
+- **7. Brief the crew on surprises**: Soft spots, overhead lines, neighbor access, and any hole that hit water on a test dig.
+
+Florida Pole Barn builds from engineered drawings matched to the span and wind load of the building you are planning. Having the pad, access, and utility picture clear when you request a quote helps the layout and the permit set line up with the property you actually have.
+
+### Frequently Asked Questions
+
+### How far in advance should I prepare the site?
+
+Finish staking, rough grading, access clearing, and utility locates before the delivery window — early enough to fix drainage after a real rain and to reschedule if locates uncover a conflict. Last-minute grading under a delivery truck is how pads end up low in one corner.
+
+### Do I need a perfectly level pad?
+
+You need a controlled pad: generally level for the building layout, with intentional drainage away from the posts. A bowl that holds water is worse than a gentle, even slope that sheds it. Follow the elevations the builder and the drawings call for.
+
+### What if my water table is high?
+
+Plan for it before dig day. High groundwater can flood post holes and change how embedment is placed. Tell the builder and, if needed, the engineer so the detail on site matches the sealed plans.
+
+### Can I pour a slab before the frame goes up?
+
+Sometimes, when the drawings and the builder’s sequence allow it. Many Florida pole barns set posts first and place a slab later, or use gravel. Coordinate the floor type with post layout and embedment so the slab edge and the post line do not fight each other.
+
+### Who marks private irrigation and septic lines?
+
+Public locate services mark public utilities. Private irrigation, septic, and well lines are usually your responsibility to identify. Use as-builts if you have them, and walk the property with whoever installed the system.
+
+### What should I have ready when I request a quote?
+
+A rough idea of size and use, whether sides will be open or enclosed, the property address for wind and code context, photos or notes about access and drainage, and any known well, septic, or easement limits. That information helps the layout match the site from the start.
+
+**[Request a free quote for your Florida pole barn →](/quote)**
+    `,
+  },
+  {
     slug: 'planning-pole-barn-florida-storm-season',
     title: 'Planning a Pole Barn for Florida Storm Season',
     description:
