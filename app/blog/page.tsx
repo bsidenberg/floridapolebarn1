@@ -18,6 +18,16 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'pole-barn-eave-height-door-openings-florida',
+    title: 'What to Think About When Choosing Eave Height and Door Openings for a Florida Pole Barn',
+    excerpt:
+      'Size the eave from the door and the clearance you need. What to measure on an RV, boat, tractor, or truck, and how Florida wind, rain, and pad height change the opening.',
+    date: '2026-10-05',
+    readTime: '8 min read',
+    category: 'Buying Guide',
+    image: '/IMG_6690.jpg',
+  },
+  {
     slug: 'florida-pole-barn-site-preparation-checklist',
     title: 'What to Think About When Preparing Your Site for a Florida Pole Barn',
     excerpt:

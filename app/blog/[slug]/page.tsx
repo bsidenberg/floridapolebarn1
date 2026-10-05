@@ -7,6 +7,11 @@ import { COMPANY } from '@/lib/constants'
 // ─── Blog post content ──────────────────────────────────────────────────────
 // Add new posts here. Each post has a slug, metadata, and full content.
 
+interface PostFaq {
+  question: string
+  answer: string
+}
+
 interface Post {
   slug: string
   title: string
@@ -17,9 +22,150 @@ interface Post {
   readTime: string
   category: string
   content: string
+  faqs?: PostFaq[]
 }
 
 const POSTS: Post[] = [
+  {
+    slug: 'pole-barn-eave-height-door-openings-florida',
+    title: 'What to Think About When Choosing Eave Height and Door Openings for a Florida Pole Barn',
+    description:
+      'A practical guide to sizing eave height, clear height, and door openings for RVs, boats, tractors, and equipment in a Florida pole barn.',
+    date: '2026-10-05',
+    author: 'Florida Pole Barn',
+    readTime: '8 min read',
+    category: 'Buying Guide',
+    faqs: [
+      {
+        question: 'How tall should a pole barn be for an RV?',
+        answer: 'Tall enough for the RV you measured, air conditioners and antennas included, to clear the door with room left under the trusses. There is no single eave height for every coach. Measure yours and have the builder set the eave from that opening.',
+      },
+      {
+        question: 'Is eave height the same as door height?',
+        answer: 'No. The eave is where the roof meets the wall. The door height is the clear hole you drive through. Header, hardware, and the bottom chord of the truss all sit in between, so both the door and the interior are shorter than the eave.',
+      },
+      {
+        question: 'Can I add a taller door later?',
+        answer: 'Only if the eave, header, and trusses already leave room, and the engineer accepts the larger opening. If a taller coach or a boat tower is likely, size the opening now.',
+      },
+      {
+        question: 'Do larger doors affect wind design in Florida?',
+        answer: 'Yes. Size, location, and whether the opening is shut in a storm or left open all change the loads. A bigger door can change the engineering and the anchorage. Match the order to the plans, or change the plans first.',
+      },
+      {
+        question: 'Does a concrete slab change my clearance?',
+        answer: 'It can. If the slab sits higher than the ground where you measured, the header is closer, and apron slope can change that again. Settle the floor and the approach before the door height is final.',
+      },
+      {
+        question: 'What should I measure before calling a builder?',
+        answer: 'The height of each machine as it will enter, accessories included. Width, mirrors included. Length of the longest trailer plus room at both ends. The drive, turns and slope included. And the next machine if it will be taller or longer.',
+      }
+    ],
+    content: `
+## What to Think About When Choosing Eave Height and Door Openings for a Florida Pole Barn
+
+How tall should a pole barn be? Size it from the tallest thing that has to pass through the door, measured the way it will actually come in: a roof air conditioner, an antenna, a bimini or T-top, an outboard tilted up, a loader bucket raised, a dump bed up. The door opening and the usable clear height inside both sit lower than the eave height, because the header, the door, and the bottom of the truss take space a wall-height number does not include. Plan the eave height from the door and the clearance you need, and have the builder confirm the exact dimension on the drawings.
+
+## Eave Height, Clear Height, and Door Height
+
+Eave height, clear height, and door height get used as if they were one number. They are not.
+
+Eave height is the wall height where the side wall meets the roof, which is what people mean by how tall the barn is. It is not the hole you drive through, and it is not how high you can stack under the trusses.
+
+Clear height is the usable height inside, from the finished floor to the lowest thing overhead — often the bottom chord of the truss, or a light, hoist, or door opener below it. A lift or a hay stack is limited by that clear height, which is shorter than the eave.
+
+Door height is the clear opening: finished floor to the underside of the header, or to the door in the open position, whichever is lower. The header, the track or the coil, and the hardware sit in the band between the eave and the top of that opening. A tall eave with a deep header is still a short door.
+
+Measure what must fit and add clearance above it so a bounce on the apron is not a scrape. That is the clear opening. Hardware needs more height above it, and the eave has to cover both while leaving room under the trusses. The builder and the door supplier confirm the stack. The opening comes first.
+
+## Measure What You Own, and What You Might Own Next
+
+A guess is how a camper roof meets a header. Measure what you own, and write down anything taller you are likely to own next. Measure to the high point, in the position the machine will be in at the door.
+
+- **RV or fifth wheel**: Include roof air conditioners, vents, and antennas, and measure the unit on its own tires. If you have not bought it yet, use the manufacturer's overall height with the accessories you will run, and treat that figure as something to confirm.
+- **Boat on a trailer**: Include the trailer, a tower, a T-top or bimini left up, and a tilted outboard. Clearing with the engine down does not mean you clear with it up.
+- **Tractor**: Measure to the ROPS or the cab, and again with the loader raised if that is how you enter. Anything towed behind it needs length and room to turn. A folding ROPS counts as folded only if you fold it every time.
+- **Trucks**: Racks, service bodies, and dump beds change the height. A bed up on arrival is a door problem. A bed that rises only inside is a clear-height problem.
+- **Hay**: The stack stops at the truss, not at the eave. Note the height you pile to and the machine that sets the top.
+- **Shop**: A lift or hoist needs room for the machine and for the vehicle under it. Say so before the trusses are drawn.
+
+Add clearance above the tallest item and have the builder confirm the gap. Do not drop it to force a shorter wall.
+
+Length and width belong on the same sheet. A tall door does not store a trailer the building cannot hold, and posts between bays take width. The [guide to common pole barn sizes](/blog/best-pole-barn-sizes-for-florida) is a start on the footprint. Check the opening against your tape.
+
+## Door Width and the Approach
+
+You need room to line a trailer up, to correct, and often to back, including the tow vehicle if you drive in still hitched. A tight turn puts the trailer on an angle at the opening. That approach needs a wider door, a wider apron, or both. Sketch the path before the width is final.
+
+- **Apron and slope**: A rise, a dip, or a break at the slab can lift the nose or drop the rear, so the roof moves closer to the header than it was on flat ground. If the load rises as you crest the edge, the yard measurement is short.
+- **Side door or gable end**: The end wall often gives a straight run down the building, which suits a long trailer. A door in the side wall can suit a drive that already runs along the barn, but the trailer has to swing past the posts. The wall you see from the road is not always the wall you can enter.
+- **A second opening**: The tractor that lives inside and the truck that only pulls up to load may need different doors. Each one goes on the drawings, with its header.
+
+Compare the clear width, mirrors included. Trim and side guides take part of the opening.
+
+## How the Door Type Changes the Opening
+
+- **Open bay**: No leaf, so the opening runs up to the header or the trim across the bay. Nothing coils overhead, which is why tall equipment often sits in an open bay. Rain comes in, and leaving the bay open is an engineering choice as well as a layout choice.
+- **Overhead door**: The panel rides up and back on tracks. The tracks, opener, and curve need headroom above the opening and often project into the bay. Get that headroom from the supplier and give it to the builder before the eave is set. The catalog height is not the clear opening.
+- **Roll-up door**: The curtain coils above the opening, so the coil and brackets take height and the guides take width. Ask where the coil sits against the eave and the truss.
+- **Sliding door**: The panel runs beside the opening, so it usually needs less headroom overhead. It needs a clear run of wall for the full panel, and the track has to stay out of the drive. A gable end may not have that wall. A door that stops partway is smaller than the one you ordered.
+
+Rough opening, clear opening, and the size printed on the door are three figures. Build to the clear opening, and get it in writing from the builder and the supplier.
+
+## Florida Wind, Rain, Grade, and Height Limits
+
+In Florida a large opening is part of the wind design. Open, enclosed, and partially enclosed are engineering classes, and they change the load on the frame. A door closed for a storm is not the same case as a bay left open. Enlarge an opening later, or wall in an open side, and the drawings may have to be revised. See [what a wind rating means on a Florida pole barn](/blog/pole-barn-hurricane-rating-florida), [planning for storm season](/blog/planning-pole-barn-florida-storm-season), and [open versus enclosed layouts](/blog/open-vs-enclosed-pole-barn-florida).
+
+Enclosed doors need the wind rating for your address, with the attachment on the permit set. The builder and the engineer name that rating. A door accepted in another state may not meet the Florida Building Code in your county.
+
+An open side or open gable lets wind-driven rain onto what is parked there. An overhang or lean-to can carry the roof past the opening, and it also changes the footprint, the posts, and sometimes the wind design. Ask for that cover while the roof is still on paper.
+
+A slab or a built-up pad sets the vehicle higher than the yard where you measured, so the header is closer. A ramp does the same thing when the trailer crests it. Set the pad and the door together. Grade and drainage are covered in the [site preparation checklist](/blog/florida-pole-barn-site-preparation-checklist).
+
+County and association height limits usually follow the eave, the pitch, and the peak, so a taller eave can push the peak over the cap. An agricultural exemption does not apply to every parcel. Start with [whether a pole barn in Florida needs a permit](/blog/do-you-need-a-permit-for-a-pole-barn-in-florida), then confirm the height limit before the eave is fixed.
+
+## A Checklist Before You Build
+
+- **Measure the tallest item**: Include a roof unit, a raised bucket, or a tilted motor, in the position it will enter.
+- **Keep clearance above it**: Have the builder confirm the gap.
+- **Name the door type**: Get the headroom and the side room from the supplier.
+- **Set the eave from that opening**: Check clear height under the trusses if you will lift or stack.
+- **Walk the approach**: Turns, backing room, slope, and a side door versus the gable end.
+- **Put the openings on the engineering**: Include wind-rated doors where the design requires them.
+- **Fix the pad height**: Keep the slab or gravel from using up the clearance you measured.
+- **Check height limits**: County and association rules, and the permit path, before a tall eave is committed.
+
+When you ask for a quote, say what has to fit and how it gets in: the machine, the trailer, the approach, and which bays stay open. We will plan the openings so the eave, the door, and the drawings are the same building.
+
+**[Tell us what has to fit →](/quote)**
+
+## Frequently Asked Questions
+
+### How tall should a pole barn be for an RV?
+
+Tall enough for the RV you measured, air conditioners and antennas included, to clear the door with room left under the trusses. There is no single eave height for every coach. Measure yours and have the builder set the eave from that opening.
+
+### Is eave height the same as door height?
+
+No. The eave is where the roof meets the wall. The door height is the clear hole you drive through. Header, hardware, and the bottom chord of the truss all sit in between, so both the door and the interior are shorter than the eave.
+
+### Can I add a taller door later?
+
+Only if the eave, header, and trusses already leave room, and the engineer accepts the larger opening. If a taller coach or a boat tower is likely, size the opening now.
+
+### Do larger doors affect wind design in Florida?
+
+Yes. Size, location, and whether the opening is shut in a storm or left open all change the loads. A bigger door can change the engineering and the anchorage. Match the order to the plans, or change the plans first.
+
+### Does a concrete slab change my clearance?
+
+It can. If the slab sits higher than the ground where you measured, the header is closer, and apron slope can change that again. Settle the floor and the approach before the door height is final.
+
+### What should I measure before calling a builder?
+
+The height of each machine as it will enter, accessories included. Width, mirrors included. Length of the longest trailer plus room at both ends. The drive, turns and slope included. And the next machine if it will be taller or longer.
+    `,
+  },
   {
     slug: 'florida-pole-barn-site-preparation-checklist',
     title: 'What to Think About When Preparing Your Site for a Florida Pole Barn',
@@ -632,6 +778,40 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 }
 
+function renderInline(text: string, keyPrefix: string): React.ReactNode {
+  const pattern = /\[([^\]]+)\]\(([^)]+)\)/g
+  const nodes: React.ReactNode[] = []
+  let lastIndex = 0
+  let match: RegExpExecArray | null
+  let index = 0
+
+  while ((match = pattern.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      nodes.push(text.slice(lastIndex, match.index))
+    }
+    const label = match[1]
+    const href = match[2]
+    const className = 'font-semibold text-brand-700 underline decoration-brand-300 underline-offset-2 hover:text-brand-900'
+    nodes.push(
+      href.startsWith('/') ? (
+        <Link key={`${keyPrefix}-${index}`} href={href} className={className}>
+          {label}
+        </Link>
+      ) : (
+        <a key={`${keyPrefix}-${index}`} href={href} className={className}>
+          {label}
+        </a>
+      )
+    )
+    index += 1
+    lastIndex = match.index + match[0].length
+  }
+
+  if (index === 0) return text
+  if (lastIndex < text.length) nodes.push(text.slice(lastIndex))
+  return nodes
+}
+
 function renderContent(content: string) {
   const lines = content.trim().split('\n')
   const elements: React.ReactNode[] = []
@@ -690,7 +870,7 @@ function renderContent(content: string) {
         elements.push(
           <li key={key++} className="flex gap-2 text-sm text-gray-700 mb-1">
             <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-brand-600 shrink-0" />
-            <span><strong>{match[1]}:</strong> {match[2]}</span>
+            <span><strong>{match[1]}:</strong> {renderInline(match[2], `li-${key}`)}</span>
           </li>
         )
       }
@@ -698,7 +878,7 @@ function renderContent(content: string) {
       elements.push(
         <li key={key++} className="flex gap-2 text-sm text-gray-700 mb-1">
           <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-brand-600 shrink-0" />
-          <span>{line.slice(2)}</span>
+          <span>{renderInline(line.slice(2), `li-${key}`)}</span>
         </li>
       )
     } else if (line.startsWith('**[')) {
@@ -713,7 +893,7 @@ function renderContent(content: string) {
         )
       }
     } else {
-      elements.push(<p key={key++} className="text-gray-700 leading-relaxed">{line}</p>)
+      elements.push(<p key={key++} className="text-gray-700 leading-relaxed">{renderInline(line, `p-${key}`)}</p>)
     }
   }
 
@@ -748,9 +928,24 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
     image: 'https://floridapolebarn.com/og-image.jpg',
   }
 
+  const faqSchema = post.faqs && post.faqs.length > 0
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: post.faqs.map((item) => ({
+          '@type': 'Question',
+          name: item.question,
+          acceptedAnswer: { '@type': 'Answer', text: item.answer },
+        })),
+      }
+    : null
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }} />
+      {faqSchema && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      )}
       <div className="bg-brand-900 py-20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <nav className="text-sm text-brand-400 mb-6">
