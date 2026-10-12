@@ -27,6 +27,160 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: 'pole-barn-metal-roof-condensation-florida',
+    title: 'What to Think About When Planning Condensation Control Under a Florida Pole Barn Metal Roof',
+    description:
+      'Why a Florida pole barn metal roof sweats, and what to think through on insulation, vapor control, ventilation, and open versus enclosed use before drips reach what you store.',
+    date: '2026-10-12',
+    author: 'Florida Pole Barn',
+    readTime: '9 min read',
+    category: 'Construction & Materials',
+    faqs: [
+      {
+        question: 'Why does a metal roof sweat in a Florida pole barn?',
+        answer: 'Florida air holds a lot of moisture for most of the year. A metal panel is thin, so it heats in the sun and cools quickly after sunset, in a cold snap, or above a cooled shop. When the underside drops below the dew point of the air touching it, that moisture becomes droplets. Through a Central Florida summer the dew point often sits in the 70s, so the panel only has to be cooler than the air against it.',
+      },
+      {
+        question: 'Is condensation the same as a roof leak?',
+        answer: 'No. A leak follows rain and usually shows up at a screw, a lap, a ridge, or a penetration. Condensation often shows up on a clear, humid morning, as a line under a purlin, or as widespread dampness when the metal is cool. Both can stain and rust, so tell them apart before you reseal a roof that is already tight.',
+      },
+      {
+        question: 'Do open pole barns get condensation under the roof?',
+        answer: 'Yes. Open bays still have metal that can fall below the dew point on a humid Florida night. Moving air usually dries the panels and what you store before the day heats up. An enclosed barn holds that humid air, so the same night can leave drips on tools, hay, and stored goods.',
+      },
+      {
+        question: 'Will insulation alone stop condensation on a pole barn metal roof?',
+        answer: 'Not by itself. Insulation changes the temperature through the roof, but humid air that still reaches cold metal will condense on it or inside the insulation. The air and vapor path has to match the insulation: sealed where the plan is to keep air off the metal, or deliberately vented where the plan is to dry the space. Ask how those pieces work together before the roof is ordered.',
+      },
+      {
+        question: 'Should a cooled Florida workshop be vented like an open barn?',
+        answer: 'Usually no. An unconditioned enclosed barn often uses eave intake and ridge exhaust to flush humid air. A cooled shop is trying to keep outdoor humidity out. Opening that building to the weather brings more moisture in and works against the cooling. The roof and walls need an air-sealing and insulation approach suited to a conditioned space, confirmed on the drawings.',
+      },
+      {
+        question: 'What are early signs of condensation under a metal roof?',
+        answer: 'Drips or a damp floor on clear mornings, rust-colored streaks on purlins or screw lines, water spots on the tops of stored items, musty cardboard or hay, and wet or sagging insulation. Stains that appear only in rain are more likely a leak. Stains that appear after a cool, humid night are more likely condensation.',
+      },
+      {
+        question: 'When should condensation control be decided on a pole barn?',
+        answer: 'Before the roof is ordered, and again before an open barn is enclosed or a bay is cooled. Open storage, hay, horses, and a cooled workshop each change the insulation, vapor control, and ventilation. Adding walls or cooling later without revisiting the roof assembly is when many Florida barns start to drip.',
+      },
+    ],
+    content: `
+## What to Think About When Planning Condensation Control Under a Florida Pole Barn Metal Roof
+
+Condensation under a Florida pole barn metal roof is water that forms on the underside of the panels when humid air meets metal that has cooled below the dew point. The air in Florida holds a lot of moisture for most of the year. The panels heat in the afternoon sun, then cool quickly after sunset, in a winter cold snap, or above a cooled workshop. When the steel drops below the dew point of the air touching it, that moisture comes out as droplets. Those drips show up as rust stains on purlins and screws, damp boxes, musty hay, or a wet floor on a clear morning. It is a planning problem. How you will use the barn — open storage, enclosed and unconditioned, or closed and cooled — decides whether the roof needs insulation, a vapor and air control layer, ventilation, or a combination. That decision belongs on the drawings before the roof is ordered.
+
+## Why a Florida Metal Roof Sweats
+
+A metal panel is thin. It has little mass, so its temperature follows the weather faster than wood decking or a heavier roof. On a Central Florida afternoon the panel can be hot to the touch. After a clear night, or when a cool front moves down the peninsula, the same panel can fall below the temperature of the air in the barn. Humid air off the Gulf and the Atlantic keeps the dew point high through much of the year, including many winter mornings. Through a typical summer the dew point often sits in the 70s, so the metal does not have to feel cold by northern standards. It only has to be cooler than the air against it. If the underside is below that dew point, water beads on it.
+
+The pattern is easy to confuse with a leak, and the next step is different.
+
+- **After a clear, humid night**: Droplets along the low edge of a panel, a damp line under a purlin, or a wet spot on the floor with no rain in the gauge. That is condensation.
+- **During or right after rain**: Water at a screw, a lap, a ridge, or a pipe flashing. That is a leak path, and resealing is the right next step.
+- **Both on the same day**: A storm can cool the roof and drive humid air in through open bays. Watch whether the drip continues on the next clear morning.
+
+A barn that stays dry in July can drip in January, when a cool roof meets air that never really dried out. Horses, hay, a washed tractor, and a dirt floor add vapor of their own. The metal is the surface where it shows up. Screws and purlins can sweat even when the field of the panel looks dry. Rust-colored streaks at those lines are an early clue.
+
+## Open Bays, Enclosed Barns, and a Cooled Shop
+
+The same roof behaves differently once you decide what the walls do. [Open and enclosed pole barns](/blog/open-vs-enclosed-pole-barn-florida) are a layout choice and a moisture choice.
+
+- **Open storage**: Air moves through the bays. The panels can still fall below the dew point on a humid night, and you may see a light sweat at dawn. Moving air usually dries the steel and what you park under it before the day heats up. Rain is the larger threat to the equipment, which is why overhangs and which way the barn faces still matter. Condensation control is simpler here, and it is not automatic.
+- **Enclosed, not cooled**: Walls and doors hold the humid air that an open bay would have flushed. Hay, livestock, a dirt or gravel floor, and a wash bay all keep the indoor dew point high. This is the layout where owners most often find drips on tools and rust on the roof screws. Ventilation has to be drawn, not hoped for.
+- **Cooled or heated**: A workshop, an office bay, or any space you air-condition puts cooler, drier interior air on one side of the roof and hot, humid outdoor air on the other. In a Florida summer the vapor drive is often inward, toward the cooled space. A roof that was fine as open storage can sweat, or wet the insulation, once the space is closed and cooled. Say so before the walls and the roof assembly are drawn.
+- **Use that will change**: An open barn you may enclose later, or an enclosed barn you may cool later, needs that future use named now. Adding walls or cooling without revisiting the roof is when many Florida barns start to drip. If horses or hay are part of the plan, say that too. Animals and feed add moisture the roof will see every night.
+
+## Insulation, Vapor Control, and Air Sealing
+
+Insulation slows heat moving through the roof. On its own it does not stop humid air from touching cold metal. Air that still reaches the panel drops its moisture there and can wet the insulation from the roof side. Wet insulation sags, smells musty, and does less of its job. No one facing fits every barn. Ask how the air and vapor path is supposed to work.
+
+- **Keep humid air off the steel**: If the plan is a layer directly under the panels — a facing on the insulation or a separate membrane — it has to be continuous. Laps, eaves, the ridge, light holes, and pipe penetrations are where untreated air still reaches the metal. A seam that is only pinched, not sealed, is still a path for condensation.
+- **Match the layer to this climate**: Most of Florida is hot and humid. Moisture often moves from outdoors toward a cooled interior in summer, and the drive can reverse on a cold night. A vapor retarder placed as if this were a northern winter can trap water in the roof. Ask where the layer sits, and why that side is right for a Florida building that may be cooled, left unconditioned, or both.
+- **Leave a way for stray moisture to dry**: Two tight sheets with insulation between them can hold water that gets in, with nowhere for it to go. One control layer, and a drying path the builder can point to, is the question to ask.
+- **Include the thermal bridges**: Purlins and fasteners carry heat around the insulation. They can sweat, stain, and drip even when the flat of the panel stays dry. Ask how those members are treated, not only the field of the roof.
+- **Pick ceiling or roof, and carry it through**: Insulating a flat ceiling and venting the space above it is a different assembly from insulating directly under the metal and leaving that cavity closed. Either approach can work when it is finished the way it was drawn. Mixing them — a ceiling batt, a blocked ridge, and a closed pocket against the panels — is a common way to store water in the roof.
+
+Gaps at the wall-to-roof joint, around door headers, and at wire penetrations move a lot of humid air. That air feeds the drip in an enclosed barn, and it is moisture a cooled shop has to remove. The drawings should say which joints are sealed and which stay open so the barn can vent. A membrane or a different insulation stack still has to match the engineered roof. If the assembly changes after the plans are stamped, the engineer should see it. [What a wind rating means on a Florida pole barn](/blog/pole-barn-hurricane-rating-florida) is the companion question: the roof has to stay on the building, and the underside has to stay dry.
+
+## Ventilation, Eave Intake, and Ridge Airflow
+
+Ventilation and vapor control do different jobs. Ventilation replaces humid indoor air with outdoor air and gives wet surfaces a chance to dry. A vapor and air control layer keeps humid air from reaching a cold surface in the first place. An unconditioned enclosed barn often needs the first. A cooled shop usually needs the second. Using the open-barn answer on a closed, cooled bay pulls outdoor humidity inside and works against the cooling.
+
+For an enclosed barn that is not conditioned, think about a path, not a single vent.
+
+- **Intake low**: Eave or soffit openings let air in. If insulation, a facing, or a trim piece blocks that slot, the high vent has little air to pull and the space under the roof stays stale.
+- **Exhaust high**: A ridge vent or a cupola lets the warmest, wettest air out. A high opening with no low intake mostly sits there. Air needs an entrance and an exit.
+- **A clear channel**: A planned gap keeps insulation from closing the airway at the eave. If you cannot trace a continuous path from eave to ridge, treat it as blocked until someone shows you the opening.
+- **Open sides and storms**: More open area dries the barn and also changes the wind load. Closing vents or adding walls before a storm is an engineering change, not only a weather habit. [Planning a pole barn for Florida storm season](/blog/planning-pole-barn-florida-storm-season) covers how open and enclosed layouts are supposed to match the site.
+
+Fans move air. They do not lower the dew point by themselves. If the air they move is already saturated, they can spread a drip without drying the barn. Outdoor exchange helps when that air is drier, or when it carries moisture off a surface that warms after sunrise. Leaving doors open so the barn can breathe is a layout the drawings should already show. An open door is a path for wind-driven rain, and the engineering class depends on which sides stay open.
+
+## Early Signs on the Panels, the Purlins, and What You Store
+
+Look on a clear morning, not only during a storm.
+
+- **Drips with no rain**: A wet line on the floor under a purlin, or drops along the low rib of a panel, after a dry night.
+- **Rust-colored streaks**: Stains that start at screws or on top of a purlin and run down. Condensation sits on those colder members and leaves a mark before a panel rusts through.
+- **Damp stored goods**: Cardboard, a saddle, a boat cover, or the top of an RV with spots that are not under one seam. Water that fell across a wide area fits condensation better than one failed screw.
+- **Musty hay or feed**: A smell, caking, or heating in the top of a stack. Hay adds moisture of its own. A sweating roof adds more. Either one is a reason to look up.
+- **Wet or sagging insulation**: Facing that stains, droops, or shows droplets on the barn side. Air is reaching a cold surface inside the assembly.
+- **A stain that only appears in rain**: More likely a fastener, a lap, or a flashing. Fix that path. Covering an active leak with insulation does not turn it into a condensation problem, and it does not solve it.
+
+A dirt floor, a slab with no vapor break under it, and poor grading add ground moisture that the roof can then condense. The pad and the drainage are part of the moisture plan. The [site preparation checklist](/blog/florida-pole-barn-site-preparation-checklist) is where grade and drainage get settled before the posts go in, so the barn is not sitting in water it is also collecting overhead.
+
+## A Checklist Before You Build or Enclose
+
+Walk through this before the roof package is ordered, and again before you enclose an open barn or add cooling.
+
+- **Name the use**: Open equipment storage, enclosed unconditioned storage, horses, hay, a workshop, or a cooled bay. Include the use you expect later.
+- **Name the moisture sources**: Animals, hay, a wash bay, a dirt floor, an RV that comes in wet, or a shop you will cool.
+- **Ask how humid air stays off the metal**: A facing, a membrane, or a vented space, and whether the laps and penetrations are sealed.
+- **Ask where the vapor control sits, and why**: Especially if any bay will be air-conditioned through a Florida summer.
+- **Pick vented or closed, and stick to it**: Intake at the eave, exhaust at the ridge, and a channel that insulation cannot block — or a sealed assembly with a drying path the builder can explain.
+- **Include purlins and fasteners**: They can sweat when the field of the panel does not.
+- **Keep the site from feeding the air**: Grade, drainage, and the floor, so ground moisture is not the source you left out.
+- **Match any new walls to the engineering**: Enclosing a side, closing vents, or changing the roof stack can change the wind design. Confirm it on the drawings before the order changes.
+- **Look up after the first cool night**: A walk-through on a clear, humid morning tells you whether the assembly is doing what it was drawn to do.
+
+## Tell Us How You Will Use the Barn
+
+Florida Pole Barn plans metal-roofed pole barns for properties across Florida, with the crew based in Central Florida. Condensation control starts with use: what you store, whether the sides stay open, and whether any bay will be cooled. Tell us how you will use the barn. We will plan the roof, the walls, and the ventilation as one building, and you can request a free quote from that conversation.
+
+**[Tell us how you will use the barn →](/quote)**
+
+## Frequently Asked Questions
+
+### Why does a metal roof sweat in a Florida pole barn?
+
+Florida air holds a lot of moisture for most of the year. A metal panel is thin, so it heats in the sun and cools quickly after sunset, in a cold snap, or above a cooled shop. When the underside drops below the dew point of the air touching it, that moisture becomes droplets. Through a Central Florida summer the dew point often sits in the 70s, so the panel only has to be cooler than the air against it.
+
+### Is condensation the same as a roof leak?
+
+No. A leak follows rain and usually shows up at a screw, a lap, a ridge, or a penetration. Condensation often shows up on a clear, humid morning, as a line under a purlin, or as widespread dampness when the metal is cool. Both can stain and rust, so tell them apart before you reseal a roof that is already tight.
+
+### Do open pole barns get condensation under the roof?
+
+Yes. Open bays still have metal that can fall below the dew point on a humid Florida night. Moving air usually dries the panels and what you store before the day heats up. An enclosed barn holds that humid air, so the same night can leave drips on tools, hay, and stored goods.
+
+### Will insulation alone stop condensation on a pole barn metal roof?
+
+Not by itself. Insulation changes the temperature through the roof, but humid air that still reaches cold metal will condense on it or inside the insulation. The air and vapor path has to match the insulation: sealed where the plan is to keep air off the metal, or deliberately vented where the plan is to dry the space. Ask how those pieces work together before the roof is ordered.
+
+### Should a cooled Florida workshop be vented like an open barn?
+
+Usually no. An unconditioned enclosed barn often uses eave intake and ridge exhaust to flush humid air. A cooled shop is trying to keep outdoor humidity out. Opening that building to the weather brings more moisture in and works against the cooling. The roof and walls need an air-sealing and insulation approach suited to a conditioned space, confirmed on the drawings.
+
+### What are early signs of condensation under a metal roof?
+
+Drips or a damp floor on clear mornings, rust-colored streaks on purlins or screw lines, water spots on the tops of stored items, musty cardboard or hay, and wet or sagging insulation. Stains that appear only in rain are more likely a leak. Stains that appear after a cool, humid night are more likely condensation.
+
+### When should condensation control be decided on a pole barn?
+
+Before the roof is ordered, and again before an open barn is enclosed or a bay is cooled. Open storage, hay, horses, and a cooled workshop each change the insulation, vapor control, and ventilation. Adding walls or cooling later without revisiting the roof assembly is when many Florida barns start to drip.
+    `,
+  },
+  {
     slug: 'pole-barn-eave-height-door-openings-florida',
     title: 'What to Think About When Choosing Eave Height and Door Openings for a Florida Pole Barn',
     description:
