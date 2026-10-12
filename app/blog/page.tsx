@@ -18,6 +18,16 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'pole-barn-metal-roof-condensation-florida',
+    title: 'What to Think About When Planning Condensation Control Under a Florida Pole Barn Metal Roof',
+    excerpt:
+      'Humid Florida air on a cooling metal roof becomes drips, rust stains, and damp stored goods. What to think through on insulation, vapor control, ventilation, and open versus enclosed use.',
+    date: '2026-10-12',
+    readTime: '9 min read',
+    category: 'Construction & Materials',
+    image: '/Gable-Dress-with-Roof-Trim.jpg',
+  },
+  {
     slug: 'pole-barn-eave-height-door-openings-florida',
     title: 'What to Think About When Choosing Eave Height and Door Openings for a Florida Pole Barn',
     excerpt:
