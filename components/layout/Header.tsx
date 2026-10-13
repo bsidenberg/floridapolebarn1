@@ -101,6 +101,14 @@ export default function Header() {
             </svg>
             {COMPANY.phone}
           </a>
+          <a
+            href="https://booqer.ai/shops/florida-pole-barn/book"
+            target="_blank"
+            rel="noopener"
+            className="hidden md:inline-flex items-center rounded-lg border border-brand-200 px-3 py-2 text-sm font-semibold text-brand-700 hover:bg-brand-50 transition-colors"
+          >
+            Book a project call
+          </a>
           <Link
             href="/quote"
             className="btn-primary text-sm px-4 py-2"

@@ -171,7 +171,16 @@ const localBusinessSchema = {
     COMPANY.social.facebook,
     COMPANY.social.instagram,
     COMPANY.social.tiktok,
+    'https://booqer.ai/shops/florida-pole-barn',
   ],
+  potentialAction: {
+    '@type': 'ReserveAction',
+    name: 'Book a project call',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: 'https://booqer.ai/shops/florida-pole-barn/book',
+    },
+  },
 }
 
 const websiteSchema = {
