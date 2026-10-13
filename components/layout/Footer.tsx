@@ -47,6 +47,9 @@ export default function Footer() {
             <Link href="/quote" className="bg-white/10 border border-white/30 text-white hover:bg-white/20 inline-flex items-center justify-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold transition-all whitespace-nowrap">
               Request Free Quote →
             </Link>
+            <a href="https://booqer.ai/shops/florida-pole-barn/book" target="_blank" rel="noopener" className="bg-white/10 border border-white/30 text-white hover:bg-white/20 inline-flex items-center justify-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold transition-all whitespace-nowrap">
+              Book a project call
+            </a>
           </div>
         </div>
       </div>
