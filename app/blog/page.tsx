@@ -18,6 +18,16 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'gravel-pad-vs-concrete-slab-florida-pole-barn',
+    title: 'What to Think About When Choosing a Gravel Pad vs a Concrete Slab for a Florida Pole Barn',
+    excerpt:
+      'Gravel fits open storage when the pad can drain. A slab fits a workshop that needs a firm floor and a vapor break. What to settle on drainage, seasonal high water, and use before you choose.',
+    date: '2026-10-15',
+    readTime: '13 min read',
+    category: 'Construction & Materials',
+    image: '/Shop-Front.jpg',
+  },
+  {
     slug: 'pole-barn-metal-roof-condensation-florida',
     title: 'What to Think About When Planning Condensation Control Under a Florida Pole Barn Metal Roof',
     excerpt:
