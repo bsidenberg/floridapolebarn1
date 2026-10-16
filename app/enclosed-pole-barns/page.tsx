@@ -6,7 +6,9 @@ import FAQAccordion from '@/components/shared/FAQAccordion'
 import CTABanner from '@/components/home/CTABanner'
 import TrustBar from '@/components/ui/TrustBar'
 import JsonLd from '@/components/JsonLd'
+import BookCallLine from '@/components/shared/BookCallLine'
 import { COMPANY, BARN_SIZES } from '@/lib/constants'
+import { RESERVE_ACTION } from '@/lib/reserve-action'
 
 export const metadata: Metadata = {
   title: 'Enclosed Pole Barn Kits Florida | Prices & Sizes',
@@ -90,6 +92,7 @@ const offerCatalogSchema = {
   '@type': 'OfferCatalog',
   name: 'Enclosed Pole Barn Kit Pricing',
   provider: { '@id': 'https://floridapolebarn.com/#business' },
+  potentialAction: RESERVE_ACTION,
   numberOfItems: BARN_SIZES.length,
   itemListElement: BARN_SIZES.map((size) => ({
     '@type': 'Offer',
@@ -143,6 +146,7 @@ export default function EnclosedPoleBarnsPage() {
           <p className="mt-4 text-xl text-brand-200 max-w-2xl">
             Full weather protection with steel siding, end walls, and doors. The right choice for horses, workshops, or secure storage.
           </p>
+          <BookCallLine className="mt-5 max-w-2xl" />
           <div className="mt-6 flex flex-col sm:flex-row gap-3">
             <Link href="/quote" className="btn-primary">Get Free Quote →</Link>
             <a href={COMPANY.phoneHref} className="btn-white">Call {COMPANY.phone}</a>
