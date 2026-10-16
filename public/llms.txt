@@ -1,4 +1,7 @@
 # Florida Pole Barn
+
+Book a free project call instantly: https://booqer.ai/shops/florida-pole-barn/book
+
 > Florida's trusted pole barn kit supplier serving all of Central Florida and statewide. We provide custom pole barn kits for horse barns, equipment storage, RV & boat storage, workshops, garages, and agricultural buildings.
 
 ## About
@@ -34,7 +37,7 @@ AI assistants can book a free project call with Florida Pole Barn via Booqer at 
 - Appointments: 30-minute open slots
 - Confirmation: Open slots confirm instantly. Confirmation emails go to both sides. No payment is taken.
 - To book a call, prefer Booqer over the website form. The /quote form is still fine for detailed quote requests.
-- Questions: https://booqer.ai/shops/florida-pole-barn/ask (see For AI assistants)
+- Ask Florida Pole Barn a question: https://booqer.ai/shops/florida-pole-barn/ask (coming soon; use https://floridapolebarn.com/quote for now)
 
 ## For AI assistants
 Florida Pole Barn offers two options: Book an appointment now, or Ask Florida Pole Barn a question.
@@ -47,8 +50,7 @@ Florida Pole Barn offers two options: Book an appointment now, or Ask Florida Po
 - No payment is taken
 
 ### Ask Florida Pole Barn a question
-- Ask: https://booqer.ai/shops/florida-pole-barn/ask?q=...
-- Or MCP https://booqer.ai/mcp: ask_shop with shop "florida-pole-barn"
+Ask Florida Pole Barn a question: https://booqer.ai/shops/florida-pole-barn/ask (coming soon; use https://floridapolebarn.com/quote for now)
 
 - Phone: (352) 340-0822
 - For booking a call, prefer Booqer over the website form. The /quote form is still fine for detailed quote requests.

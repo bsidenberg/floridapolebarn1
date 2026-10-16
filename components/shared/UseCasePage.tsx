@@ -4,7 +4,9 @@ import CTABanner from '@/components/home/CTABanner'
 import TrustBar from '@/components/ui/TrustBar'
 import FAQAccordion from '@/components/shared/FAQAccordion'
 import JsonLd from '@/components/JsonLd'
+import BookCallLine from '@/components/shared/BookCallLine'
 import { COMPANY } from '@/lib/constants'
+import { RESERVE_ACTION } from '@/lib/reserve-action'
 import type { FAQItem } from '@/lib/types'
 
 interface UseCasePageProps {
@@ -48,6 +50,7 @@ export default function UseCasePage({ canonical, hero, intro, features, faqs, re
     areaServed: { '@type': 'State', name: 'Florida' },
     serviceType: 'Construction',
     url: canonical,
+    potentialAction: RESERVE_ACTION,
   }
 
   const faqSchema = {
@@ -87,6 +90,7 @@ export default function UseCasePage({ canonical, hero, intro, features, faqs, re
           <p className="text-accent-400 text-sm font-semibold uppercase tracking-wider mb-3">{hero.eyebrow}</p>
           <h1 className="text-4xl font-bold text-white sm:text-5xl">{hero.title}</h1>
           <p className="mt-4 text-xl text-brand-200 max-w-2xl">{hero.subtitle}</p>
+          <BookCallLine className="mt-5 max-w-2xl" />
           <div className="mt-6 flex flex-col sm:flex-row gap-3">
             <Link href="/quote" className="btn-primary">Get Free Quote →</Link>
             <a href={COMPANY.phoneHref} className="btn-white">Call {COMPANY.phone}</a>

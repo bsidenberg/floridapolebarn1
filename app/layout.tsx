@@ -7,6 +7,7 @@ import Footer from '@/components/layout/Footer'
 import GTMPageView from '@/components/GTMPageView'
 import Joseph from '@/components/chat/Joseph'
 import { COMPANY } from '@/lib/constants'
+import { RESERVE_ACTION } from '@/lib/reserve-action'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -173,29 +174,7 @@ const localBusinessSchema = {
     COMPANY.social.tiktok,
     'https://booqer.ai/shops/florida-pole-barn',
   ],
-  potentialAction: [
-    {
-      '@type': 'ReserveAction',
-      name: 'Book a project call',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: 'https://booqer.ai/shops/florida-pole-barn/book',
-        actionPlatform: [
-          'http://schema.org/DesktopWebPlatform',
-          'http://schema.org/MobileWebPlatform',
-        ],
-      },
-    },
-    {
-      '@type': 'AskAction',
-      name: 'Ask Florida Pole Barn a question via Booqer',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: 'https://booqer.ai/shops/florida-pole-barn/ask?q={question}',
-      },
-      'query-input': 'required name=question',
-    },
-  ],
+  potentialAction: [RESERVE_ACTION],
 }
 
 const websiteSchema = {
