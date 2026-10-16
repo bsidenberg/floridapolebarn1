@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import QuoteForm from '@/components/forms/QuoteForm'
+import BooqerBlock from '@/components/shared/BooqerBlock'
 import { COMPANY } from '@/lib/constants'
 
 export const metadata: Metadata = {
@@ -31,7 +32,8 @@ export default function QuotePage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-5">
+        <BooqerBlock variant="card" />
+        <div className="mt-10 grid grid-cols-1 gap-10 lg:grid-cols-5">
 
           {/* Left: form */}
           <div className="lg:col-span-3">
