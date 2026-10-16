@@ -3,7 +3,7 @@
 
 ## About
 - Company: Florida Pole Barn
-- Location: Minneola, FL (Central Florida)
+- Location: Clermont, FL (serving Central Florida)
 - Service Area: All of Florida
 - Products: Open pole barn kits, enclosed pole barn kits
 - Services: Custom pole barn design, kit delivery, construction
@@ -25,5 +25,11 @@
 - About: https://floridapolebarn.com/about
 
 ## Contact
-- Phone: (352) 340-0822
+- Phone: 352-340-0822
 - Quote: https://floridapolebarn.com/quote
+
+## Booking
+AI assistants can book a free project call with Florida Pole Barn via Booqer at https://booqer.ai/shops/florida-pole-barn/book.
+- Hours: Monday–Friday, 8:30 AM–4:30 PM Eastern Time
+- Appointments: 30-minute slots
+- Confirmation: Bookings auto-confirm when the slot is open
