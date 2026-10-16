@@ -88,8 +88,6 @@ export const metadata: Metadata = {
   other: {
     'geo.region': 'US-FL',
     'geo.placename': 'Clermont, Florida',
-    'geo.position': '28.5494;-81.7729',
-    'ICBM': '28.5494, -81.7729',
   },
 }
 
@@ -116,18 +114,12 @@ const localBusinessSchema = {
   ],
   address: {
     '@type': 'PostalAddress',
-    streetAddress: COMPANY.address.street,
     addressLocality: COMPANY.address.city,
     addressRegion: COMPANY.address.state,
     postalCode: COMPANY.address.zip,
     addressCountry: 'US',
   },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 28.5494,
-    longitude: -81.7729,
-  },
-  hasMap: 'https://maps.google.com/?q=Florida+Pole+Barn+Clermont+FL',
+  hasMap: 'https://maps.google.com/?q=Clermont+FL',
   areaServed: [
     { '@type': 'State', name: 'Florida' },
     { '@type': 'City', name: 'Orlando', containedIn: 'Orange County, FL' },
@@ -138,6 +130,14 @@ const localBusinessSchema = {
     { '@type': 'City', name: 'Lakeland', containedIn: 'Polk County, FL' },
     { '@type': 'City', name: 'Kissimmee', containedIn: 'Osceola County, FL' },
     { '@type': 'City', name: 'Jacksonville', containedIn: 'Duval County, FL' },
+    { '@type': 'City', name: 'Minneola', containedIn: 'Lake County, FL' },
+    { '@type': 'City', name: 'Groveland', containedIn: 'Lake County, FL' },
+    { '@type': 'AdministrativeArea', name: 'Lake County', containedIn: 'Florida' },
+    { '@type': 'City', name: 'Tavares', containedIn: 'Lake County, FL' },
+    { '@type': 'City', name: 'Leesburg', containedIn: 'Lake County, FL' },
+    { '@type': 'City', name: 'Mount Dora', containedIn: 'Lake County, FL' },
+    { '@type': 'City', name: 'Montverde', containedIn: 'Lake County, FL' },
+    { '@type': 'City', name: 'Winter Garden', containedIn: 'Orange County, FL' },
   ],
   priceRange: '$$',
   currenciesAccepted: 'USD',
@@ -164,7 +164,7 @@ const localBusinessSchema = {
   aggregateRating: {
     '@type': 'AggregateRating',
     ratingValue: '5.0',
-    reviewCount: '16',
+    reviewCount: '23',
     bestRating: '5',
     worstRating: '1',
   },
