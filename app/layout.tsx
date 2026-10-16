@@ -139,7 +139,6 @@ const localBusinessSchema = {
     { '@type': 'City', name: 'Montverde', containedIn: 'Lake County, FL' },
     { '@type': 'City', name: 'Winter Garden', containedIn: 'Orange County, FL' },
   ],
-  priceRange: '$$',
   currenciesAccepted: 'USD',
   paymentAccepted: 'Cash, Check, Credit Card',
   knowsAbout: [

@@ -38,7 +38,7 @@ const values = [
   },
   {
     title: 'Honest Business',
-    desc: 'No hidden costs. No bait-and-switch pricing. We give you a clear, complete quote and deliver exactly what we promise. Customers come back because they trust us.',
+    desc: 'We give you a clear, complete quote and deliver exactly what we promise. Customers come back because they trust us.',
   },
   {
     title: 'Local to Florida',

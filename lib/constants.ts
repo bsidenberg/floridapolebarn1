@@ -20,6 +20,10 @@ export const COMPANY = {
   },
 } as const
 
+/** Public copy only. Do not add dollar amounts, ranges, or per-square-foot rates. */
+export const PRICING_GUIDANCE =
+  'Pricing depends on building size, county wind-load requirements, site conditions and options. Get a free quote or book a free project call: https://booqer.ai/shops/florida-pole-barn/book'
+
 export const BARN_SIZES: BarnSize[] = [
   {
     width: 20,
@@ -27,7 +31,6 @@ export const BARN_SIZES: BarnSize[] = [
     heights: [12, 14],
     sqft: 480,
     primaryUse: 'Personal storage, small garage',
-    startingPrice: 2326,
   },
   {
     width: 30,
@@ -35,7 +38,6 @@ export const BARN_SIZES: BarnSize[] = [
     heights: [12, 14],
     sqft: 1080,
     primaryUse: 'Equipment storage, small workshop',
-    startingPrice: 4601,
   },
   {
     width: 40,
@@ -43,7 +45,6 @@ export const BARN_SIZES: BarnSize[] = [
     heights: [12, 14],
     sqft: 1920,
     primaryUse: 'Large workshop, horse barn, multi-vehicle',
-    startingPrice: 7244,
   },
   {
     width: 40,
@@ -51,7 +52,6 @@ export const BARN_SIZES: BarnSize[] = [
     heights: [12, 14],
     sqft: 2400,
     primaryUse: 'Multi-use barn, RV storage, agricultural',
-    startingPrice: 8788,
   },
   {
     width: 50,
@@ -59,7 +59,6 @@ export const BARN_SIZES: BarnSize[] = [
     heights: [12, 14],
     sqft: 3000,
     primaryUse: 'Large agricultural or commercial storage',
-    startingPrice: 12140,
   },
   {
     width: 50,
@@ -67,7 +66,6 @@ export const BARN_SIZES: BarnSize[] = [
     heights: [12, 14],
     sqft: 4800,
     primaryUse: 'Commercial barn, large-scale agricultural',
-    startingPrice: 16962,
   },
 ]
 
@@ -148,7 +146,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: 'David M.',
     location: 'Lakeland, FL',
     rating: 5,
-    text: 'Used them to build a workshop and man cave. Exactly what I envisioned at a price that beat every other quote I got. The Florida Pole Barn team really knows what they\'re doing.',
+    text: 'Used them to build a workshop and man cave. Exactly what I envisioned. The Florida Pole Barn team really knows what they\'re doing.',
     useCase: 'Workshop',
   },
   {
@@ -278,7 +276,7 @@ export const FAQS: FAQItem[] = [
   {
     question: 'What is the difference between an open and enclosed pole barn?',
     answer:
-      'Open pole barns have a roof and posts but no walls, providing ventilation and covered storage at the lowest cost. Enclosed pole barns add metal siding and doors, providing weather protection and security for your equipment, animals, or valuables.',
+      'Open pole barns have a roof and posts but no walls, which keeps the sides open for ventilation and covered storage. Enclosed pole barns add metal siding and doors, providing weather protection and security for your equipment, animals, or valuables.',
   },
   {
     question: 'What post sizes do you use?',
@@ -303,7 +301,7 @@ export const FAQS: FAQItem[] = [
   {
     question: 'How much does a pole barn cost in Florida?',
     answer:
-      'Pole barn kit costs in Florida vary based on size, wall height, and whether the barn is open or enclosed. Contact us for a free quote — we\'ll give you exact pricing for your specific project.',
+      PRICING_GUIDANCE,
   },
   {
     question: 'Do you install the barn or just provide the kit?',

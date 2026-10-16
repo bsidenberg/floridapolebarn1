@@ -52,7 +52,7 @@ export default function SizesOverview() {
         </div>
 
         <p className="mt-4 text-center text-sm text-gray-500">
-          Call us or request a free quote for custom pricing on any size.{' '}
+          Call us or request a free quote for any size.{' '}
           <Link href="/quote" className="font-semibold text-brand-600 hover:underline">
             Get your free custom quote →
           </Link>

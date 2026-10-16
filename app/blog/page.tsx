@@ -6,11 +6,11 @@ import CTABanner from '@/components/home/CTABanner'
 export const metadata: Metadata = {
   title: 'Pole Barn Blog — Florida Tips & Guides',
   description:
-    'Pole barn guides, cost breakdowns, permit info, and tips for Florida property owners. Learn everything you need to know before building your pole barn.',
+    'Pole barn planning guides, permit info, and tips for Florida property owners. Learn what to think through before building your pole barn.',
   alternates: { canonical: 'https://floridapolebarn.com/blog' },
   openGraph: {
     title: 'Pole Barn Blog — Florida Tips & Guides | Florida Pole Barn',
-    description: 'Pole barn guides, cost breakdowns, permit info, and tips for Florida property owners.',
+    description: 'Pole barn planning guides, permit info, and tips for Florida property owners.',
     url: 'https://floridapolebarn.com/blog',
     images: [{ url: 'https://floridapolebarn.com/og-image.jpg', width: 1200, height: 630, alt: 'Florida Pole Barn blog — guides and tips for Florida property owners' }],
   },
@@ -69,12 +69,12 @@ const posts = [
   },
   {
     slug: 'how-much-does-a-pole-barn-cost-in-florida',
-    title: 'How Much Does a Pole Barn Cost in Florida? (2026 Guide)',
+    title: 'What Affects Your Pole Barn Cost in Florida',
     excerpt:
-      'Complete breakdown of pole barn costs in Florida — kit prices, installation, concrete, permits, and what to budget. Real numbers from a Florida builder.',
+      'Building size, county wind-load requirements, site conditions, and options change the project. No published prices — get a free quote or book a project call.',
     date: '2026-03-27',
     readTime: '6 min read',
-    category: 'Cost Guide',
+    category: 'Planning Guide',
     image: '/IMG_9001.jpg',
   },
   {
@@ -91,7 +91,7 @@ const posts = [
     slug: 'open-vs-enclosed-pole-barn-florida',
     title: 'Open vs. Enclosed Pole Barn: Which Is Right for Your Florida Property?',
     excerpt:
-      'Side-by-side comparison of open and enclosed pole barns for Florida use cases — cost, ventilation, weather protection, and which works best for each application.',
+      'Side-by-side comparison of open and enclosed pole barns for Florida use cases — ventilation, weather protection, and which works best for each application.',
     date: '2025-01-05',
     readTime: '5 min read',
     category: 'Buying Guide',
@@ -121,7 +121,7 @@ const posts = [
     slug: 'horse-barn-planning-florida',
     title: 'Horse Barn Planning Guide for Florida Properties',
     excerpt:
-      'Everything horse owners need to know when planning a Florida barn — stall sizing, ventilation, aisle layouts, Florida-specific considerations, and cost expectations.',
+      'Everything horse owners need to know when planning a Florida barn — stall sizing, ventilation, aisle layouts, and Florida-specific considerations.',
     date: '2024-11-28',
     readTime: '7 min read',
     category: 'Use Case Guide',
@@ -130,7 +130,7 @@ const posts = [
 ]
 
 const categoryColors: Record<string, string> = {
-  'Cost Guide': 'bg-yellow-100 text-yellow-800',
+  'Planning Guide': 'bg-yellow-100 text-yellow-800',
   'Permits & Regulations': 'bg-blue-100 text-blue-800',
   'Buying Guide': 'bg-red-100 text-red-800',
   'Construction & Materials': 'bg-purple-100 text-purple-800',

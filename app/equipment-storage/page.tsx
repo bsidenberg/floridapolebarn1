@@ -22,14 +22,14 @@ export default function EquipmentStoragePage() {
         eyebrow: 'Farmers & Property Owners',
         title: 'Equipment Storage Buildings in Florida',
         subtitle:
-          'Stop leaving your tractors, ATVs, and farm equipment exposed to Florida sun and storms. A pole barn pays for itself by protecting your investment.',
+          'Stop leaving your tractors, ATVs, and farm equipment exposed to Florida sun and storms. A pole barn keeps that equipment under cover.',
         image: '/IMG_6911.jpg',
         imageAlt: 'Open pole barn equipment storage building in Florida',
       }}
       intro={{
         heading: 'Protect Your Equipment from Florida\'s Weather',
         paragraphs: [
-          'Farm equipment is expensive. A tractor left out in Florida\'s sun and humidity corrodes faster, degrades faster, and loses more value every season. A pole barn is the most cost-effective way to extend the life of your equipment.',
+          'A tractor left out in Florida\'s sun and humidity corrodes faster and degrades faster every season. A pole barn keeps that equipment under a roof built for Florida weather.',
           'Our open and enclosed equipment storage buildings are designed for easy drive-in/drive-out access. Wide spans, tall wall heights, and no interior posts mean you can maneuver large equipment without obstacles.',
         ],
         bullets: [

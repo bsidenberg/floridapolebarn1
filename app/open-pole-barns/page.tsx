@@ -11,12 +11,12 @@ import { COMPANY, BARN_SIZES } from '@/lib/constants'
 import { RESERVE_ACTION } from '@/lib/reserve-action'
 
 export const metadata: Metadata = {
-  title: 'Open Pole Barn Kits Florida | Prices & Sizes',
+  title: 'Open Pole Barn Kits Florida | Sizes & Options',
   description:
     'Open pole barn kits built for Florida weather. Pressure-treated posts, custom steel trusses, metal roofing. Sizes from 20×24 to 50×96. 140+ MPH rated. Free quote.',
   alternates: { canonical: 'https://floridapolebarn.com/open-pole-barns' },
   openGraph: {
-    title: 'Open Pole Barn Kits Florida | Prices & Sizes',
+    title: 'Open Pole Barn Kits Florida | Sizes & Options',
     description: 'Open pole barn kits built for Florida weather. Sizes from 20×24 to 50×96. Pressure-treated posts, custom steel trusses, 140+ MPH rated. Free quote.',
     url: 'https://floridapolebarn.com/open-pole-barns',
     images: [{ url: '/Open.jpg', width: 1200, height: 630, alt: 'Open pole barn kit in Florida with metal roof' }],
@@ -87,23 +87,23 @@ const breadcrumbSchema = {
   ],
 }
 
-const offerCatalogSchema = {
+const productListSchema = {
   '@context': 'https://schema.org',
-  '@type': 'OfferCatalog',
-  name: 'Open Pole Barn Kit Pricing',
+  '@type': 'ItemList',
+  name: 'Open Pole Barn Kits',
   provider: { '@id': 'https://floridapolebarn.com/#business' },
   potentialAction: RESERVE_ACTION,
   numberOfItems: BARN_SIZES.length,
-  itemListElement: BARN_SIZES.map((size) => ({
-    '@type': 'Offer',
-    name: `${size.width}×${size.length} Open Pole Barn Kit`,
-    description: `${size.sqft} sq ft open pole barn kit — ${size.primaryUse}`,
-    price: (size.startingPrice ?? 0).toString(),
-    priceCurrency: 'USD',
-    priceValidUntil: '2027-12-31',
-    availability: 'https://schema.org/InStock',
-    url: 'https://floridapolebarn.com/open-pole-barns',
-    seller: { '@id': 'https://floridapolebarn.com/#business' },
+  itemListElement: BARN_SIZES.map((size, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    item: {
+      '@type': 'Product',
+      name: `${size.width}×${size.length} Open Pole Barn Kit`,
+      description: `${size.sqft} sq ft open pole barn kit — ${size.primaryUse}`,
+      url: 'https://floridapolebarn.com/open-pole-barns',
+      brand: { '@id': 'https://floridapolebarn.com/#business' },
+    },
   })),
 }
 
@@ -121,7 +121,7 @@ export default function OpenPoleBarnsPage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema} />
-      <JsonLd data={offerCatalogSchema} />
+      <JsonLd data={productListSchema} />
       <JsonLd data={faqSchema} />
       {/* Hero */}
       <div className="relative bg-brand-900 py-20 overflow-hidden">
@@ -143,7 +143,7 @@ export default function OpenPoleBarnsPage() {
           </nav>
           <h1 className="text-4xl font-bold text-white sm:text-5xl">Open Pole Barn Kits</h1>
           <p className="mt-4 text-xl text-brand-200 max-w-2xl">
-            Cost-effective, ventilated, and built for Florida. Open pole barns deliver maximum coverage with minimal cost.
+            Ventilated and built for Florida. Open pole barns give you full roof coverage with open sides for airflow.
           </p>
           <BookCallLine className="mt-5 max-w-2xl" />
           <div className="mt-6 flex flex-col sm:flex-row gap-3">
@@ -165,7 +165,7 @@ export default function OpenPoleBarnsPage() {
                 Full Roof Coverage. Open Sides.
               </h2>
               <p className="mt-4 text-gray-600 leading-relaxed">
-                An open pole barn is a structure with a full roof supported by posts — no side walls. This design is ideal for Florida where ventilation is essential, and where you need covered storage without the full enclosure cost.
+                An open pole barn is a structure with a full roof supported by posts — no side walls. This design is ideal for Florida where ventilation is essential, and where you want covered storage with the sides left open.
               </p>
               <p className="mt-3 text-gray-600 leading-relaxed">
                 Open barns are perfect for equipment that doesn&apos;t need to be locked up, livestock that needs shelter from rain and sun, covered workspace, or RV and boat storage where you need drive-through access.
@@ -215,10 +215,10 @@ export default function OpenPoleBarnsPage() {
       <section className="section-padding bg-white">
         <div className="mx-auto max-w-7xl">
           <div className="text-center mb-10">
-            <p className="text-sm font-semibold text-brand-600 uppercase tracking-wider mb-2">Sizes & Pricing</p>
+            <p className="text-sm font-semibold text-brand-600 uppercase tracking-wider mb-2">Sizes</p>
             <h2 className="text-3xl font-bold text-gray-900">Common Sizes</h2>
             <p className="mt-3 text-gray-600 max-w-xl mx-auto text-sm">
-              Custom sizes available. Request a free quote for exact pricing on your project.
+              Custom sizes are available. Pricing depends on building size, county wind-load requirements, site conditions and options. Request a free quote for your project.
             </p>
           </div>
           <SizeTable />

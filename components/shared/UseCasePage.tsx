@@ -153,7 +153,7 @@ export default function UseCasePage({ canonical, hero, intro, features, faqs, re
       {/* CTA strip */}
       <section className="bg-accent-500 py-10">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
-          <h2 className="text-2xl font-bold text-white">Ready to get pricing?</h2>
+          <h2 className="text-2xl font-bold text-white">Ready to plan your project?</h2>
           <p className="mt-2 text-orange-100 text-sm">Free quote · No commitment · We call you within 1 business day</p>
           <div className="mt-5 flex flex-col sm:flex-row gap-3 justify-center">
             <Link href="/quote" className="btn-white text-sm">Request Free Quote →</Link>
