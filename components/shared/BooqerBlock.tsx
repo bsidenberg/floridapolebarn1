@@ -1,7 +1,7 @@
 import { cn } from '@/lib/utils'
 
 const BOOK_HREF = 'https://booqer.ai/shops/florida-pole-barn/book'
-const ASK_HREF = 'https://booqer.ai/shops/florida-pole-barn/ask'
+const ASK_HREF = '/quote'
 
 export default function BooqerBlock({
   id,
