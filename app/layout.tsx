@@ -173,18 +173,29 @@ const localBusinessSchema = {
     COMPANY.social.tiktok,
     'https://booqer.ai/shops/florida-pole-barn',
   ],
-  potentialAction: {
-    '@type': 'ReserveAction',
-    name: 'Book a project call',
-    target: {
-      '@type': 'EntryPoint',
-      urlTemplate: 'https://booqer.ai/shops/florida-pole-barn/book',
-      actionPlatform: [
-        'http://schema.org/DesktopWebPlatform',
-        'http://schema.org/MobileWebPlatform',
-      ],
+  potentialAction: [
+    {
+      '@type': 'ReserveAction',
+      name: 'Book a project call',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: 'https://booqer.ai/shops/florida-pole-barn/book',
+        actionPlatform: [
+          'http://schema.org/DesktopWebPlatform',
+          'http://schema.org/MobileWebPlatform',
+        ],
+      },
     },
-  },
+    {
+      '@type': 'AskAction',
+      name: 'Ask Florida Pole Barn a question via Booqer',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: 'https://booqer.ai/shops/florida-pole-barn/ask?q={question}',
+      },
+      'query-input': 'required name=question',
+    },
+  ],
 }
 
 const websiteSchema = {
@@ -212,6 +223,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link
+          rel="alternate"
+          type="application/json"
+          href="https://booqer.ai/shops/florida-pole-barn/agent-card.json"
+          title="Booqer agent card"
+        />
+        <link
+          rel="service-desc"
+          type="application/yaml"
+          href="https://booqer.ai/.well-known/openapi.yaml"
+        />
+        <link rel="mcp" href="https://booqer.ai/mcp" />
+        <meta name="booqer:shop" content="florida-pole-barn" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}

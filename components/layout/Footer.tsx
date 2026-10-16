@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { COMPANY } from '@/lib/constants'
 import PhoneLink from '@/components/ui/PhoneLink'
+import BooqerBlock from '@/components/shared/BooqerBlock'
 
 const productLinks = [
   { label: 'Open Pole Barn Kits', href: '/open-pole-barns' },
@@ -53,6 +54,8 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
+      <BooqerBlock id="booqer" />
 
       {/* Link columns */}
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
