@@ -1,5 +1,6 @@
 import { Resend } from 'resend'
 import type { QuoteFormData } from './types'
+import { COMPANY } from './constants'
 import { sendQuoteConfirmationSms } from './sms'
 
 const NOTIFY_EMAILS = ['info@floridapolebarn.com', 'sales@floridapolebarn.com']
@@ -97,7 +98,7 @@ export async function sendQuoteNotification(data: QuoteFormData): Promise<{ succ
 
         <p style="color: #6b7280; font-size: 13px; margin-top: 24px; border-top: 1px solid #e5e7eb; padding-top: 16px;">
           Florida Pole Barn<br>
-          Florida Highway 50, Clermont, FL 34711<br>
+          ${COMPANY.address.full}<br>
           <a href="https://floridapolebarn.com" style="color: #c0272d;">floridapolebarn.com</a>
         </p>
       </div>

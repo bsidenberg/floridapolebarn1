@@ -8,11 +8,10 @@ export const COMPANY = {
   phoneHref: 'tel:3523400822',
   email: 'info@floridapolebarn.com',
   address: {
-    street: 'Florida Highway 50',
     city: 'Clermont',
     state: 'FL',
     zip: '34711',
-    full: 'Florida Highway 50, Clermont, FL 34711',
+    full: 'Clermont, FL',
   },
   social: {
     facebook: 'https://www.facebook.com/people/Florida-Pole-Barn/61556805939648/',

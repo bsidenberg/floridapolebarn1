@@ -35,10 +35,10 @@ const serviceAreaSchema = {
     telephone: COMPANY.phone,
     address: {
       '@type': 'PostalAddress',
-      streetAddress: COMPANY.address.street,
       addressLocality: COMPANY.address.city,
       addressRegion: COMPANY.address.state,
       postalCode: COMPANY.address.zip,
+      addressCountry: 'US',
     },
   },
   areaServed: {
