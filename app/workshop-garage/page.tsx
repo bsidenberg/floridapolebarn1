@@ -22,14 +22,14 @@ export default function WorkshopGaragePage() {
         eyebrow: 'Florida Homeowners & Hobbyists',
         title: 'Pole Barn Workshop & Garage Florida',
         subtitle:
-          'Build the ultimate garage, workshop, or man cave on your property. Enclosed pole barns offer affordable, spacious, fully customizable buildings.',
+          'Build the ultimate garage, workshop, or man cave on your property. Enclosed pole barns are spacious and fully customizable.',
         image: '/Jeffs.jpeg',
         imageAlt: 'Enclosed pole barn workshop and garage in Central Florida',
       }}
       intro={{
         heading: 'Your Property. Your Workshop. Your Rules.',
         paragraphs: [
-          'A pole barn garage or workshop gives you the space you\'ve always wanted at a fraction of the cost of traditional construction. Open floor plans, tall ceilings, and complete customization — built on your property.',
+          'A pole barn garage or workshop gives you the space you\'ve always wanted. Open floor plans, tall ceilings, and complete customization — built on your property.',
           'Whether you\'re building a woodworking shop, car garage, welding bay, home gym, or just the ultimate hangout space, our enclosed pole barns deliver the square footage and flexibility to make it happen.',
         ],
         bullets: [

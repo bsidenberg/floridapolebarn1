@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import CTABanner from '@/components/home/CTABanner'
-import { COMPANY } from '@/lib/constants'
+import { COMPANY, PRICING_GUIDANCE } from '@/lib/constants'
 
 // ─── Blog post content ──────────────────────────────────────────────────────
 // Add new posts here. Each post has a slug, metadata, and full content.
@@ -619,7 +619,7 @@ Think through the path from the road to the pad:
 - **Soft ground**: After summer rains, sand and organic soil can bog a loaded truck. Plan temporary matting or an alternate dry approach if the driveway floods.
 - **Neighbor relations**: If the only access crosses a shared drive, confirm that before the truck is on the way.
 
-If the path is tight, say so early. Relocating the pad a few feet for access is cheaper in planning than improvising on delivery day.
+If the path is tight, say so early. Relocating the pad a few feet for access is easier to plan than improvising on delivery day.
 
 ### Utilities, Wells, and What Lies Underground
 
@@ -802,61 +802,56 @@ Before the permit set is finalized. Wind criteria, open versus enclosed sides, d
   },
   {
     slug: 'how-much-does-a-pole-barn-cost-in-florida',
-    title: 'How Much Does a Pole Barn Cost in Florida? (2026 Guide)',
+    title: 'What Affects Your Pole Barn Cost in Florida',
     description:
-      'Complete breakdown of pole barn costs in Florida — kit prices, installation, concrete, permits, and what to budget.',
+      'What changes a Florida pole barn project: building size, county wind-load requirements, site conditions, enclosure, and options. No published prices — get a free quote.',
     date: '2025-01-15',
-    updatedDate: '2026-03-26',
+    updatedDate: '2026-10-16',
     author: 'Florida Pole Barn',
     readTime: '6 min read',
-    category: 'Cost Guide',
+    category: 'Planning Guide',
     content: `
-## Pole Barn Costs in Florida: The Real Numbers
+## What Affects Your Pole Barn Cost in Florida
 
-If you're searching for pole barn costs in Florida, you've probably seen a wide range of numbers. Here's a straightforward breakdown from a Florida pole barn builder.
+${PRICING_GUIDANCE}
 
-### Kit Prices (Materials Only)
+A single published figure would miss the property. The useful question is which parts of the project change the quote.
 
-The kit — posts, trusses, roofing, hardware — is the foundation of your cost. Kit pricing varies based on size, wall height, open vs. enclosed configuration, and current material costs.
+### Building size and layout
 
-*Prices vary — contact us for current pricing on your specific size and configuration. We respond within 1 business day with an exact quote.*
+Width, length, and wall height set the posts, trusses, and roof. A taller eave, a wider clear span, or a longer run of bays changes the structure. Extra door bays and a layout built around horses, equipment, an RV, or a workshop change it again. Tell us what has to fit, and the building is sized to that use.
 
-These are kit prices — materials only. Installation and site work are separate.
+### Open or enclosed
 
-### Installation Costs
+An open barn is a roof on posts. An enclosed barn adds metal siding, end walls, and doors. Enclosure, door count, and door size are options. Insulation, windows, lean-tos, and interior finishing are options too.
 
-Professional installation typically runs $3–$6 per square foot for labor depending on size and complexity. A 30×36 open barn might run $3,000–$4,500 for installation; a 40×60 enclosed barn with doors could run $8,000–$15,000.
+### County wind-load requirements
 
-### Additional Costs to Budget
+Florida counties do not all use the same design wind speed. Coastal and inland sites can require different engineering. Stamped plans for your county's wind load are part of a Florida project, and they are scoped with the building.
 
-**Concrete slab:** $4–$8 per sq ft depending on thickness and reinforcement. A 40×60 slab runs $10,000–$20,000.
+### Site conditions
 
-**Site prep and grading:** Varies significantly by site. Budget $1,000–$5,000 for typical level sites.
+The lot changes the work around the building:
 
-**Permits:** Most Florida counties charge $500–$2,000 for building permits on structures of this size.
+- Grade and drainage
+- Access for delivery
+- Gravel pad or concrete slab
+- Utilities and electrical
+- How the posts are set
 
-**Doors:** Roll-up garage doors range from $800–$3,000 each depending on size.
+A level, accessible site and a sloping or wet site are different projects. Site work is scoped on the property.
 
-**Electrical:** Basic electrical rough-in typically runs $2,000–$6,000 by a licensed electrician.
+### Permits and options
 
-### Total Budget Framework
+Most counties require a permit for a permanent pole barn. The process depends on the county, the size, and whether the use is agricultural. Doors, roof trim, wainscot, and interior finishing are chosen with the layout.
 
-When budgeting your full project, factor in: kit materials, installation labor, concrete slab (if applicable), site prep, permits, doors, and any electrical or finishing work. Total project costs scale significantly with size and whether the barn is open or enclosed.
+### How to get a number for your project
 
-*Kit prices vary — contact us for a current quote on your specific size. We'll give you an exact number, not a range.*
-
-### Why Florida Prices May Differ From What You See Online
-
-Most online pole barn cost calculators are built for the Midwest. Florida has:
-
-- Higher wind load requirements (140 MPH vs. 90 MPH in many states)
-- Specific pressure-treating requirements for humid climates
-- County-specific permit requirements
-- Distance factors for rural delivery
-
-A Florida-engineered building costs more than a generic kit — because it's built to actually survive here.
+${PRICING_GUIDANCE}
 
 **[Get a free quote for your Florida pole barn →](/quote)**
+
+**[Book a free project call →](https://booqer.ai/shops/florida-pole-barn/book)**
     `,
   },
   {
@@ -901,9 +896,11 @@ For non-agricultural or residential property, expect to pull a permit. The proce
 
 Our buildings are engineered to Florida Building Code and come with stamped engineering drawings — which makes the permit process much smoother.
 
-### Permit Costs
+### Permit Fees
 
-Typical permit fees in Florida range from $500–$2,000 for a pole barn, depending on county and building size.
+Permit fees are set by the county and change with building size and scope. We do not publish a fee. Ask the county building department, or include the question in a quote request and we will talk through what your county typically requires.
+
+${PRICING_GUIDANCE}
 
 ### Our Advice
 
@@ -921,7 +918,7 @@ If you're not sure whether your project needs a permit, ask your county building
     slug: 'open-vs-enclosed-pole-barn-florida',
     title: 'Open vs. Enclosed Pole Barn: Which Is Right for Your Florida Property?',
     description:
-      'Side-by-side comparison of open and enclosed pole barns for Florida — cost, ventilation, protection, and which works best for each use case.',
+      'Side-by-side comparison of open and enclosed pole barns for Florida — ventilation, protection, and which works best for each use case.',
     date: '2025-01-05',
     author: 'Florida Pole Barn',
     readTime: '5 min read',
@@ -944,7 +941,7 @@ One of the first decisions you'll make is whether you want an open or enclosed p
 
 **Florida advantage:** Open barns excel in Florida's heat. The open sides allow natural ventilation that's critical when you're storing equipment, animals, or organic materials in hot, humid conditions.
 
-**Cost:** Lower than enclosed — no siding, no door hardware, simpler framing.
+**What the building includes:** A roof on posts. No siding and no door hardware. Simpler framing.
 
 ### Enclosed Pole Barns
 
@@ -960,7 +957,7 @@ One of the first decisions you'll make is whether you want an open or enclosed p
 
 **Florida advantage:** Full weather protection during heavy rain and storms. Security for high-value equipment, tools, or finished goods.
 
-**Cost:** Higher than open — siding, end walls, and doors add to the kit price.
+**What the building includes:** The same post-and-truss structure, plus siding, end walls, and doors.
 
 ### Side-by-Side Comparison
 
@@ -971,7 +968,7 @@ One of the first decisions you'll make is whether you want an open or enclosed p
 | Security | None | Lockable |
 | Best in Florida heat | ✓ | With ventilation |
 | Hurricane protection | Good | Better |
-| Cost | Lower | Higher |
+| What you add | Roof and posts | Siding, end walls, and doors |
 | Permit complexity | Simpler | More involved |
 
 ### Our Recommendation for Common Uses
@@ -999,7 +996,7 @@ Still unsure? Ask us during your free quote — we'll recommend what's right for
     content: `
 ## Choosing the Right Pole Barn Size in Florida
 
-Picking the right size saves money and avoids the frustration of outgrowing your barn too quickly. Here are our recommendations by use case.
+Picking the right size avoids the frustration of outgrowing your barn too quickly. Here are our recommendations by use case.
 
 ### For Horse Barns
 
@@ -1033,7 +1030,7 @@ Think about the length of your longest piece of equipment plus turning radius.
 
 ### General Advice
 
-Build bigger than you think you need. The number one regret we hear from customers is wishing they'd gone slightly larger. The marginal cost of adding a few feet is much less than building a second structure later.
+Build bigger than you think you need. The number one regret we hear from customers is wishing they'd gone slightly larger. Adding a few feet during the original build is simpler than putting up a second structure later.
 
 **[Request a quote for your specific size →](/quote)**
     `,
@@ -1081,7 +1078,7 @@ Every Florida Pole Barn structure comes with custom-fabricated steel trusses eng
     slug: 'horse-barn-planning-florida',
     title: 'Horse Barn Planning Guide for Florida Properties',
     description:
-      'Everything horse owners need to know when planning a Florida barn — stall sizing, ventilation, layouts, and cost.',
+      'Everything horse owners need to know when planning a Florida barn — stall sizing, ventilation, and layouts.',
     date: '2024-11-28',
     author: 'Florida Pole Barn',
     readTime: '7 min read',

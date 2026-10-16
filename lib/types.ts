@@ -4,7 +4,6 @@ export interface BarnSize {
   heights: number[]
   sqft: number
   primaryUse: string
-  startingPrice: number | null
 }
 
 export interface UseCase {

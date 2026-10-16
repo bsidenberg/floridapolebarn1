@@ -8,11 +8,11 @@ import { FAQS, COMPANY } from '@/lib/constants'
 export const metadata: Metadata = {
   title: 'Pole Barn FAQ Florida | Common Questions Answered',
   description:
-    'Answers to common questions about pole barns in Florida — cost, permits, sizes, materials, timeline, and more. From Florida Pole Barn, your local Central Florida builder.',
+    'Answers to common questions about pole barns in Florida — permits, sizes, materials, timeline, and what affects the project. From Florida Pole Barn.',
   alternates: { canonical: 'https://floridapolebarn.com/faq' },
   openGraph: {
     title: 'Pole Barn FAQ Florida | Common Questions Answered',
-    description: 'How much does a pole barn cost in Florida? Do you need a permit? What sizes are available? Answers from a local Florida pole barn builder.',
+    description: 'What affects a Florida pole barn project? Permits, sizes, materials, and timeline — answers from a local Florida pole barn builder.',
     url: 'https://floridapolebarn.com/faq',
     images: [{ url: '/Open.jpg', width: 1200, height: 630, alt: 'Florida Pole Barn FAQ' }],
   },

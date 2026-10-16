@@ -30,7 +30,7 @@ export default function AgriculturalBuildingsPage() {
       intro={{
         heading: 'Farm Buildings Built for Florida Agriculture',
         paragraphs: [
-          'Florida farmers need structures that handle heat, humidity, heavy rains, and storm season — while remaining practical and cost-effective for agricultural operations. Pole barns are the #1 choice for Florida farm buildings because they deliver exactly that.',
+          'Florida farmers need structures that handle heat, humidity, heavy rains, and storm season — and that stay practical for agricultural operations. Pole barns are a common choice for Florida farm buildings because they deliver exactly that.',
           'From small hay storage barns to large multi-use agricultural buildings, we design and build structures sized for your land, your livestock, and your operation.',
         ],
         bullets: [

@@ -11,12 +11,12 @@ import { COMPANY, BARN_SIZES } from '@/lib/constants'
 import { RESERVE_ACTION } from '@/lib/reserve-action'
 
 export const metadata: Metadata = {
-  title: 'Enclosed Pole Barn Kits Florida | Prices & Sizes',
+  title: 'Enclosed Pole Barn Kits Florida | Sizes & Options',
   description:
     'Enclosed pole barn kits with metal siding, doors, and full weather protection. Horse barns, workshops, storage. Sizes from 20×24 to 50×96. 140+ MPH rated. Free quote.',
   alternates: { canonical: 'https://floridapolebarn.com/enclosed-pole-barns' },
   openGraph: {
-    title: 'Enclosed Pole Barn Kits Florida | Prices & Sizes',
+    title: 'Enclosed Pole Barn Kits Florida | Sizes & Options',
     description: 'Enclosed pole barn kits with full metal siding and doors. Weather-tight protection for horses, livestock, workshops, and storage. 140+ MPH rated. Free quote.',
     url: 'https://floridapolebarn.com/enclosed-pole-barns',
     images: [{ url: '/89bfd6f3-82b6-43de-b5a1-137c4e192b55.jpg', width: 1200, height: 630, alt: 'Enclosed pole barn kit with metal siding in Florida' }],
@@ -87,23 +87,23 @@ const breadcrumbSchema = {
   ],
 }
 
-const offerCatalogSchema = {
+const productListSchema = {
   '@context': 'https://schema.org',
-  '@type': 'OfferCatalog',
-  name: 'Enclosed Pole Barn Kit Pricing',
+  '@type': 'ItemList',
+  name: 'Enclosed Pole Barn Kits',
   provider: { '@id': 'https://floridapolebarn.com/#business' },
   potentialAction: RESERVE_ACTION,
   numberOfItems: BARN_SIZES.length,
-  itemListElement: BARN_SIZES.map((size) => ({
-    '@type': 'Offer',
-    name: `${size.width}×${size.length} Enclosed Pole Barn Kit`,
-    description: `${size.sqft} sq ft enclosed pole barn kit — ${size.primaryUse}`,
-    price: (size.startingPrice ?? 0).toString(),
-    priceCurrency: 'USD',
-    priceValidUntil: '2027-12-31',
-    availability: 'https://schema.org/InStock',
-    url: 'https://floridapolebarn.com/enclosed-pole-barns',
-    seller: { '@id': 'https://floridapolebarn.com/#business' },
+  itemListElement: BARN_SIZES.map((size, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    item: {
+      '@type': 'Product',
+      name: `${size.width}×${size.length} Enclosed Pole Barn Kit`,
+      description: `${size.sqft} sq ft enclosed pole barn kit — ${size.primaryUse}`,
+      url: 'https://floridapolebarn.com/enclosed-pole-barns',
+      brand: { '@id': 'https://floridapolebarn.com/#business' },
+    },
   })),
 }
 
@@ -121,7 +121,7 @@ export default function EnclosedPoleBarnsPage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema} />
-      <JsonLd data={offerCatalogSchema} />
+      <JsonLd data={productListSchema} />
       <JsonLd data={faqSchema} />
       {/* Hero */}
       <div className="relative bg-brand-900 py-20 overflow-hidden">
@@ -217,12 +217,12 @@ export default function EnclosedPoleBarnsPage() {
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold text-gray-900">Common Sizes</h2>
             <p className="mt-3 text-gray-600 max-w-xl mx-auto text-sm">
-              Custom sizes available. Request a free quote for exact pricing on your project.
+              Custom sizes are available. Pricing depends on building size, county wind-load requirements, site conditions and options. Request a free quote for your project.
             </p>
           </div>
           <SizeTable />
           <div className="mt-6 text-center">
-            <Link href="/quote" className="btn-primary">Get Enclosed Barn Pricing →</Link>
+            <Link href="/quote" className="btn-primary">Get a Free Quote →</Link>
           </div>
         </div>
       </section>
