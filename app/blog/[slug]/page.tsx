@@ -27,6 +27,234 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: 'florida-pole-barn-posts-termites-moisture',
+    title: 'Pole Barn Posts in Florida Soil: Termites, Moisture, and What to Ask Before You Build',
+    description:
+      'What Florida buyers should ask about pole barn posts: termites, moisture, sandy soil, high water, ground-contact wood, piers and brackets, depth, drainage, and wind uplift.',
+    date: '2026-10-19',
+    author: 'Florida Pole Barn',
+    readTime: '13 min read',
+    category: 'Construction & Materials',
+    faqs: [
+      {
+        question: 'Do Florida pole barn posts need ground-contact treated wood?',
+        answer:
+          'If the wood post is buried or stays in contact with the ground, it should be pressure-treated and stamped for ground contact, not only for above-ground use. Above-ground treatment is a different rating, and it is the wrong product for a post that lives in Florida soil. Wood held entirely above grade on a pier or bracket is a different detail, and the engineer still specifies that post. Field-treat cut ends and drilled holes in any zone that stays damp, and confirm the stamp before the posts are set.',
+      },
+      {
+        question: 'Are concrete piers or brackets better than embedded posts in Florida?',
+        answer:
+          'Neither is automatically the better foundation. An embedded ground-contact post is a sound pole-barn path when the depth, the hole, and the backfill match the drawings for that soil and that wind. A concrete pier or a steel bracket holds the wood above the soil, which reduces decay and termite exposure on the post itself, and it still has to be engineered for uplift and for lateral load. Termites can cross a short gap with shelter tubes, so wood above grade still needs a clear inspection line. Ask the engineer which detail fits this lot.',
+      },
+      {
+        question: 'How deep should a pole barn post be set in Florida?',
+        answer:
+          'There is no single depth for every barn and every lot. In peninsular Florida the usual drivers are wind uplift, lateral load, and the soil, not frost. Depth, hole diameter, and backfill are on the stamped drawings for that building. A post set shallower than the sheet, or in a hole that caved in with loose sand, is not the foundation that was engineered. Confirm the detail with the project engineer and the local building department.',
+      },
+      {
+        question: 'What if pole barn post holes fill with water?',
+        answer:
+          'Stop and ask before concrete or backfill goes in. On many Central Florida lots, including sandy ground around Clermont and in Lake County, groundwater sits higher in the rainy season than it does in a dry spring. A hole full of water is not the condition a dry-hole detail assumes, and concrete placed into standing water may not be the concrete on the plans. The engineer should say how to place the foundation on that site. Tell the builder if a test hole on the lot has already filled.',
+      },
+      {
+        question: 'How do subterranean termites reach a pole barn in Florida?',
+        answer:
+          'Subterranean termites live in the soil and need moisture, which Florida ground supplies for much of the year. They can enter through a buried post, and they can build shelter tubes from the soil up a pier, a bracket, or a skirt board to reach wood above grade. Ground-contact treatment resists them in the treated zone of a buried post. It does not protect untreated girts, trim, or stored wood that touches soil or stays damp. Keep soil, mulch, and debris off the frame, leave the grade line visible enough to spot tubes, and have a pest professional look when tubes show up.',
+      },
+      {
+        question: 'How do pole barn posts resist wind uplift in a Florida storm?',
+        answer:
+          'In a high wind the roof lifts, and that load travels through the trusses into the posts and then into the ground. Embedded posts resist it through the depth, the hole, and the concrete or backfill the engineer specified. Piers and brackets resist it through the anchors and the pier, which have to be designed for uplift and not only for the weight of the building. Sandy soil and water that scours around a post weaken that path. The wind design and the foundation detail belong on the same stamped set, confirmed with the building department.',
+      },
+    ],
+    content: `
+## Pole Barn Posts in Florida Soil: Termites, Moisture, and What to Ask Before You Build
+
+Pole barn posts in Florida have to stay sound in sandy soil, seasonal high water, subterranean termites, and the uplift a hurricane wind puts on the roof. Ground-contact treated wood embedded to the stamped drawings is the usual approach, and concrete piers or brackets that hold the wood above grade are the alternative when the engineer designs them for that wind and soil. Confirm the post, the depth, and the backfill with the local building department and the project engineer before the first hole is dug.
+
+Florida Pole Barn builds these barns for properties across the state, with the crew based near Clermont in Central Florida. The post is the part of the building that lives in the ground. Sandy soils, a rainy season that can fill a hole, and wind that tries to lift the roof are the conditions that detail has to answer. The pad, the drainage, and the holes belong on one plan. A foundation chosen after the frame is up has to live with posts that are already set.
+
+## What Florida Ground Does to a Post
+
+A pole barn post is both a column and a foundation. It carries the roof, and in an embedded design it is also what keeps the roof from lifting out of the ground. Florida asks more of that piece of wood or of the pier that replaces it than a dry, cold climate does.
+
+### Sandy soil and a water table that moves
+
+Much of Central Florida, including a lot of Lake County and the ground around Clermont, is sand. Clean sand can drain, which helps a pad that is built up above the yard. Sand also has little cohesion. A post sitting in loose sand does not grip the way a post in firm, compacted ground does. The drawings assume a soil. A hole that shows muck, clay, organic fill, or a buried layer of debris is a reason to stop and ask, not a reason to set the post and move on.
+
+The seasonal high water table is how high groundwater usually stands in a wet year. On many peninsula lots it sits closer to the surface in the rainy season than it does in a dry spring. A test hole that is empty in April can have water in it in August. That water is an embedment question. It is also a reason to tell the builder what you have already seen on the lot.
+
+### Termites and hurricane wind
+
+Subterranean termites live in the soil across Florida, including Central Florida. They need moisture, and a buried post is in the habitat they already use. They are a reason the wood that touches the ground has to be the right treatment, and a reason the grade around the barn has to stay visible after the building is up.
+
+Hurricane season, June through November, is the other load. Wind on the roof becomes uplift and lateral force in the posts. The foundation that resists that load is part of the wind design, not a detail copied from a barn in another county. [Planning a pole barn for Florida storm season](/blog/planning-pole-barn-florida-storm-season) is where drainage and embedment sit next to the wind speed for the parcel. The posts are that embedment.
+
+Grade, access, and utility locates still come first. The [site preparation checklist](/blog/florida-pole-barn-site-preparation-checklist) is where the pad and the dig get settled before the holes are open.
+
+## Termites and Ground-Contact Treated Wood
+
+Subterranean termites travel through soil. They can feed on a buried post from below, and they can build shelter tubes — the mud tubes you can see — from the ground up a pier, a bracket, a skirt board, or a wall to reach wood that never touched the soil. Moisture is what makes the path usable. A post line that stays damp is an easier path than a post line that can dry.
+
+### What the stamp should say
+
+Pressure-treated lumber rated for ground contact is produced for wood that touches soil. Above-ground treatment is a different rating, for wood that stays off the ground and has a chance to dry. The stamp on the post is how you tell them apart. Ask to see a ground-contact mark, or a ground-contact use category, before a buried post goes in the hole. A stamp that only says the lumber was treated is not the same thing.
+
+Treatment protects the treated zone. It resists decay and termite attack there. It is not a promise that the whole barn is termite-proof. A large post is not always treated through the full thickness. A cut end, a deep check, or a notch in the buried portion opens wood the original treatment may not have reached. Those cuts should be field-treated with a preservative made for that use, and the builder should look at them before the post is set. Confirm that step when you walk the posts, not after the holes are closed.
+
+### Where termites still get in
+
+Ground-contact posts do not cover the rest of the frame.
+
+- **Skirt boards and bottom girts**: This is the wood most likely to sit near soil, mulch, or splash, besides the posts themselves. If it is not rated for the exposure it actually has, it is a separate termite and decay path.
+- **Stored wood and debris**: Firewood, lumber offcuts, and cardboard piled against the barn give termites a bridge and hide the tubes.
+- **Mulch and raised grade**: Soil or mulch pushed up against the frame after construction buries the line you would have inspected. Finish grade should leave that line visible.
+- **Piers and brackets**: Holding the post above grade reduces decay and termite exposure on the post. Termites can still cross a short gap with a shelter tube. Above-grade wood needs a gap you can see, and someone who looks.
+
+Have a pest professional inspect when tubes appear. A ground-contact post is one part of keeping the building sound. It does not replace looking at the barn after the rainy season.
+
+## Moisture, Sandy Soil, and a High Water Table
+
+Florida rain is heavy, and the wet season can keep the ground charged for months. A post detail that looks fine on a dry day in spring has to work on a wet afternoon in late summer, when the water table is up and the roof is shedding a storm.
+
+### Sand that drains, and layers that do not
+
+Sand drains when the profile under the pad is sand and the pad sits above the yard. A clay lens, a hardpan, organic muck, or a pocket of recent fill holds water above it. Those layers show up on Central Florida lots that look uniform from the driveway. Soft spots and old fill settle, and a post or a pier that bears on them is not on the soil the drawings assumed.
+
+Say so if a hole has filled, or if the dig smells organic or looks like it was a low spot that someone filled. The engineer can adjust the detail. The crew cannot invent that adjustment in an open hole.
+
+### Concrete, backfill, and water against the wood
+
+An embedded post stays damp for long stretches of a Florida year. That is why the treatment rating matters. The material around the post matters too. Some details set the post in a concrete collar or footing. Some use a concrete footing with a specified backfill above it. Some keep the wood out of the ground entirely on a bracket. Concrete can trap water against a post when the pocket holds it. Compacted backfill and a concrete footing move water differently. The detail on the stamped sheet is the one that was chosen for that soil and that building. A mix of the two, decided in the hole, is a different foundation.
+
+The floor meets the same water. A gravel pad that sheds through the base and a slab that needs a vapor break are different surfaces, and both of them change the grade at the post. [Gravel pad or concrete slab](/blog/gravel-pad-vs-concrete-slab-florida-pole-barn) is the companion choice. Settle it with the posts, so the slab edge and the post line are drawn together.
+
+## Embedded Posts, Concrete Piers, and Brackets
+
+Buyers usually hear three ways to put a pole barn on Florida ground. They solve different problems. None of them is a shortcut around engineering.
+
+### Embedded ground-contact posts
+
+This is the traditional pole-barn path. The post goes in the ground to the depth on the drawings, in a hole of the size on the drawings, with the concrete or backfill the sheet names. Uplift and lateral resistance come from that buried portion working with the soil. The wood in the ground needs a ground-contact stamp, field treatment at cuts, and a grade that does not scour the hole out from under the building.
+
+Embedded posts are a weak match when the hole will not stay open in loose sand, when groundwater fills the hole and the detail has no method for that water, or when the soil in the footprint is not the soil on the plans. Those are reasons to call the engineer before the post is set. They are not reasons to set it shallow and backfill with whatever came out of the hole.
+
+### Concrete piers and steel brackets
+
+A concrete pier, a precast concrete column, or a steel bracket on a footing holds the wood post above grade. The wood spends less of its life in the termite and decay zone. The pier and the bracket then have to do the work the buried post was doing: carry the roof, and hold it down when the wind lifts.
+
+Ask how the bracket connects to the post and how the bracket connects to the pier. Uplift hardware that was chosen for gravity only is not an uplift detail. Ask what coating the steel has. Florida humidity, splash, and soil moisture are hard on bare steel, and the coating belongs on the drawings with the bracket. Ask whether the base sheds water or holds it at the post bottom.
+
+The wood above a bracket can still be reached by shelter tubes. Keep soil, vines, and stored material from closing the gap, and look at the steel where it meets the concrete.
+
+### What to compare
+
+Compare the options on the site you have, not on a barn you saw somewhere else.
+
+- **Where the wood sits**: In the ground, or above a pier, with a treatment rating that matches that exposure.
+- **How uplift is resisted**: Embedment and backfill, or anchors and a pier sized for lift, on the same wind design as the frame.
+- **What a wet hole does**: Whether the detail assumes a dry hole, and what the engineer wants if this lot fills.
+- **What you can inspect**: A visible grade line, a bracket you can see, and no mulch burying the base.
+- **What the permit set shows**: The foundation on the sheets the building department will review. [Whether a pole barn in Florida needs a permit](/blog/do-you-need-a-permit-for-a-pole-barn-in-florida) is the place to start. The county, and any local amendment, still has to be confirmed for your parcel.
+
+Florida Pole Barn uses pressure-treated posts rated for ground contact on the embedded buildings it plans. If the lot or the engineering calls for a pier or a bracket, that detail belongs in the same conversation, before holes are dug.
+
+## Post Depth and Backfill
+
+There is no single post depth that fits every Florida pole barn. In peninsular Florida, including Central Florida, frost is not the usual reason a post goes deep. Wind uplift, lateral load, the span, and the soil are. A neighbor's barn, or a depth remembered from another state, is not this building's foundation.
+
+### What the drawings should name
+
+The stamped set should show the embedment depth, the hole diameter, and the backfill or concrete for this wind and this soil. Hole size matters in sand. A wider, deeper embedment is one way an engineer develops resistance when the soil will not grip a narrow post. The number is theirs, for this barn. Setting the post shallower because the hole hit water, or because the sand caved, changes the design. Ask before that happens.
+
+Confirm the same sheets with the local building department. Counties across Florida adopt the Florida Building Code and can add local amendments. Lake County and the counties around it do not all review a foundation the same way, and an open pasture can differ from a wooded lot on the same road. The engineer of record and the building department are the two places that can say the detail fits this parcel.
+
+### Backfill that matches the sheet
+
+Loose sand shoveled back into the hole is not the same as compacted backfill, and it is not the same as the concrete collar or footing on the plans. Uplift resistance depends on that material being placed the way the drawing says. A partial pour that is not on the sheet is a different foundation.
+
+If the hole fills with water, stop. Concrete placed into standing water can wash out and may not be the concrete the plans describe. Dewatering, a different pier, or a different placement method is an engineering decision. Tell the builder if a test hole on the site has already filled, so the detail can be chosen before dig day rather than invented during it.
+
+The [site preparation checklist](/blog/florida-pole-barn-site-preparation-checklist) covers the same point for the pad: if the soil on site does not match what the drawings assume, resolve it before the posts are set.
+
+## Drainage Around the Posts
+
+Water at the post line is a termite problem, a decay problem, and an uplift problem. Saturated sand has less resistance than the soil the design assumed. A trench cut by roof water can lower the grade and expose or undermine the embedment. Standing water keeps the base of the barn in the moisture subterranean termites use.
+
+### Grade and the rainy season
+
+Build the pad as the high ground, with a continuous fall away from the posts, and check it against a real storm if you can. A barn at the bottom of the pasture collects the yard and the roof together. Summer storms around Clermont and across Central Florida drop a lot of water in a short time. A corner that is firm in April can be soft in August. Fix the low spot before concrete and posts lock it in place.
+
+- **Roof water**: A metal roof sheds rain in a sheet at the eave. Give that water a path — a swale, a stone strip, or gutters that discharge away from the posts. Gutters are optional. A discharge path is not. Keep it out of the embedment zone.
+- **The drip line**: Fine or thin gravel at the eave moves. A rut there becomes a channel along the posts. Detail that edge so the rest of the grade stays where you placed it.
+- **Splash and the skirt**: Water that bounces off a flat yard keeps the skirt and the post base wet. Grade and a clear line at the base let that splash leave.
+- **After the first hard rain**: Walk the perimeter. A pond at a corner or a cut along a post is easier to correct before the finished grade is treated as done.
+
+[Planning for storm season](/blog/planning-pole-barn-florida-storm-season) puts this drainage next to the wind design. The floor choice changes the same edge. A slab that sits low, or gravel placed in a bowl, holds water against the posts either way.
+
+## Wind Uplift and the Connection to the Ground
+
+In a hurricane wind the roof wants to lift. That force goes through the trusses into the posts, then into the ground through embedment, concrete, anchors, or brackets. If the connection at the ground is lighter than the wind design, the frame is not the building that was engineered.
+
+### The load path
+
+Look at both ends of the post. The truss connection and the foundation connection are one path. A post that is well set in the ground and poorly tied to the truss, or a bracket that is well tied to the truss and lightly anchored to the pier, breaks the path in a different place. Ask the builder to show you those two connections on the drawings.
+
+Sandy soil is part of the path. Resistance in sand depends on the depth, the hole, and the backfill the engineer used. Scour from roof water, or a hole left full of loose sand, removes part of that resistance. Drainage and embedment are the same storm detail.
+
+Open, enclosed, and partially enclosed are engineering classes. Adding walls later changes the load on the posts and the trusses. [What a wind rating means on a Florida pole barn](/blog/pole-barn-hurricane-rating-florida) explains what that rating is asking the frame to do. [Open versus enclosed layouts](/blog/open-vs-enclosed-pole-barn-florida) is the layout choice that has to match the drawings. Decide it before the posts are sized and set.
+
+### What to confirm before dig day
+
+The wind speed and the exposure come from the site, not from a single statewide number. The foundation on the sheets should name this parcel, this enclosure, and this soil. If the hole shows something else, the engineer updates the detail before concrete goes in. The building department sees that set when a permit is required. Keep the approved sheets on site so the holes match them.
+
+## Questions to Ask a Builder
+
+Walk this list on the lot, with the drawings, before the first hole is dug.
+
+- **Ground-contact stamp**: If the post is buried, does the stamp say ground contact, and who field-treats cut ends and holes in that zone?
+- **Embedded, pier, or bracket**: Which foundation is on the drawings, and why it fits this soil and this wind?
+- **Depth, hole, and backfill**: What the sheet shows for embedment, hole size, concrete, and backfill, and what happens if the hole fills with water.
+- **Soil in the hole**: Who stops the work if the dig shows muck, clay, fill, or caving sand that the plans did not assume?
+- **Drainage**: Where the pad falls, where roof water discharges, and how that water stays out of the embedment zone.
+- **Termite path**: Which wood sits near the soil, whether the grade line stays visible, and who looks for shelter tubes after the barn is up.
+- **Uplift path**: How the post or bracket ties to the truss and to the ground, and whether that detail matches the wind design for this parcel.
+- **The permit set**: Whether this foundation is on the sheets the building department will review, and which code edition the county is enforcing. Confirm both with the building department and the engineer.
+
+## Talk Through the Posts on Your Lot
+
+Florida Pole Barn plans pole barns for properties across Florida, with the crew based in Central Florida near Clermont. The posts follow the lot: the soil in the hole, where water stands in the rainy season, and the wind the building is engineered for. Tell us how you will use the barn and what the ground does after a summer storm. We will talk through the post and foundation detail with you before the holes are dug.
+
+**[Book a free project call →](https://booqer.ai/shops/florida-pole-barn/book)**
+
+## Frequently Asked Questions
+
+### Do Florida pole barn posts need ground-contact treated wood?
+
+If the wood post is buried or stays in contact with the ground, it should be pressure-treated and stamped for ground contact, not only for above-ground use. Above-ground treatment is a different rating, and it is the wrong product for a post that lives in Florida soil. Wood held entirely above grade on a pier or bracket is a different detail, and the engineer still specifies that post. Field-treat cut ends and drilled holes in any zone that stays damp, and confirm the stamp before the posts are set.
+
+### Are concrete piers or brackets better than embedded posts in Florida?
+
+Neither is automatically the better foundation. An embedded ground-contact post is a sound pole-barn path when the depth, the hole, and the backfill match the drawings for that soil and that wind. A concrete pier or a steel bracket holds the wood above the soil, which reduces decay and termite exposure on the post itself, and it still has to be engineered for uplift and for lateral load. Termites can cross a short gap with shelter tubes, so wood above grade still needs a clear inspection line. Ask the engineer which detail fits this lot.
+
+### How deep should a pole barn post be set in Florida?
+
+There is no single depth for every barn and every lot. In peninsular Florida the usual drivers are wind uplift, lateral load, and the soil, not frost. Depth, hole diameter, and backfill are on the stamped drawings for that building. A post set shallower than the sheet, or in a hole that caved in with loose sand, is not the foundation that was engineered. Confirm the detail with the project engineer and the local building department.
+
+### What if pole barn post holes fill with water?
+
+Stop and ask before concrete or backfill goes in. On many Central Florida lots, including sandy ground around Clermont and in Lake County, groundwater sits higher in the rainy season than it does in a dry spring. A hole full of water is not the condition a dry-hole detail assumes, and concrete placed into standing water may not be the concrete on the plans. The engineer should say how to place the foundation on that site. Tell the builder if a test hole on the lot has already filled.
+
+### How do subterranean termites reach a pole barn in Florida?
+
+Subterranean termites live in the soil and need moisture, which Florida ground supplies for much of the year. They can enter through a buried post, and they can build shelter tubes from the soil up a pier, a bracket, or a skirt board to reach wood above grade. Ground-contact treatment resists them in the treated zone of a buried post. It does not protect untreated girts, trim, or stored wood that touches soil or stays damp. Keep soil, mulch, and debris off the frame, leave the grade line visible enough to spot tubes, and have a pest professional look when tubes show up.
+
+### How do pole barn posts resist wind uplift in a Florida storm?
+
+In a high wind the roof lifts, and that load travels through the trusses into the posts and then into the ground. Embedded posts resist it through the depth, the hole, and the concrete or backfill the engineer specified. Piers and brackets resist it through the anchors and the pier, which have to be designed for uplift and not only for the weight of the building. Sandy soil and water that scours around a post weaken that path. The wind design and the foundation detail belong on the same stamped set, confirmed with the building department.
+    `,
+  },
+  {
     slug: 'gravel-pad-vs-concrete-slab-florida-pole-barn',
     title: 'What to Think About When Choosing a Gravel Pad vs a Concrete Slab for a Florida Pole Barn',
     description:
@@ -634,7 +862,7 @@ Mark known private lines with flags that survive a rain. A sketch in your phone 
 
 ### Soil, Water Table, and Embedment Reality
 
-The engineering set specifies post depth, hole diameter, and backfill for the design wind load and assumed soil. Florida sites often include sand, organic layers, or a high water table that fills holes as soon as they are dug.
+The engineering set specifies post depth, hole diameter, and backfill for the design wind load and assumed soil. Florida sites often include sand, organic layers, or a high water table that fills holes as soon as they are dug. What to ask about termites, ground-contact treatment, piers and brackets, and wind uplift is in [pole barn posts in Florida soil](/blog/florida-pole-barn-posts-termites-moisture).
 
 What to think about before dig day:
 
@@ -734,7 +962,7 @@ Hurricane season is also peak heat. If you enclose the barn, plan ventilation fo
 
 ### Drainage and Post Embedment
 
-Florida rain is heavy, soils are often sandy, and the water table can sit close to the surface. Wind design assumes the posts stay where the engineer put them. Standing water in post holes, or runoff that scours around the piers, works against that assumption.
+Florida rain is heavy, soils are often sandy, and the water table can sit close to the surface. Wind design assumes the posts stay where the engineer put them. Standing water in post holes, or runoff that scours around the piers, works against that assumption. Treatment, depth, backfill, and uplift for the posts themselves are covered in [pole barn posts in Florida soil](/blog/florida-pole-barn-posts-termites-moisture).
 
 What to think about on the site:
 
