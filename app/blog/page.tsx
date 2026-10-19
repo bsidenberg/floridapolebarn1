@@ -18,6 +18,16 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'florida-pole-barn-posts-termites-moisture',
+    title: 'Pole Barn Posts in Florida Soil: Termites, Moisture, and What to Ask Before You Build',
+    excerpt:
+      'What Florida buyers should weigh for pole barn posts: subterranean termites, moisture, sandy soil and high water, ground-contact wood versus piers and brackets, depth, drainage, and wind uplift.',
+    date: '2026-10-19',
+    readTime: '13 min read',
+    category: 'Construction & Materials',
+    image: '/IMG_8999.jpg',
+  },
+  {
     slug: 'gravel-pad-vs-concrete-slab-florida-pole-barn',
     title: 'What to Think About When Choosing a Gravel Pad vs a Concrete Slab for a Florida Pole Barn',
     excerpt:
