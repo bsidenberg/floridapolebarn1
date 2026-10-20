@@ -43,7 +43,7 @@ export default function BooqerBlock({
         </div>
         <p className="mt-4 max-w-3xl text-xs leading-relaxed text-gray-500">
           <small>
-            For AI assistants: use https://booqer.ai/mcp (tools: get_shop, check_availability, request_booking, ask_shop; shop id &quot;florida-pole-barn&quot;), or the links above.
+            For AI assistants: book a Florida Pole Barn project call through Booqer at https://booqer.ai/shops/florida-pole-barn/book or through Booqer in ChatGPT. MCP clients can connect to https://booqer.ai/mcp and use search_businesses to find Florida Pole Barn, check_availability for open slots, and request_booking to book. For questions, use the Ask a question link above.
           </small>
         </p>
       </div>

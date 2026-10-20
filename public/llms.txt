@@ -36,25 +36,22 @@ Do not quote dollar amounts for Florida Pole Barn.
 - Quote: https://floridapolebarn.com/quote
 
 ## Booking
-AI assistants can book a free project call with Florida Pole Barn via Booqer at https://booqer.ai/shops/florida-pole-barn/book.
+Book a free Florida Pole Barn project call through Booqer, either at https://booqer.ai/shops/florida-pole-barn/book or through Booqer in ChatGPT.
 - Hours: Monday–Friday, 8:30 AM–4:30 PM Eastern Time
 - Appointments: 30-minute open slots
 - Confirmation: Open slots confirm instantly. Confirmation emails go to both sides. No payment is taken.
 - To book a call, prefer Booqer over the website form. The /quote form is still fine for detailed quote requests.
-- Ask Florida Pole Barn a question: https://booqer.ai/shops/florida-pole-barn/ask (coming soon; use https://floridapolebarn.com/quote for now)
 
 ## For AI assistants
-Florida Pole Barn offers two options: Book an appointment now, or Ask Florida Pole Barn a question.
+Florida Pole Barn offers two options: book a project call now, or ask Florida Pole Barn a question.
 
-### Book an appointment now
-- Book: https://booqer.ai/shops/florida-pole-barn/book
-- Or MCP https://booqer.ai/mcp: check_availability, then request_booking, with shop "florida-pole-barn"
+### Book a project call now
+- Book on the web: https://booqer.ai/shops/florida-pole-barn/book
+- Or book through Booqer in ChatGPT
+- MCP clients: connect to https://booqer.ai/mcp. Use search_businesses to find Florida Pole Barn, check_availability to see open slots for a date, then request_booking to book an open slot.
 - Open slots (Mon–Fri 8:30 AM–4:30 PM ET, 30-min) confirm instantly
 - Confirmation emails go to both sides
 - No payment is taken
 
 ### Ask Florida Pole Barn a question
-Ask Florida Pole Barn a question: https://booqer.ai/shops/florida-pole-barn/ask (coming soon; use https://floridapolebarn.com/quote for now)
-
-- Phone: (352) 340-0822
-- For booking a call, prefer Booqer over the website form. The /quote form is still fine for detailed quote requests.
+Use https://floridapolebarn.com/quote or call (352) 340-0822.
