@@ -18,6 +18,16 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'pole-barn-gutters-drainage-florida',
+    title: 'Pole Barn Gutters and Drainage in Florida: What to Think About Before You Build',
+    excerpt:
+      'What to think through for pole barn gutters and drainage in Florida: summer downpours, sandy and clay soils, grade away from posts, downspout discharge, splash at open bays, and livestock areas.',
+    date: '2026-10-22',
+    readTime: '14 min read',
+    category: 'Construction & Materials',
+    image: '/Open-Gable-with-Roof-Trim.jpg',
+  },
+  {
     slug: 'florida-pole-barn-posts-termites-moisture',
     title: 'Pole Barn Posts in Florida Soil: Termites, Moisture, and What to Ask Before You Build',
     excerpt:
