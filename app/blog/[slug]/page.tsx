@@ -27,6 +27,260 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    slug: 'pole-barn-gutters-drainage-florida',
+    title: 'Pole Barn Gutters and Drainage in Florida: What to Think About Before You Build',
+    description:
+      'Pole barn gutters in Florida and pole barn drainage in Florida: roof runoff, downspouts, grade, sandy versus clay soil, and what to ask the county.',
+    date: '2026-10-22',
+    author: 'Florida Pole Barn',
+    readTime: '14 min read',
+    category: 'Construction & Materials',
+    faqs: [
+      {
+        question: 'Do Florida pole barns need gutters?',
+        answer:
+          'Gutters are a planning choice on a Florida pole barn. Drainage is not. A metal roof sheds rain in a sheet at the eave during a summer downpour or a tropical storm, and that water still needs a path away from the posts whether or not gutters are on the building. Gutters help when you want to move that sheet to a planned discharge, keep splash off a wall or an open bay, or send overflow toward a swale. They still need downspouts that land away from the posts, and they can overflow in a hard storm, so the grade under the eave has to work even when the gutter is full.',
+      },
+      {
+        question: 'Where should pole barn downspouts discharge in Florida?',
+        answer:
+          'Discharge downspouts onto ground that falls away from the building, into a swale or another path that carries water off the pad. Do not land them at the base of a post or against a slab or gravel edge. Keep the outlet out of stall doors, wash racks, and the splash zone of an open bay. In a tropical storm the outlet still needs somewhere to go if the pipe fills. Ask the county before sending that water into a ditch, a wetland, a neighboring lot, or a road right-of-way.',
+      },
+      {
+        question: 'How should the ground around pole barn posts be graded?',
+        answer:
+          'Build the pad as the high ground, with a continuous fall away from the posts on every side you can grade. A barn at the bottom of a pasture collects the yard and the roof together. Water that stands at a post, or that cuts a trench along the drip line, keeps the base wet and can scour the soil the embedment depends on. Check the grade after a real summer storm, and fix low corners before the finished surface locks them in.',
+      },
+      {
+        question: 'Does sandy soil drain a Central Florida pole barn better than clay?',
+        answer:
+          'Clean sand can take water when the pad sits above the yard, which is common on ridge ground around Clermont and in parts of Lake County. Clay, hardpan, organic muck, or a clay lens under a sandy surface holds water above it, so the same grading plan can pond. A lot that looks like sand from the driveway can still have a layer that does not drain. Walk the site after a hard rain, and tell the builder if a test hole stays wet. The grade and the floor have to match the soil on this parcel.',
+      },
+      {
+        question: 'How do you keep horse and livestock areas dry under a Florida pole barn?',
+        answer:
+          'Keep roof water out of the stall, the aisle, and the gate where animals stand. Grade the barn pad and the turnout so water leaves the loafing area, and do not aim a downspout at a stall door or a wash rack. An open run-in still needs a high side and an exit for rain that blows in. Bedding and footing stay drier when splash at the eave has a stone strip or a swale, rather than a flat yard that bounces water back inside. A wash rack needs its own path out of the building, separate from the roof sheet if you can give it one.',
+      },
+      {
+        question: 'What drainage questions should you ask the county about a pole barn?',
+        answer:
+          'Ask whether this parcel needs a building permit, and whether the review includes grading, stormwater, or a site sketch that shows where roof water goes. Ask about wetlands, ditches, easements, wells, and septic setbacks that the barn and its discharge should not cross. Ask whether water may leave the lot toward a county ditch, a right-of-way, or a neighboring property. If the land is in agricultural use, ask whether that changes the drainage review. Counties in Florida do not all answer these the same way. Confirm them with the building department for this parcel.',
+      },
+    ],
+    content: `
+## Pole Barn Gutters and Drainage in Florida: What to Think About Before You Build
+
+Pole barn gutters in Florida are a planning choice; pole barn drainage in Florida is part of the building. A metal roof turns a summer downpour or tropical-storm rain into a sheet of water at the eaves, and that water has to leave the posts, the slab or gravel edge, and any open bay. Grade the ground away from the building, decide where downspouts discharge, and ask the county what this lot may send downhill before the posts go in.
+
+Florida Pole Barn builds these barns for properties across the state, with the crew based near Clermont in Central Florida. The roof is large, the storms are short and hard, and the ground under the drip line is where that water meets the posts. Gutters can move the sheet to a place you choose. They do not replace a grade that falls away from the building. Settle drainage with the pad, before the holes are dug, so the posts, the floor edge, and the discharge path are drawn together.
+
+## What Florida Rain Does at the Eave
+
+A pole barn roof is a collector. Rain that would have soaked a pasture in a wide sheet lands instead along the eaves, in the same hour the yard is already wet.
+
+### Summer downpours and tropical storms
+
+Central Florida summers, including the ground around Clermont and across Lake County, bring storms that drop a lot of water in a short time. A tropical storm or a hurricane rain band can keep that going, with wind pushing water sideways. The plan that works for a light shower can fail on the afternoon the ditch is already full. Think about the hard rain, not the average afternoon.
+
+[Planning a pole barn for Florida storm season](/blog/planning-pole-barn-florida-storm-season) is where wind, enclosure, and drainage sit on one list. Roof runoff is the drainage part of that plan. Water standing at the posts is also a foundation problem, because the wind design assumes the posts stay where the engineer put them.
+
+### Runoff is not the same as a sweating roof
+
+Water off the eave is outside the building. Drips under a cool metal panel, on a humid morning, are condensation. Gutters do not stop that. If stored tools or hay are wet when it has not rained, read [condensation under a Florida pole barn metal roof](/blog/pole-barn-metal-roof-condensation-florida) before you treat a tight roof as the problem. If the skirt and the post bases are wet after a storm, you are looking at runoff, splash, and grade.
+
+## Sandy Soil and Clay in Central Florida
+
+Where the water goes after it leaves the eave depends on the soil, not only on the gutter.
+
+### Sand that can take water
+
+Much of Central Florida, including a lot of Lake County and the ridge ground around Clermont, is sand. Clean sand can absorb water when the pad sits above the yard and the profile under the pad is actually sand. That helps a gravel surface and a swale that is allowed to soak. It does not mean a low corner will stay firm. Loose sand also scours. A channel cut by roof water along the posts can lower the grade the embedment was counting on.
+
+### Clay, hardpan, and a layer under the sand
+
+Clay, a hardpan, organic muck, or a clay lens under a sandy surface holds water on top of it. Those layers show up on lots that look uniform from the driveway. A grading plan copied from a sandy neighbor can pond on a flatwoods pasture a few miles away. Fill placed in an old low spot can do the same thing.
+
+- **Walk it after a hard rain**: Mark the corners that stay soft and the direction the yard already falls. A dry visit in spring hides the wet-season path.
+- **Separate a puddle from a layer that holds water**: A puddle may be surface grade. Water that rises in a test hole and stays is groundwater, or a layer that will not let the roof water through. Say so if a hole on the lot has filled.
+- **Do not assume the driveway soil is the pad soil**: The footprint can change inside one pasture. The grade and the floor have to match the ground under the barn.
+
+## Grade Away From the Posts
+
+The first drainage tool is the ground. Gutters are a way to aim the roof. The grade is what keeps that water from living at the posts.
+
+### The pad as the high ground
+
+Build the pad so it is the high spot, with a continuous fall away from the building on every side you can grade. A barn at the bottom of the pasture collects the yard and the roof together. A crown, or a steady slope to a swale, is the shape to think about. A bowl that looks level can hold water against the posts after the first summer storm.
+
+Check that fall before the finished surface goes down. A low corner is easier to correct in the dirt than after a slab edge or a compacted gravel pad has locked it in. The [site preparation checklist](/blog/florida-pole-barn-site-preparation-checklist) walks through pad elevation, sheet flow, and a check after real rain. Drainage belongs in that sequence, not as a patch after the crew leaves.
+
+### Post bases
+
+Water at the post is a decay problem, a termite problem, and an uplift problem. Saturated ground and a trench cut along the drip line work against the embedment the drawings describe. Soil, mulch, or a washed berm piled against the post after you regrade hides the grade line and keeps the base damp. Finish grade should leave that line visible.
+
+What to ask about ground-contact treatment, piers, brackets, and wind uplift is in [pole barn posts in Florida soil](/blog/florida-pole-barn-posts-termites-moisture). The drainage plan is what keeps roof water from undoing that detail. Keep discharge out of the embedment zone, and do not use the post line as the ditch.
+
+## Slab Edges, Gravel Edges, and Splash
+
+The floor and the eave meet at one line. A metal roof drops its sheet there, and the edge of the floor either sends that water away or holds it.
+
+### Gravel and concrete at the edge
+
+A gravel pad that is built up can let water through and away, if the rock is deep enough to stay put and the pad is high. Fine or thin gravel at the drip line moves. The rut becomes a channel along the posts. A concrete slab is a lid. Water that reaches a low slab edge sits against the joint between the floor and the ground, and against the posts at that corner.
+
+[Gravel pad or concrete slab](/blog/gravel-pad-vs-concrete-slab-florida-pole-barn) is the floor choice. Settle it with the drip line, so the stone strip, the swale, or the gutter outlet is drawn with the slab edge or the gravel shoulder. A slab poured high, with the outside grade left low, traps water at the posts either way.
+
+- **A path at the drip line**: A shallow swale, a strip of larger stone, or gutters that discharge past the edge. The edge detail should match the floor you chose.
+- **Fall outside the building**: Grade beyond the slab or the gravel should keep moving water away, not stop at a flat shoulder.
+- **An exit for rain that blows in**: An open bay with a level slab, or gravel in a bowl, holds water the wind pushed past the eave. Give that bay a low side.
+
+### Splash zones at open bays
+
+The drip line does not only wet the ground. Water hits and splashes back onto skirt boards, post bases, and into an open side. A flat, hard surface at the eave bounces that splash farther. In a tropical storm, wind drives rain past the overhang into the bay, so the inside edge of an open building is part of the drainage plan.
+
+Think about what sits in that splash. Tack, feed, steel equipment, and bedding stored against the open side stay wet even when the middle of the barn looks dry. A stone strip or a swale at the eave gives the sheet somewhere to go besides back onto the wall. The bay floor still needs a way out for what the wind carries in.
+
+## Overhangs, Eaves, and Drip Edges
+
+The overhang is the first control on where the sheet lands. The drip edge is how that water leaves the panel.
+
+### Where the overhang drops the water
+
+A short eave drops the sheet close to the wall, the skirt, and the post line. A deeper overhang moves the drip line out, which can protect the wall and can also land a concentrated sheet on a walkway, a stall apron, or the outside edge of the slab. Neither length is a drainage system by itself. It sets the spot you have to grade, gutter, or stone.
+
+The overhang on the engineered drawings is the one sized with the wind design for this building. Lengthening it, or cutting it back, to chase a drip line is a change to the roof. Confirm that with the engineer before anyone alters it. [Planning for storm season](/blog/planning-pole-barn-florida-storm-season) is the reminder that the frame and the site belong on the same set.
+
+### The drip edge
+
+Ask how water leaves the panel at the eave. A drip edge, or the eave trim that does that job, kicks the sheet off the metal so it does not run back under the panel onto the fascia or the top of the wall. If you add gutters, the sheet should land in the gutter, not behind it. A gutter that misses the drip dumps water on the fascia and then at the posts, in the same storms you were trying to control.
+
+Look at that edge from the ground. A stain on the fascia, or a wet line on the wall above the skirt, is a sign the sheet is not leaving where you planned.
+
+## Gutters, Downspouts, and Discharge
+
+Gutters collect the sheet and move it to outlets. On a large roof, each outlet is a concentrated release. Where that outlet lands matters as much as whether the gutter is there.
+
+### When to think about gutters
+
+Think about gutters when you want the sheet off a walkway, a stall apron, or the face of an enclosed wall, or when you need the water at a discharge point you choose instead of along the whole eave. They are a weak stand-in for grade. A gutter that overflows in a tropical downpour sends the sheet back to the drip line, often at a corner, right when the yard is already full.
+
+Leaves and pine needles collect in gutters and at outlets. A clogged downspout overflows at the building. If you add gutters, look at them before the wet season and after a storm, not only when a waterfall shows up at a post.
+
+### Downspout placement
+
+- **Past the posts**: Land the outlet beyond the embedment, not on the post. A splash block on flat ground still leaves the water at the building if the grade does not fall.
+- **Past the floor edge**: Carry the outlet beyond the slab joint or the gravel shoulder. Water dumped on that edge is the rut and the pond you were trying to avoid.
+- **Away from openings**: Keep outlets out of doorways, open bays where people and animals stand, and the approach a trailer uses.
+- **Enough outlets for the slope**: One downspout at a far corner asks that corner to take the whole eave. Spread outlets so a single low spot does not become the ditch.
+- **An overflow that still behaves**: When the gutter fills, water comes over the rim. The grade under the eave has to be acceptable on that day, not only on the day the downspouts are clear.
+
+### Where the discharge should go
+
+Send the water to a swale, a daylight outlet, or firm ground that keeps falling away from the barn. Do not aim it at a neighboring lot, a road right-of-way, or a county ditch until you have asked whether that is allowed. Do not send it into a well area, a septic field, or a wetland you have not identified.
+
+A buried pipe is only a path if it daylights. A pipe that ends in sand, with no outlet, stores water against the building. If you bury a line, know where it comes out, and keep that outlet from silting shut. An extension you can see is easier to check when it clogs, and easier to move if the first storm lands in the wrong place.
+
+After the first hard rain, walk every outlet. A pond at a corner or a fresh cut in the sand is the correction, while the grade can still change.
+
+## Rain Capture
+
+A barrel, a tank, or a cistern can hold roof water for a wash-down or for watering plants. It uses some of the runoff. It is not the drainage plan for the storm that fills it.
+
+Plan for overflow. A summer downpour can fill a small tank and keep coming. The overflow needs the same kind of discharge as a downspout: away from the posts, off the slab or gravel edge, and onto ground that falls away. A tank with no overflow becomes a waterfall at the eave once it is full.
+
+Think about where the tank sits. A full tank is heavy, so it wants a firm pad of its own, not a lean against a post or a skirt board. Leave the grade line at the post visible. Keep the overflow out of the stall and out of the open bay.
+
+Standing water in an open container is a mosquito problem through a Florida wet season. A closed tank, or a screened opening, belongs in the plan if you capture water at the barn. Do not assume water off a metal roof is ready for animals to drink. If you want collected water for livestock, or for anything beyond a wash-down, ask the county what this site is allowed to do, and ask a veterinarian before animals drink it.
+
+If the county reviews stormwater with the permit, ask whether a tank changes that review. Put the overflow path on the sketch either way.
+
+## Keeping Horse and Livestock Areas Dry
+
+Horses and other livestock add water the roof did not, and they stand where roof water wants to cross. A dry stall starts with keeping the roof sheet out of the door, the aisle, and the gate.
+
+Grade the barn and the turnout together. A loafing area on the low side of the pad, or a downspout aimed at a stall door, stays wet through the rainy season even when the aisle looks fine. Open run-ins still take wind-driven rain. They need a high side and an exit so blown-in water does not stand under the animals.
+
+- **Stall doors and gates**: Put the drip line and the downspouts where animals are not asked to walk through the sheet.
+- **Wash racks**: Wash water needs its own way out. Do not add the whole roof to that drain. A rack that discharges into the aisle wets the floor it crosses.
+- **Bedding and feed**: Store them out of the splash zone at an open side. Splash off a flat apron wets the bottom of a stack even when the roof is tight.
+- **Turnout footing**: A swale that carries roof water across the gate builds a soft spot at the place you use most. Carry discharge past that traffic line.
+- **What you pile outside**: Manure, old bedding, and fill pushed against the eave can dam the grade you just set and bury the post line.
+
+Stalls, aisles, and ventilation are covered in the [horse barn planning guide](/blog/horse-barn-planning-florida). The floor under them still has to send water out. An enclosed stall bay and a wash rack usually want a surface that can be drained. An open shade bay wants a pad that can shed what the weather blows in. The [gravel pad or concrete slab](/blog/gravel-pad-vs-concrete-slab-florida-pole-barn) choice should name those animal areas before the pad is built.
+
+## Site Preparation and Questions for the County
+
+Drainage is site work. It can also be a permitting question, and the two are not always on the same form.
+
+### Tie drainage to the pad before the posts
+
+Rough grade, the roof-water path, and the floor edge belong in site preparation, with access and utility locates, before dig day. Posts set in a bowl are hard to rescue with a gutter later. Soil pushed up to fix a low side after the fact can bury the post line. If the soil in the footprint is not the draining sand you pictured, stop and say so. The [site preparation checklist](/blog/florida-pole-barn-site-preparation-checklist) is the sequence. Use it with this drainage list, and walk the pad after a real rain before you treat the grade as finished.
+
+The same pad has to work when the rain is hardest and the wind is on the roof. [Planning a pole barn for Florida storm season](/blog/planning-pole-barn-florida-storm-season) puts embedment next to drainage. Read it with the grade, so the posts and the discharge are one conversation. How water at the base affects treatment and uplift is in [pole barn posts in Florida soil](/blog/florida-pole-barn-posts-termites-moisture).
+
+### What to ask the county
+
+Counties in Florida do not review every parcel the same way. Ask for this address, and write down the answers. A barn down the road is not the ruling for this lot.
+
+- **Whether a permit applies**: [Whether a pole barn in Florida needs a permit](/blog/do-you-need-a-permit-for-a-pole-barn-in-florida) is the starting point, including agricultural exemptions where a county applies them. Confirm this parcel with the building department.
+- **Whether drainage is part of that review**: Ask if they want a site sketch, a grading note, or a stormwater question answered with the building set. Some reviews stay with the structure. Some ask where the water goes.
+- **Wetlands, ditches, and easements**: Ask what the barn and its discharge cannot fill, block, or cross. A pad that drains into a wetland or a drainage easement can still be the wrong pad.
+- **Wells and septic**: Keep the setbacks the county requires, and do not treat a drain field as a convenient low spot for roof water.
+- **Leaving the lot**: Ask before a swale or a pipe sends flow to a county ditch, a road right-of-way, or a neighboring property.
+- **Agricultural use**: If the land is in agricultural classification, ask whether that changes the drainage review. That is a separate question from whether the building itself needs a permit.
+- **What you add later**: A gutter run, a tank, or a buried outlet can change where water leaves the property. Ask before you install one the first review did not show.
+
+Bring the property address, a note about which way the yard falls, and photos of where water stands after a storm. Those make the county conversation, and the building plan, specific to this lot.
+
+## Drainage Checklist Before You Build
+
+Walk this list on the site before the pad is finished and before the posts go in.
+
+- **1. Walk the lot after a hard rain**: Mark soft corners, the way the yard falls, and any ditch, wetland, or low pasture the water already uses.
+- **2. Name the soil in the footprint**: Sand that drains, or clay, hardpan, muck, or fill that holds water. Tell the builder if a test hole stays wet.
+- **3. Set the pad as the high ground**: Continuous fall away from the posts, with a swale that does not use the post line as the ditch.
+- **4. Choose the floor with the edge in mind**: Gravel or a slab, a stone strip or a swale at the drip line, and a way out of open bays for rain that blows in.
+- **5. Protect the post bases**: Keep roof water, splash, mulch, and piled soil off the embedment, and leave the grade line visible.
+- **6. Place the overhang on the drawings**: The eave sets the drip line. Confirm any change with the engineer before the roof is altered.
+- **7. Decide on gutters, then place every outlet**: Downspouts past the posts and the floor edge, enough of them that one corner does not take the whole slope, and grade that still works if a gutter overflows.
+- **8. Give rain capture an overflow**: A tank is not the drain. Send overflow to the same kind of discharge, on a pad that is not leaning on a post.
+- **9. Keep animal areas out of the sheet**: Stall doors, gates, wash racks, and turnout footing need a path that is not the roof drip line.
+- **10. Ask the county before water leaves the lot**: Permit, grading or stormwater review, easements, wells, septic, and where discharge is allowed to go.
+
+## Talk Through Drainage on Your Lot
+
+Florida Pole Barn plans pole barns for properties across Florida, with the crew based in Central Florida near Clermont. The roof and the ground are one plan: where summer water stands, whether the soil takes that water or holds it, and where a downspout can land without soaking the posts. Tell us how you will use the barn and what the lot does after a hard rain. We will talk through gutters, grade, and discharge with you, and you can request a consultation from that conversation.
+
+**[Request a consultation →](/quote)**
+
+## Frequently Asked Questions
+
+### Do Florida pole barns need gutters?
+
+Gutters are a planning choice on a Florida pole barn. Drainage is not. A metal roof sheds rain in a sheet at the eave during a summer downpour or a tropical storm, and that water still needs a path away from the posts whether or not gutters are on the building. Gutters help when you want to move that sheet to a planned discharge, keep splash off a wall or an open bay, or send overflow toward a swale. They still need downspouts that land away from the posts, and they can overflow in a hard storm, so the grade under the eave has to work even when the gutter is full.
+
+### Where should pole barn downspouts discharge in Florida?
+
+Discharge downspouts onto ground that falls away from the building, into a swale or another path that carries water off the pad. Do not land them at the base of a post or against a slab or gravel edge. Keep the outlet out of stall doors, wash racks, and the splash zone of an open bay. In a tropical storm the outlet still needs somewhere to go if the pipe fills. Ask the county before sending that water into a ditch, a wetland, a neighboring lot, or a road right-of-way.
+
+### How should the ground around pole barn posts be graded?
+
+Build the pad as the high ground, with a continuous fall away from the posts on every side you can grade. A barn at the bottom of a pasture collects the yard and the roof together. Water that stands at a post, or that cuts a trench along the drip line, keeps the base wet and can scour the soil the embedment depends on. Check the grade after a real summer storm, and fix low corners before the finished surface locks them in.
+
+### Does sandy soil drain a Central Florida pole barn better than clay?
+
+Clean sand can take water when the pad sits above the yard, which is common on ridge ground around Clermont and in parts of Lake County. Clay, hardpan, organic muck, or a clay lens under a sandy surface holds water above it, so the same grading plan can pond. A lot that looks like sand from the driveway can still have a layer that does not drain. Walk the site after a hard rain, and tell the builder if a test hole stays wet. The grade and the floor have to match the soil on this parcel.
+
+### How do you keep horse and livestock areas dry under a Florida pole barn?
+
+Keep roof water out of the stall, the aisle, and the gate where animals stand. Grade the barn pad and the turnout so water leaves the loafing area, and do not aim a downspout at a stall door or a wash rack. An open run-in still needs a high side and an exit for rain that blows in. Bedding and footing stay drier when splash at the eave has a stone strip or a swale, rather than a flat yard that bounces water back inside. A wash rack needs its own path out of the building, separate from the roof sheet if you can give it one.
+
+### What drainage questions should you ask the county about a pole barn?
+
+Ask whether this parcel needs a building permit, and whether the review includes grading, stormwater, or a site sketch that shows where roof water goes. Ask about wetlands, ditches, easements, wells, and septic setbacks that the barn and its discharge should not cross. Ask whether water may leave the lot toward a county ditch, a right-of-way, or a neighboring property. If the land is in agricultural use, ask whether that changes the drainage review. Counties in Florida do not all answer these the same way. Confirm them with the building department for this parcel.
+    `,
+  },
+  {
     slug: 'florida-pole-barn-posts-termites-moisture',
     title: 'Pole Barn Posts in Florida Soil: Termites, Moisture, and What to Ask Before You Build',
     description:

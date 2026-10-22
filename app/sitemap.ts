@@ -3,6 +3,7 @@ import type { MetadataRoute } from 'next'
 const BASE = 'https://floridapolebarn.com'
 
 const BLOG_SLUGS = [
+  'pole-barn-gutters-drainage-florida',
   'florida-pole-barn-posts-termites-moisture',
   'gravel-pad-vs-concrete-slab-florida-pole-barn',
   'pole-barn-metal-roof-condensation-florida',
